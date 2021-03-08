@@ -22,3 +22,11 @@
     margin-top: 20px;
   }
 }
+
+@include media-breakpoint-up(md) {
+  .featured-event {
+    .featured-event__image {
+      margin-bottom: 0;
+    }
+  }
+}
