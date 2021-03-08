@@ -6,6 +6,10 @@
 		<h2 class="cta-group__heading">{{ module.heading }}</h2>
 	{% endif %}
 
+	{% if module.description %}
+		<div class="cta-group__description wysiwyg">{{ module.description }}</div>
+	{% endif %}
+
 	{% if module.cta_group|length > 0 %}
 		<div class="row">
 			{% for cta in module.cta_group %}

@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_604696a491d8f",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5d8d1f0955c69",
             "label": "CTAs",
             "name": "cta_group",
@@ -81,5 +100,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1614700199
+    "modified": 1615238829
 }
