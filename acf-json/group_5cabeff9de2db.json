@@ -252,6 +252,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_60465d0f2c3cf": {
+                    "key": "layout_60465d0f2c3cf",
+                    "name": "statistics",
+                    "label": "Statistics",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60465d142c3d0",
+                            "label": "Statistics",
+                            "name": "statistics",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60465c60956b1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d8d0689f0549": {
                     "key": "layout_5d8d0689f0549",
                     "name": "team",
@@ -432,5 +463,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1614286926
+    "modified": 1615224106
 }

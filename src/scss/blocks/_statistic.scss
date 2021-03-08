@@ -1,0 +1,17 @@
+.statistic {
+    text-align: center;
+
+    .statistic__image {
+        border-radius: 100%;
+        margin-bottom: 20px;
+        max-width: 50%;
+    }
+
+    .statistic__figure {
+        margin-bottom: 10px;
+    }
+
+    .statistic__link {
+        margin-top: 10px;
+    }
+}
