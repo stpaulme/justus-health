@@ -6,6 +6,10 @@
 		<h2 class="feed-event__heading">{{ module.heading }}</h2>
 	{% endif %}
 
+	{% if module.event_category.description %}
+		<p class="feed-event__description">{{ module.event_category.description }}</p>
+	{% endif %}
+
 	{% if module.events|length > 0 %}
 		<div class="row">
 			{% for post in module.events %}
