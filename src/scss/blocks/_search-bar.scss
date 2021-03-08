@@ -1,0 +1,37 @@
+.search-bar {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+
+    #search-bar__toggle {
+        // Remove default button styles
+        background: none;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        color: $black;
+
+        &:focus,
+        &:hover {
+            color: $link-hover-color;
+            outline: 0;
+        }
+    }
+
+    #search-bar__form {
+        flex: 1;
+        margin-left: 15px;
+    }
+
+    #search-bar__field {
+        border: 0;
+        padding: 0;
+
+        &::placeholder {
+            font-style: italic;
+        }
+    }
+}

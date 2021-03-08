@@ -1,0 +1,32 @@
+.post {
+  margin-bottom: 40px;
+
+  .post__image {
+    margin-bottom: 1rem;
+  }
+
+  .post__date {
+    font-style: italic;
+  }
+
+  .post__cats {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .post__meta {
+    border-top: 1px solid $gray;
+    font-size: 0.75rem;
+    padding-top: 1rem;
+  }
+}

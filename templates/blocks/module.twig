@@ -1,0 +1,19 @@
+<div class="module {{ module_name }}">
+
+	{% block outer_top %}
+		{# Optionally add elements above .container here #}
+	{% endblock %}
+
+	<div class="container">
+		<div class="{{ module_name }}__inner">
+			{% block content %}
+				<p>Nothing in this module</p>
+			{% endblock %}
+		</div>
+	</div>
+
+	{% block outer_bottom %}
+		{# Optionally add elements below .container here #}
+	{% endblock %}
+
+</div>

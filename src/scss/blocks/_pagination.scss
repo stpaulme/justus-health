@@ -1,0 +1,9 @@
+.pagination {
+  .pagination__next {
+    text-align: right;
+  }
+
+  &--load-more {
+    text-align: center;
+  }
+}

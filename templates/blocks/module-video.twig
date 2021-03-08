@@ -1,0 +1,19 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.heading %}
+		<h2 class="video__heading">{{ module.heading }}</h2>
+	{% endif %}
+
+	{% if module.sr_text|length > 0 %}
+		<div class="sr-only">
+			{{ module.sr_text }}
+		</div>
+	{% endif %}
+
+	<div class="video__embed er-container">
+		{{ module.embed }}
+	</div>
+
+{% endblock %}

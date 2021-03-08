@@ -1,0 +1,15 @@
+.page-title {
+  background-color: $purple;
+  color: $white;
+  padding: 20px 0;
+
+  .page-title__heading {
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .page-title {
+    padding: 40px 0;
+  }
+}

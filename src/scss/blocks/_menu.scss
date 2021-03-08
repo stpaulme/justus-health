@@ -1,0 +1,15 @@
+.menu {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  .menu__link {
+    color: inherit;
+
+    &:focus,
+    &:hover {
+      color: $link-hover-color;
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.text {
+  .text__row {
+    justify-content: center;
+  }
+
+  .text__media {
+    margin-bottom: 20px;
+  }
+
+  .text__image {
+    width: 100%;
+  }
+
+  .text__content {
+    &--without-media {
+      text-align: center;
+    }
+  }
+
+  .text__link {
+    margin-top: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text {
+    .text__media {
+      margin-bottom: 0;
+    }
+  }
+}

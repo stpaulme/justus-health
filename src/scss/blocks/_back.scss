@@ -1,0 +1,9 @@
+.back {
+    margin-top: 40px;
+}
+
+@include media-breakpoint-up(md) {
+    .back {
+        margin-top: 60px;
+    }
+}

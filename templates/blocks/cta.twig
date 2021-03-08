@@ -1,0 +1,39 @@
+<div class="cta">
+
+	{% set image = Image(cta.image) %}
+
+	{% if image.src %}
+		{% if cta.link %}
+			<a class="link-has-image" href="{{ cta.link.url }}" target="{{ cta.link.target }}">
+			{% endif %}
+
+			<picture>
+				<source srcset="{{ image.src('3by2')|towebp }} 1110w, {{ image.src('3by2-md')|towebp }} 690w, {{ image.src('3by2-sm')|towebp }} 395w" sizes="{{ sizes }}" type="image/webp">
+				<source srcset="{{ image.src('3by2') }} 1110w, {{ image.src('3by2-md') }} 690w, {{ image.src('3by2-sm') }} 395w" sizes="{{ sizes }}" type="image/jpeg">
+				<img class="cta__image" loading="lazy" src="{{ image.src('3by2') }}">
+			</picture>
+
+			{% if cta.link %}
+			</a>
+		{% endif %}
+	{% endif %}
+
+	<div class="cta__content">
+		{% if cta.heading %}
+			<{{heading_level}} class="cta__heading">{{ cta.heading }}</{{heading_level}}>
+		{% endif %}
+
+		{% if cta.copy %}
+			<div class="cta__copy wysiwyg">
+				{{ cta.copy }}
+			</div>
+		{% endif %}
+
+		{% if cta.link %}
+			<div class="cta__link">
+				<a class="button" href="{{ cta.link.url }}" target="{{ cta.link.target }}">{{ cta.link.title }}</a>
+			</div>
+		{% endif %}
+	</div>
+
+</div>

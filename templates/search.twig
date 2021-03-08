@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="search-landing">
+
+		<div class="container">
+
+			{% if posts|length > 0 %}
+				<div class="search-landing__posts append-posts">
+					{% for post in posts %}
+						{% include 'blocks/excerpt.twig' %}
+					{% endfor %}
+				</div>
+			{% endif %}
+
+			<div class="search-landing__pagination">
+				{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style } %}
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock %}

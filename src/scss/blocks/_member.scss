@@ -1,0 +1,34 @@
+.member {
+  .member__image {
+    margin-bottom: 20px;
+  }
+
+  .member__name,
+  .member__position,
+  .member__email,
+  .member__phone,
+  .member__affiliation {
+    display: block;
+  }
+
+  .member__name {
+    @extend .h4;
+
+    a {
+      color: inherit;
+      font-weight: inherit;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  .member__position {
+    font-style: italic;
+  }
+
+  .member__email {
+    word-break: break-all;
+  }
+}

@@ -1,0 +1,62 @@
+.site-footer {
+  background-color: $gray;
+  padding: 20px 0;
+
+  .site-footer__logo {
+    margin-bottom: 20px;
+  }
+
+  .site-footer__address {
+    margin-bottom: 20px;
+  }
+
+  .site-footer__email {
+    margin-bottom: 5px;
+  }
+
+  .site-footer__phone {
+    margin-bottom: 20px;
+  }
+
+  // both menus
+  .site-footer__menu {
+    margin-bottom: 20px;
+
+    .menu {
+      .menu__item {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .site-footer__social-media {
+    margin-bottom: 20px;
+  }
+
+  .site-footer__colophon {
+    font-size: 0.75rem;
+    line-height: 1.1667;
+  }
+
+  .site-footer__copyright {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .site-footer {
+    .site-footer__copyright {
+      margin-bottom: 0;
+    }
+
+    .site-footer__attribution {
+      display: block;
+      text-align: right;
+    }
+  }
+}

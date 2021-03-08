@@ -1,0 +1,19 @@
+<div class="announcement">
+	<div class="container">
+		<div class="announcement__inner">
+			{% if options.announcement.copy %}
+				<div class="announcement__copy wysiwyg">
+					{{ options.announcement.copy }}
+				</div>
+			{% endif %}
+
+			{% if options.announcement.link.url %}
+				<div class="announcement__link">
+					<a class="button" href="{{ options.announcement.link.url }}" target="{{ options.announcement.link.target }}">
+						{{ options.announcement.link.title }}
+					</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

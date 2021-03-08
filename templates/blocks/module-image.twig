@@ -1,0 +1,17 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+	{% set image = Image(module.image) %}
+
+	<figure class="image__figure">
+		<picture>
+			<source srcset="{{ image.src('infographic')|towebp }} 2000w, {{ image.src('infographic-md')|towebp }} 1024w, {{ image.src('infographic-sm')|towebp }} 576w" sizes="100vw" type="image/webp">
+			<source srcset="{{ image.src('infographic') }} 2000w, {{ image.src('infographic-md') }} 1024w, {{ image.src('infographic-sm') }} 576w" sizes="100vw" type="image/jpeg">
+			<img alt="{{ image.alt }}" class="image__image" loading="lazy" src="{{ image.src('infographic') }}">
+		</picture>
+
+		{% if image.caption|length > 0 %}
+			<figcaption class="image__caption">{{ image.caption }}</figcaption>
+		{% endif %}
+	</figure>
+{% endblock %}

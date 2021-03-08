@@ -1,0 +1,41 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+	<div class="row text__row">
+		{% set media_type = module.media_type %}
+		{% if media_type != 'none' %}
+			{% set media_position = module.media_position %}
+			{% set image = Image(module.image) %}
+			{% set video = module.video %}
+			<div class="col-lg-6 {{ media_position == 'right' ? 'order-lg-2' }}">
+				<div class="text__media">
+					{% if media_type == 'image' and image.src %}
+						<picture>
+							<source srcset="{{ image.src('3by2')|towebp }} 1110w, {{ image.src('3by2-md')|towebp }} 690w, {{ image.src('3by2-sm')|towebp }} 395w" sizes="(min-width: 992px) 48vw, 96vw" type="image/webp">
+							<source srcset="{{ image.src('3by2') }} 1110w, {{ image.src('3by2-md') }} 690w, {{ image.src('3by2-sm') }} 395w" sizes="(min-width: 992px) 48vw, 96vw" type="image/jpeg">
+							<img alt="{{ image.alt }}" class="text__image" loading="lazy" src="{{ image.src('3by2') }}">
+						</picture>
+					{% elseif media_type == 'video' and video %}
+						<div class="text__video er-container">
+							{{ video }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endif %}
+
+		<div class="{{ media_type == 'none' ? 'col-lg-8' : 'col'}} {{ media_position == 'right' ? 'order-lg-1' }}">
+			<div class="text__content text__content--{{ media_type == 'none' ? 'without-media' : 'with-media' }}">
+				<div class="text__copy text-heavy wysiwyg">
+					{{ module.copy }}
+				</div>
+
+				{% if module.link.url %}
+					<div class="text__link">
+						<a class="button" href="{{ module.link.url }}" target="{{ module.link.target }}">{{ module.link.title }}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

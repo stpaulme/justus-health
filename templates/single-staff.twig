@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="text-heavy wysiwyg">
+		{{ post.content }}
+	</div>
+
+	{% include 'blocks/back.twig' with { 'link_url' : '/about/staff', 'link_text' : 'Back to All Staff' } %}
+{% endblock %}
+
+{% block sidebar %}
+	<div class="row">
+		<div class="col-md-6 col-lg-12 sidebar__col">
+			{% include 'blocks/member.twig' with { 'show_thumbnail' : true } %}
+		</div>
+	</div>
+{% endblock %}

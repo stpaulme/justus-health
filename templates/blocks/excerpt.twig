@@ -1,0 +1,53 @@
+<div class="excerpt excerpt--{{ post.post_type }}">
+
+	<div class="excerpt__flex">
+
+		{% if show_header == true %}
+			<div class="excerpt__header">
+				{% block header %}
+					{% if post.thumbnail %}
+						<a class="link-has-image" href="{{ post.link }}">
+							<picture>
+								<source srcset="{{ post.thumbnail.src('3by2')|towebp }} 1110w, {{ post.thumbnail.src('3by2-md')|towebp }} 690w, {{ post.thumbnail.src('3by2-sm')|towebp }} 395w" sizes="(min-width: 992px) 32vw, (min-width: 768px) 48vw, 96vw" type="image/webp">
+								<source srcset="{{ post.thumbnail.src('3by2') }} 1110w, {{ post.thumbnail.src('3by2-md') }} 690w, {{ post.thumbnail.src('3by2-sm') }} 395w" sizes="(min-width: 992px) 32vw, (min-width: 768px) 48vw, 96vw" type="image/jpeg">
+								<img alt="Go to {{ post.title }}" class="excerpt__image" loading="lazy" src="{{ post.thumbnail.src('3by2') }}">
+							</picture>
+						</a>
+					{% endif %}
+				{% endblock %}
+			</div>
+		{% endif %}
+
+		<div class="excerpt__content">
+			{% block content %}
+				<h2 class="excerpt__title">
+					<a href="{{ post.link }}">{{ post.title }}</a>
+				</h2>
+
+				{% if post.preview|length > 0 %}
+					<p class="excerpt__preview">{{ post.preview.length(25).read_more('') }}</p>
+				{% endif %}
+			{% endblock %}
+		</div>
+
+		{% if show_footer == true %}
+			<div class="excerpt__footer">
+				{% block footer %}
+					<time class="excerpt__date">{{ post.date }}</time>
+
+					{% if post.categories|length > 0 %}
+						<ul class="excerpt__cats">
+							{% for item in post.categories %}
+								<li>
+									<a href="{{ item.link }}">{{ item.name }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				{% endblock %}
+			</div>
+		{% endif %}
+
+	</div>
+
+</div>

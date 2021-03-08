@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="text-heavy wysiwyg">
+		{{ post.content }}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+	<div class="row">
+		{% if sidebar_nav %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				{% include 'blocks/sidebar/sidebar-nav.twig' with { 'aria_label' : Post(parent).name ~ ' Section', 'nav' : sidebar_nav } %}
+			</div>
+		{% endif %}
+
+		{% if sidebar_modules %}
+			{% for module in sidebar_modules %}
+				{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+				<div class="col-md-6 col-lg-12 sidebar__col">
+					{% include ['blocks/sidebar/sidebar-module-' ~ module_name ~ '.twig', 'blocks/sidebar/sidebar-module.twig'] with { 'modifier' : 'sidebar' } %}
+				</div>
+			{% endfor %}
+		{% endif %}
+	</div>
+{% endblock %}
+
+{% block below %}
+	{% for module in below_modules %}
+		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+.sidebar-nav {
+    background-color: $gray;
+    padding: 20px;
+
+    .sidebar-nav__list {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    li.current_page_item > a {
+        color: $black;
+        font-style: italic;
+    }
+}

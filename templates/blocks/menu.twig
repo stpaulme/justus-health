@@ -1,0 +1,19 @@
+{% if menu %}
+	<ul class="menu {{ modifier ? 'menu--'~modifier }}">
+		{% for item in items %}
+			<li class="menu__item {{ show_children == true and item.children ? 'menu__item--has-children' }}">
+				<a class="menu__link {{ item.classes | join(' ') }}" href="{{ item.link }}" target="{{ item.target }}">
+					{{ item.title }}
+				</a>
+				{% if show_children == true and item.children %}
+					{% include "blocks/menu.twig" with { 'modifier' : 'children', 'items' : item.children, 'show_search' : false } %}
+				{% endif %}
+			</li>
+		{% endfor %}
+		{% if show_search == true %}
+			<li class="menu__item">
+				{% include 'blocks/search-bar.twig' %}
+			</li>
+		{% endif %}
+	</ul>
+{% endif %}

@@ -1,0 +1,7 @@
+{% extends 'blocks/sidebar/sidebar-module.twig' %}
+
+{% block content %}
+
+	{% include 'blocks/cta.twig' with { 'cta' : module, 'sizes' : '(min-width: 992px) 32vw, (min-width: 768px) 48vw, 96vw', 'heading_level' : 'h2' } %}
+
+{% endblock %}

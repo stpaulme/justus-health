@@ -1,0 +1,45 @@
+{% set logo = Image(options.logo) %}
+
+<header class="site-header {{ options.sticky_header ? 'site-header--sticky' }}">
+	{% if options.announcement.copy or options.announcement.link.url %}
+		{% include 'blocks/announcement.twig' %}
+	{% endif %}
+
+	<div class="container">
+		<div class="row site-header__row">
+			<div class="col-8 col-md-4 col-lg-3">
+				<a class="link-has-image" href="{{ site.url }}">
+					<img alt="{{ site.title }} homepage" class="site-header__logo" src="{{ logo.src }}">
+				</a>
+			</div>
+
+			<div class="col site-header__hamburger-col">
+				<button id="site-header__hamburger" aria-label="Toggle Mobile Menu">
+					<span class="sr-only">Toggle Mobile Menu</span>
+				</button>
+				<div class="site-header__menu-mobile">
+					{% include 'blocks/nav.twig' with { 'menu' : menu_mobile, 'id' : 'site-header__nav-mobile', 'items' : menu_mobile.get_items, 'show_children' : true } %}
+				</div>
+			</div>
+
+			<div class="col site-header__desktop-menus-col">
+				<div class="site-header__desktop-menus">
+					<div class="site-header__desktop-menu site-header__desktop-menu--secondary">
+						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items, 'show_search' : true } %}
+					</div>
+					<div class="site-header__desktop-menu site-header__desktop-menu--primary">
+						{% if options.desktop_menu_style == 'dropdown' %}
+							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'modifier' : 'dropdown', 'items' : menu_primary.get_items, 'show_children' : true } %}
+						{% else %}
+							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'items' : menu_primary.get_items, 'show_children' : false } %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+{% if sub_nav %}
+	{% include 'blocks/sub-nav.twig' %}
+{% endif %}

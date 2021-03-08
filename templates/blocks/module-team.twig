@@ -1,0 +1,21 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.heading %}
+		<h2 class="team__heading">{{ module.heading }}</h2>
+	{% endif %}
+
+	{% if module.members|length > 0 %}
+		<div class="row">
+			{% for post in Post(module.members) %}
+				<div class="col-md-4 team__col">
+					<div class="team__member">
+						{% include 'blocks/member.twig' with { 'show_thumbnail' : true, 'show_name' : true } %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+{% endblock %}
