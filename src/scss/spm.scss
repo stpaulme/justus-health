@@ -58,11 +58,6 @@ a img {
     opacity;
 }
 
-a[href^="tel:"] {
-  color: inherit;
-  font-weight: inherit;
-}
-
 body {
   color: $black;
   font-family: $text;
