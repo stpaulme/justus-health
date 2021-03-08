@@ -1,0 +1,24 @@
+.featured-event {
+  .featured-event__image {
+    margin-bottom: 20px;
+  }
+
+  .featured-event__subtitle,
+  .featured-event__date {
+    display: block;
+    font-style: italic;
+  }
+
+  .featured-event__location {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .featured-event__description {
+    margin-top: 20px;
+  }
+
+  .featured-event__link {
+    margin-top: 20px;
+  }
+}

@@ -128,6 +128,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6046982f72dc8": {
+                    "key": "layout_6046982f72dc8",
+                    "name": "featured_event",
+                    "label": "Featured Event",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6046983372dc9",
+                            "label": "Featured Event",
+                            "name": "featured_event",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_604697aee3451"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d921807dfe0c": {
                     "key": "layout_5d921807dfe0c",
                     "name": "form",
@@ -463,5 +494,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1615224106
+    "modified": 1615239237
 }
