@@ -47,11 +47,6 @@ function spm_menu_item_classes($classes, $item, $args)
         $classes[] = 'current-menu-item';
     }
 
-    /* Staff */
-    if ((is_singular('staff')) && 'About' == $item->title) {
-        $classes[] = 'current-menu-item';
-    }
-
     return array_unique($classes);
 
 }

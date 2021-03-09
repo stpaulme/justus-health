@@ -7,15 +7,15 @@
 	{% endif %}
 
 	{% if module.members|length > 0 %}
-		<div class="row">
-			{% for post in Post(module.members) %}
-				<div class="col-md-4 team__col">
-					<div class="team__member">
-						{% include 'blocks/member.twig' with { 'show_thumbnail' : true, 'show_name' : true } %}
-					</div>
-				</div>
-			{% endfor %}
-		</div>
+
+		{% for member in module.members %}
+
+			<div class="team__member">
+				{% include 'blocks/member.twig' %}
+			</div>
+
+		{% endfor %}
+
 	{% endif %}
 
 {% endblock %}

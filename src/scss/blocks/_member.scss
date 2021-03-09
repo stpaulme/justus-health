@@ -4,31 +4,24 @@
   }
 
   .member__name,
-  .member__position,
-  .member__email,
-  .member__phone,
-  .member__affiliation {
+  .member__title {
     display: block;
+    margin-bottom: 10px;
   }
 
-  .member__name {
-    @extend .h4;
-
-    a {
-      color: inherit;
-      font-weight: inherit;
-
-      &:hover {
-        color: $link-hover-color;
-      }
-    }
-  }
-
-  .member__position {
+  .member__title {
     font-style: italic;
   }
 
-  .member__email {
-    word-break: break-all;
+  .member__link {
+    margin-top: 20px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .member {
+    .member__image {
+      margin-bottom: 0;
+    }
   }
 }
