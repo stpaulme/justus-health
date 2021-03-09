@@ -60,3 +60,11 @@
     }
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .site-footer {
+    .site-footer__logo {
+      max-width: 16.6667%;
+    }
+  }
+}

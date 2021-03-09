@@ -157,14 +157,13 @@ img {
 .button {
   background-color: $link-color;
   border: none;
-  color: $white;
+  color: $white !important;
   display: inline-block;
   font-weight: 700;
-  padding: 8px 12px;
+  padding: 10px 20px !important;
 
   &:hover {
     background-color: $link-hover-color;
-    color: $white;
   }
 }
 

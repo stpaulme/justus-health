@@ -49,16 +49,6 @@
 
 @include media-breakpoint-up(lg) {
   .site-header {
-
-    .site-header__row {
-      align-items: stretch;
-      padding-bottom: 0;
-    }
-
-    .site-header__logo {
-      margin-bottom: 20px; // to facilitate border styles and/or dropdown functionality
-    }
-
     .site-header__hamburger-col {
       display: none;
     }
@@ -88,6 +78,7 @@
 
         .menu__link {
           display: inline-block;
+          line-height: 1.125;
 
           &.current-menu-item,
           &.current-page-ancestor {
@@ -100,13 +91,11 @@
 
     // secondary desktop menu only
     .site-header__desktop-menu--secondary {
+      margin-bottom: 60px;
+
       .menu {
         .menu__item {
           margin-right: 20px;
-        }
-
-        .menu__link {
-          line-height: 1.125;
         }
       }
     }
@@ -118,12 +107,6 @@
       .menu {
         .menu__item {
           margin-right: 40px;
-        }
-
-        .menu__link {
-          font-size: 1.125rem;
-          line-height: 1.1111;
-          padding-bottom: 20px; // to facilitate border styles and/or dropdown functionality
         }
       }
 
@@ -144,11 +127,11 @@
         }
 
         .menu__link {
-          padding: 20px;
+          padding: 10px 20px;
         }
 
-        .menu__item--has-children:hover,
-        .menu__item--has-children.menu__item--has-focus {
+        >.menu__item--has-children:hover,
+        >.menu__item--has-children.menu__item--has-focus {
           background-color: $white;
           filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
 
@@ -156,6 +139,13 @@
             clip: auto;
             height: auto;
             width: 16rem;
+
+            .menu--children {
+              position: static;
+              clip: auto;
+              height: auto;
+              width: 100%;
+            }
           }
         }
 
@@ -170,7 +160,7 @@
           height: 1px;
           margin: 0;
           overflow: hidden;
-          padding: 20px;
+          padding: 10px 20px;
           width: 1px;
 
           .menu__item {
