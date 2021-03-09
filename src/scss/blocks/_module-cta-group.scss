@@ -23,3 +23,11 @@
     }
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .cta-group {
+    .cta-group__description {
+      max-width: 83.3333%;
+    }
+  }
+}

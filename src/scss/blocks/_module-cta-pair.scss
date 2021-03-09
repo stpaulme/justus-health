@@ -19,3 +19,11 @@
     }
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .cta-pair {
+    .cta-pair__description {
+      max-width: 83.3333%;
+    }
+  }
+}

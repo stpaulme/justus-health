@@ -3,3 +3,11 @@
         margin-bottom: 20px;
     }
 }
+
+@include media-breakpoint-up(lg) {
+    .video {
+        .video__description {
+            max-width: 83.3333%;
+        }
+    }
+}

@@ -21,3 +21,11 @@
     }
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .statistics {
+    .statistics__description {
+      max-width: 83.3333%;
+    }
+  }
+}
