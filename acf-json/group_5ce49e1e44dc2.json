@@ -103,21 +103,6 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6047e18391c6b",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
                     "key": "field_6047e19391c6c",
                     "label": "Bio",
                     "name": "bio",
@@ -135,6 +120,21 @@
                     "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
+                },
+                {
+                    "key": "field_6047e18391c6b",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -156,5 +156,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615323549
+    "modified": 1615325282
 }
