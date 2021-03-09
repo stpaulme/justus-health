@@ -45,6 +45,10 @@
 
 @include media-breakpoint-up(md) {
   .site-footer {
+    .site-footer__row {
+      align-items: center;
+    }
+
     .site-footer__menu {
       columns: 2;
     }
