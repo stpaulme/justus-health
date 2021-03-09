@@ -91,9 +91,13 @@
 
     // secondary desktop menu only
     .site-header__desktop-menu--secondary {
+      align-items: center;
+      display: flex;
       margin-bottom: 60px;
 
       .menu {
+        margin-right: 20px;
+
         .menu__item {
           margin-right: 20px;
         }

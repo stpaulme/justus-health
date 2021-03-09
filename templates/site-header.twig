@@ -7,7 +7,7 @@
 
 	<div class="container">
 		<div class="row site-header__row">
-			<div class="col-8 col-md-4 col-lg-1">
+			<div class="col-3 col-md-1">
 				<a class="link-has-image" href="{{ site.url }}">
 					<img alt="{{ site.title }} homepage" class="site-header__logo" src="{{ logo.src }}">
 				</a>
@@ -25,7 +25,8 @@
 			<div class="col site-header__desktop-menus-col">
 				<div class="site-header__desktop-menus">
 					<div class="site-header__desktop-menu site-header__desktop-menu--secondary">
-						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items, 'show_search' : true } %}
+						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items } %}
+						{% include 'blocks/social-media.twig' %}
 					</div>
 					<div class="site-header__desktop-menu site-header__desktop-menu--primary">
 						{% if options.desktop_menu_style == 'dropdown' %}

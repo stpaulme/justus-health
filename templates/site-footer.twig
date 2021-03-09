@@ -3,11 +3,13 @@
 <footer class="site-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-1">
 				<a class="site-footer__logo-link link-has-image" href="{{ site.url }}">
 					<img alt="{{ site.title }} homepage" class="site-footer__logo" src="{{ logo.src }}">
 				</a>
+			</div>
 
+			<div class="col-md-5">
 				{% if options.address %}
 					<address class="site-footer__address links-blend-in">
 						{% if options.map_url %}
@@ -31,18 +33,13 @@
 						<a href="tel:{{ options.phone }}">{{ options.phone }}</a>
 					</div>
 				{% endif %}
-
-				<div class="site-footer__social-media">
-					{% include 'blocks/social-media.twig' %}
-				</div>
 			</div>
 
 			<div class="col-md-6">
 				<div class="site-footer__menu">
-					{% include 'blocks/nav.twig' with { 'menu' : menu_footer, 'items' : menu_footer.get_items } %}
+					{% include 'blocks/nav.twig' with { 'menu' : menu_footer, 'items' : menu_footer.get_items, 'show_search' : true } %}
 				</div>
 			</div>
-
 
 			<div class="col-md-12">
 				<div class="site-footer__colophon links-blend-in">
