@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_6047dbd2a2eb0",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_5ce4270427126",
             "label": "Embed",
             "name": "embed",
@@ -53,7 +72,7 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 3,
             "new_lines": "wpautop"
         }
     ],
@@ -74,5 +93,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1614108053
+    "modified": 1615322143
 }

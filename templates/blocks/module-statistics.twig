@@ -6,6 +6,12 @@
 		<h2 class="statistics__heading">{{ module.heading }}</h2>
 	{% endif %}
 
+	{% if module.description %}
+		<div class="statistics__description wysiwyg">
+			{{ module.description }}
+		</div>
+	{% endif %}
+
 	{% if module.statistics|length > 0 %}
 		<div class="row">
 			{% for statistic in module.statistics %}

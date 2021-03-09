@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_6047dbaa71ad6",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_60465c6f25e81",
             "label": "Statistics",
             "name": "statistics",
@@ -137,5 +156,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615224993
+    "modified": 1615322046
 }

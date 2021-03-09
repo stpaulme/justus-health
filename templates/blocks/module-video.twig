@@ -6,14 +6,21 @@
 		<h2 class="video__heading">{{ module.heading }}</h2>
 	{% endif %}
 
+	{% if module.description %}
+		<div class="video__description wysiwyg">
+			{{ module.description }}
+		</div>
+	{% endif %}
+
+
+	<div class="video__embed er-container">
+		{{ module.embed }}
+	</div>
+
 	{% if module.sr_text|length > 0 %}
 		<div class="sr-only">
 			{{ module.sr_text }}
 		</div>
 	{% endif %}
-
-	<div class="video__embed er-container">
-		{{ module.embed }}
-	</div>
 
 {% endblock %}
