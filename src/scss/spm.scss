@@ -32,6 +32,9 @@ $enable-rounded: false;
 @import "../../node_modules/bootstrap/scss/alert";
 @import "../../node_modules/bootstrap/scss/forms";
 
+// Splide
+@import "../../node_modules/@splidejs/splide/dist/css/splide.min.css";
+
 // Fonts
 $text: "Nunito Sans",
 sans-serif;

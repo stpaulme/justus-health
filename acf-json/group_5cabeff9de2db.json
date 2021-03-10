@@ -407,6 +407,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6049397fb7571": {
+                    "key": "layout_6049397fb7571",
+                    "name": "slider",
+                    "label": "Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60493983b7572",
+                            "label": "Slider",
+                            "name": "slider",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_604938f5bdc60"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d8d0689f0549": {
                     "key": "layout_5d8d0689f0549",
                     "name": "team",
@@ -587,5 +618,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1615408557
+    "modified": 1615411619
 }

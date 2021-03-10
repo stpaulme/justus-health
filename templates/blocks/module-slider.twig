@@ -1,0 +1,36 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.heading %}
+		<h2 class="slider__heading">{{ module.heading }}</h2>
+	{% endif %}
+
+	{% if module.slides|length > 0 %}
+
+		<div class="splide" id="splide-{{ loop.index }}">
+			<div class="splide__track">
+				<ul class="splide__list">
+					{% for item in module.slides %}
+						{% set image = Image(item.image) %}
+						<li class="splide__slide">
+							{% if item.url %}<a href="{{ item.url }}" target="_blank">{% endif %}
+								<picture>
+									<source srcset="{{ image.src('3by2')|towebp }} 1110w, {{ image.src('3by2-md')|towebp }} 690w, {{ image.src('3by2-sm')|towebp }} 395w" sizes="96vw" type="image/webp">
+									<source srcset="{{ image.src('3by2') }} 1110w, {{ image.src('3by2-md') }} 690w, {{ image.src('3by2-sm') }} 395w" sizes="96vw" type="image/jpeg">
+									<img alt="{{ image.alt }}" class="slider__image" loading="lazy" src="{{ image.src('3by2') }}">
+								</picture>
+							{% if item.url %}</a>{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			new Splide('#splide-{{ loop.index }}').mount();
+		</script>
+
+	{% endif %}
+
+{% endblock %}
