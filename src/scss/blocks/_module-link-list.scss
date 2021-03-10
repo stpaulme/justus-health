@@ -21,6 +21,7 @@
         }
 
         .link-list__item {
+            break-inside: avoid;
             margin-bottom: 30px;
         }
     }
