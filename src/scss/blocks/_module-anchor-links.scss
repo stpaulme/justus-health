@@ -1,0 +1,40 @@
+.anchor-links {
+    .anchor-links__list {
+        list-style: none;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .anchor-links__list-item {
+        display: inline;
+
+        &:after {
+            content: '/';
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+    }
+
+    .anchor-links__item {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .anchor-links {
+        .anchor-links__list {
+            margin-bottom: 30px;
+        }
+
+        .anchor-links__item {
+            margin-bottom: 30px;
+            max-width: 83.3333%;
+        }
+    }
+}

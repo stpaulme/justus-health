@@ -45,6 +45,7 @@ sans-serif;
 html {
   font-size: 18px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -388,6 +389,7 @@ img {
 @import "blocks/excerpt.scss";
 @import "blocks/member.scss";
 @import "blocks/menu.scss";
+@import "blocks/module-anchor-links.scss";
 @import "blocks/module-cta-group.scss";
 @import "blocks/module-cta-pair.scss";
 @import "blocks/module-cta-single.scss";
