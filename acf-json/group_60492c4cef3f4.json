@@ -7,7 +7,7 @@
             "label": "Embed Code",
             "name": "embed_code",
             "type": "wysiwyg",
-            "instructions": "Can be used for shortcodes (WordPress plugins) or iframes (external sites)",
+            "instructions": "Can be used for shortcodes (WordPress plugins), iframes (external sites), etc.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615409256
+    "modified": 1615413829
 }
