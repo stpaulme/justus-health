@@ -13,7 +13,9 @@
 		</div>
 
 		<div class="col-md-8">
-			<h3 class="member__name">{{ member.name }}</h3>
+			{% if member.name %}
+				<h3 class="member__name">{{ member.name }}</h3>
+			{% endif %}
 
 			{% if member.title %}
 				<span class="member__title">{{ member.title }}</span>
