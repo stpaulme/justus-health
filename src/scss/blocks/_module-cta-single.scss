@@ -1,1 +1,14 @@
-.cta-single {}
+.cta-single {
+    text-align: center;
+}
+
+@include media-breakpoint-up(lg) {
+    .cta-single {
+        .cta {
+            .cta__copy {
+                margin: 0 auto;
+                max-width: 83.3333%;
+            }
+        }
+    }
+}
