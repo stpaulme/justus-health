@@ -35,9 +35,15 @@
 				{% endif %}
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-3">
 				<div class="site-footer__menu">
-					{% include 'blocks/nav.twig' with { 'menu' : menu_footer, 'items' : menu_footer.get_items, 'show_search' : true } %}
+					{% include 'blocks/nav.twig' with { 'menu' : menu_footer_1, 'items' : menu_footer_1.get_items, 'show_search' : false } %}
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="site-footer__menu">
+					{% include 'blocks/nav.twig' with { 'menu' : menu_footer_2, 'items' : menu_footer_2.get_items, 'show_search' : true } %}
 				</div>
 			</div>
 
