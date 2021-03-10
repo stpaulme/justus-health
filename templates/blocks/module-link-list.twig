@@ -1,0 +1,21 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.heading %}
+		<h2 class="link-list__heading">{{ module.heading }}</h2>
+	{% endif %}
+
+	{% if module.links|length > 0 %}
+		<ul class="link-list__list">
+			{% for item in module.links %}
+				<li class="link-list__item">
+					<a href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+					<div class="wysiwyg">
+						{{ item.description }}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}

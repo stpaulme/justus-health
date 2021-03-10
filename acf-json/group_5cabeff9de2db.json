@@ -345,6 +345,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_60492d903218b": {
+                    "key": "layout_60492d903218b",
+                    "name": "link_list",
+                    "label": "Link List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60492d973218c",
+                            "label": "Link List",
+                            "name": "link_list",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60492d365baab"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60465d0f2c3cf": {
                     "key": "layout_60465d0f2c3cf",
                     "name": "statistics",
@@ -556,5 +587,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1615408322
+    "modified": 1615408557
 }
