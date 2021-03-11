@@ -68,14 +68,14 @@
             "layouts": {
                 "layout_5ce4b885b1a9a": {
                     "key": "layout_5ce4b885b1a9a",
-                    "name": "testimonial",
-                    "label": "Testimonial",
+                    "name": "cta_single",
+                    "label": "CTA",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5ce4b889b1a9b",
-                            "label": "Testimonial",
-                            "name": "testimonial",
+                            "key": "field_604a39cb4b690",
+                            "label": "CTA",
+                            "name": "cta",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -86,7 +86,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5ce406488eb38"
+                                "group_5cabeb1f27537"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -120,5 +120,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614882517
+    "modified": 1615477217
 }
