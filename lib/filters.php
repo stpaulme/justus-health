@@ -62,3 +62,15 @@ add_filter('acf/fields/google_map/api', 'spm_acf_google_map_api');
 
 // GF: Scroll to confirmation text or validation message on submission
 add_filter('gform_confirmation_anchor', '__return_true');
+
+// ACF: Use a flexible content layout's heading as its title
+add_filter('acf/fields/flexible_content/layout_title', 'spm_use_heading_as_acf_layout_title', 10, 4);
+function spm_use_heading_as_acf_layout_title($title, $field, $layout, $i)
+{
+    // load text sub field
+    if ($heading = get_sub_field('heading')) {
+        $title .= ': ' . esc_html($heading);
+    }
+
+    return $title;
+}

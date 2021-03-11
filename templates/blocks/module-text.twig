@@ -26,6 +26,10 @@
 
 		<div class="{{ media_type == 'none' ? 'col-lg-8' : 'col'}} {{ media_position == 'right' ? 'order-lg-1' }}">
 			<div class="text__content text__content--{{ media_type == 'none' ? 'without-media' : 'with-media' }}">
+				{% if module.heading %}
+					<h2 class="text__heading">{{ module.heading }}</h2>
+				{% endif %}
+
 				<div class="text__copy text-heavy wysiwyg">
 					{{ module.copy }}
 				</div>
