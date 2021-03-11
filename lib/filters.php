@@ -37,6 +37,11 @@ add_filter('embed_oembed_html', 'spm_wrap_embeds');
 function spm_menu_item_classes($classes, $item, $args)
 {
 
+    /* Counselors */
+    if ((is_singular('counselor') && 'Chemical Health' == $item->title || false !== strpos($item->title, 'Counseling'))) {
+        $classes[] = 'current-menu-item';
+    }
+
     /* Events */
     if ((tribe_is_community_edit_event_page() || tribe_is_community_my_events_page()) && 'Events' == $item->title) {
         $classes[] = 'current-menu-item';
@@ -44,6 +49,11 @@ function spm_menu_item_classes($classes, $item, $args)
 
     /* News */
     if ((is_singular('post') || is_category()) && 'News' == $item->title) {
+        $classes[] = 'current-menu-item';
+    }
+
+    /* Therapists */
+    if ((is_singular('therapist') && 'Therapy' == $item->title || false !== strpos($item->title, 'Counseling'))) {
         $classes[] = 'current-menu-item';
     }
 
@@ -67,7 +77,6 @@ add_filter('gform_confirmation_anchor', '__return_true');
 add_filter('acf/fields/flexible_content/layout_title', 'spm_use_heading_as_acf_layout_title', 10, 4);
 function spm_use_heading_as_acf_layout_title($title, $field, $layout, $i)
 {
-    // load text sub field
     if ($heading = get_sub_field('heading')) {
         $title .= ': ' . esc_html($heading);
     }
