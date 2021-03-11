@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_604697cb94df8",
-            "label": "Title",
-            "name": "title",
+            "label": "Heading",
+            "name": "heading",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -23,8 +23,8 @@
         },
         {
             "key": "field_604697c694df7",
-            "label": "Subtitle",
-            "name": "subtitle",
+            "label": "Subheading",
+            "name": "subheading",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -154,5 +154,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615240181
+    "modified": 1615497057
 }
