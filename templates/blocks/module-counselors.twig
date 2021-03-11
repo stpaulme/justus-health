@@ -1,0 +1,15 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.posts|length > 0 %}
+		<div class="row">
+			{% for post in module.posts %}
+				<div class="col-md-4 counselors__col">
+					{% include 'blocks/excerpt.twig' with { 'show_header' : true, 'show_footer' : false } %}
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+{% endblock %}

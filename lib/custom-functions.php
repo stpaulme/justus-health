@@ -52,6 +52,19 @@ function spm_add_data_to_modules($modules)
     }
 
     foreach ($modules as &$module) {
+        if ($module['acf_fc_layout'] == 'counselors') {
+
+            // Add posts to module in Timber
+            $args = array(
+                'post_type' => 'counselor',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+            );
+
+            $module['posts'] = Timber::get_posts($args);
+        }
+
         if ($module['acf_fc_layout'] == 'feed_event') {
             // Get data from ACF
             $event_category = $module['event_category'];
