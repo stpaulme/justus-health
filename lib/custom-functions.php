@@ -114,6 +114,28 @@ function spm_add_data_to_modules($modules)
 
             $module['posts'] = Timber::get_posts($args);
         }
+
+        if ($module['acf_fc_layout'] == 'therapists_or_interns') {
+            // Get data from ACF
+            $role = $module['role'];
+
+            // Add posts to module in Timber
+            $args = array(
+                'post_type' => 'therapist',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'therapist_role',
+                        'field' => 'term_id',
+                        'terms' => $role,
+                    ),
+                ),
+            );
+
+            $module['posts'] = Timber::get_posts($args);
+        }
     }
 
     return $modules;

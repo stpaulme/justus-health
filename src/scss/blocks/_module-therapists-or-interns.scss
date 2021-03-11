@@ -1,0 +1,19 @@
+.therapists-or-interns {
+  .therapists-or-interns__col {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .therapists-or-interns {
+    .therapists-or-interns__col {
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

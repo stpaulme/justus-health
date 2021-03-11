@@ -1,12 +1,12 @@
 {
-    "key": "group_604a3743a05e3",
-    "title": "Module - Counselors",
+    "key": "group_604a3f194e48c",
+    "title": "Post Type - Therapist or Intern - After Title",
     "fields": [
         {
-            "key": "field_604a374d36a3c",
-            "label": "",
-            "name": "",
-            "type": "message",
+            "key": "field_604a3f19513da",
+            "label": "Pronouns",
+            "name": "pronouns",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,9 +15,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Counselors will be automatically pulled from the Counselors section in the WordPress sidebar",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -25,17 +27,17 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "therapist"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
-    "style": "default",
+    "position": "acf_after_title",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
-    "modified": 1615481480
+    "modified": 1615478674
 }

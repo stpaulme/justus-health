@@ -3,6 +3,7 @@
   padding: 20px 0;
 
   .site-footer__logo {
+    max-width: 25%;
     margin-bottom: 20px;
   }
 
@@ -45,6 +46,10 @@
 
 @include media-breakpoint-up(md) {
   .site-footer {
+    .site-footer__logo {
+      max-width: 100%;
+    }
+
     .site-footer__copyright {
       margin-bottom: 0;
     }

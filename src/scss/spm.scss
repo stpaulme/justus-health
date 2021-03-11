@@ -396,6 +396,7 @@ img {
 @import "blocks/module-cta-group.scss";
 @import "blocks/module-cta-pair.scss";
 @import "blocks/module-cta-single.scss";
+@import "blocks/module-counselors.scss";
 @import "blocks/module-featured-event.scss";
 @import "blocks/module-hero.scss";
 @import "blocks/module-image.scss";
@@ -405,6 +406,7 @@ img {
 @import "blocks/module-statistics.scss";
 @import "blocks/module-team.scss";
 @import "blocks/module-text.scss";
+@import "blocks/module-therapists-or-interns.scss";
 @import "blocks/module-video.scss";
 @import "blocks/page-title.scss";
 @import "blocks/pagination.scss";
@@ -423,3 +425,4 @@ img {
 
 @import "single/counselor-post";
 @import "single/news-post";
+@import "single/therapist-post";

@@ -24,8 +24,12 @@
 					<a href="{{ post.link }}">{{ post.title }}</a>
 				</h2>
 
+				{% if post.meta('pronouns') %}
+					<span class="excerpt__pronouns">{{ post.meta('pronouns') }}</span>
+				{% endif %}
+
 				{% if post.preview|length > 0 %}
-					<p class="excerpt__preview">{{ post.preview.length(25).read_more('') }}</p>
+					<p class="excerpt__preview">{{ post.preview.length(15).read_more('') }}</p>
 				{% endif %}
 			{% endblock %}
 		</div>

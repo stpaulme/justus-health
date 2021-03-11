@@ -1,0 +1,19 @@
+.therapist-post {
+    .therapist-post__meta {
+        margin-bottom: 20px;
+    }
+
+    .therapist-post__types,
+    .therapist-post__pronouns {
+        margin-bottom: 0;
+    }
+
+    .therapist-post__types {
+        font-weight: 700;
+    }
+
+    .therapist-post__pronouns {
+        font-style: italic;
+        margin-top: 5px;
+    }
+}
