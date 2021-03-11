@@ -38,7 +38,10 @@ function spm_menu_item_classes($classes, $item, $args)
 {
 
     /* Counselors */
-    if ((is_singular('counselor') && 'Chemical Health' == $item->title || false !== strpos($item->title, 'Counseling'))) {
+    if ((is_singular('counselor') && 'Chemical Health' == $item->title)) {
+        $classes[] = 'current-menu-item';
+    }
+    if ((is_singular('counselor') && false !== strpos($item->title, 'Counseling'))) {
         $classes[] = 'current-menu-item';
     }
 
@@ -53,7 +56,10 @@ function spm_menu_item_classes($classes, $item, $args)
     }
 
     /* Therapists */
-    if ((is_singular('therapist') && 'Therapy' == $item->title || false !== strpos($item->title, 'Counseling'))) {
+    if ((is_singular('therapist') && 'Therapy' == $item->title)) {
+        $classes[] = 'current-menu-item';
+    }
+    if ((is_singular('therapist') && false !== strpos($item->title, 'Counseling'))) {
         $classes[] = 'current-menu-item';
     }
 
