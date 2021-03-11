@@ -358,6 +358,28 @@
             "placeholder": ""
         },
         {
+            "key": "field_604a8b6b22895",
+            "label": "Excluded Pages",
+            "name": "excluded_pages",
+            "type": "post_object",
+            "instructions": "These pages will be excluded from the sidebar menu system",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_6037ff5e031b9",
             "label": "",
             "name": "",
@@ -391,5 +413,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614797582
+    "modified": 1615498236
 }

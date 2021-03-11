@@ -26,6 +26,8 @@ function spm_get_child_pages($depth, $show_title_li)
 
     $top_parent = spm_get_top_parent($post);
 
+    $excluded_pages = get_field('excluded_pages', 'option');
+
     $args = array(
         'child_of' => $top_parent,
         'depth' => $depth,
@@ -36,6 +38,10 @@ function spm_get_child_pages($depth, $show_title_li)
 
     if ($show_title_li == true) {
         $args['title_li'] = '<h2>' . get_the_title($top_parent) . '</h2>';
+    }
+
+    if (is_array($excluded_pages)) {
+        $args['exclude'] = implode(',', $excluded_pages);
     }
 
     $child_pages = wp_list_pages($args);
