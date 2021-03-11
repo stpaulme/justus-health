@@ -24,6 +24,16 @@
 					<a href="{{ post.link }}">{{ post.title }}</a>
 				</h2>
 
+				{% if post.meta('counselor_title') or post.meta('therapist_title') %}
+					{% if post.meta('counselor_title') %}
+						<span class="excerpt__subtitle">{{ post.meta('counselor_title') }}</span>
+					{% endif %}
+
+					{% if post.meta('therapist_title') %}
+						<span class="excerpt__subtitle">{{ post.meta('therapist_title') }}</span>
+					{% endif %}
+				{% endif %}
+
 				{% if post.meta('pronouns') %}
 					<span class="excerpt__pronouns">{{ post.meta('pronouns') }}</span>
 				{% endif %}
