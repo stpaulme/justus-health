@@ -69,7 +69,7 @@
                 "layout_5d8d0689f0549": {
                     "key": "layout_5d8d0689f0549",
                     "name": "team",
-                    "label": "Team",
+                    "label": "Staff or Board",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -122,5 +122,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1615476797
+    "modified": 1615477781
 }

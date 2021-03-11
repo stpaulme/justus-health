@@ -1,6 +1,6 @@
 {
     "key": "group_5ce49e1e44dc2",
-    "title": "Module - Team",
+    "title": "Module - Team (Staff or Board)",
     "fields": [
         {
             "key": "field_5ce49e23422cf",
@@ -156,5 +156,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615325282
+    "modified": 1615477762
 }
