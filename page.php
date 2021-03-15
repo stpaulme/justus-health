@@ -24,4 +24,9 @@ $context['below_modules'] = spm_add_data_to_modules($below_modules);
 
 $templates = array('default.twig');
 
-Timber::render($templates, $context);
+if (post_password_required($timber_post->ID)) {
+    $context['sidebar'] = true; // for .container and line length
+    Timber::render('page-password.twig', $context);
+} else {
+    Timber::render($templates, $context);
+}
