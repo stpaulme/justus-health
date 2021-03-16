@@ -58,6 +58,11 @@
   display: none;
 }
 
+// Hidden labels
+.hidden_label .gfield_label {
+  @extend .screen-reader-text;
+}
+
 // Anti-spam honeypot
 .gform_validation_container,
 .gform_wrapper .gform_validation_container,
