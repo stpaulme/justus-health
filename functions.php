@@ -50,9 +50,6 @@ class SPMSite extends Timber\Site
 
     public function add_to_context($context)
     {
-        $environment = wp_get_environment_type();
-        $context['environment'] = $environment;
-
         $context['categories'] = wp_list_categories(array(
             'echo' => false,
             'title_li' => '<h2>Categories</h2>',

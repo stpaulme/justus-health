@@ -101,6 +101,25 @@
             "button_label": "Add Module",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_60623b1b9caf4",
+            "label": "Show AIDSLine CTA?",
+            "name": "show_aidsline_cta",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -120,5 +139,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1615477217
+    "modified": 1617050414
 }
