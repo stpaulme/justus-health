@@ -164,7 +164,7 @@ img {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.125;
-  padding: 15px 25px !important;
+  padding: 13px 24px !important;
 
   &:after {
     position: absolute;
@@ -193,6 +193,21 @@ img {
     &:after {
       background-color: $purple-medium;
     }
+  }
+
+  &--header {
+    padding: 9px 24px !important;
+
+    &:after {
+      background-color: $purple-medium;
+    }
+
+    &:hover {
+      &:after {
+        background-color: $purple;
+      }
+    }
+
   }
 }
 

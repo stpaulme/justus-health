@@ -1,5 +1,6 @@
 .site-header {
   background-color: $white;
+  overflow: hidden;
 
   &--sticky {
     position: sticky;
@@ -11,6 +12,10 @@
   .site-header__row {
     align-items: center;
     padding-bottom: 15px;
+  }
+
+  .site-header__social-media {
+    display: none;
   }
 
   .site-header__aidsline {
@@ -113,7 +118,7 @@
     display: none;
   }
 
-  .site-header__desktop-menus-col {
+  .site-header__desktop-menu {
     display: none;
   }
 }
@@ -124,7 +129,7 @@
       padding: 20px 0;
     }
 
-    .site-header__aidsline-col {
+    .site-header__menus-col {
       margin-left: auto;
     }
 
@@ -161,6 +166,149 @@
 
     #site-header__hamburger {
       background-color: $lilac-bg-alt;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .site-header {
+    .site-header__row {
+      padding-bottom: 0;
+    }
+
+    .site-header__logo-col {
+      padding-right: 60px;
+    }
+
+    .site-header__menus-col {
+      align-items: flex-end;
+      display: flex; // separates menus vertically
+      flex-direction: column;
+      margin-left: 0;
+
+      // both menus
+      .menu {
+        display: flex;
+
+        .menu__link {
+          color: $gray-text;
+          font-weight: 600;
+
+          &:focus {
+            outline: 0;
+          }
+
+          &:not(.button):focus-visible {
+            span {
+              outline: 2px solid $red;
+            }
+          }
+
+          &:hover {
+            color: $purple;
+          }
+
+          &.current-menu-item,
+          &.current-page-ancestor {
+            color: $purple-medium;
+          }
+        }
+      }
+    }
+
+    .site-header__menus-upper {
+      align-items: center;
+      display: flex; // separates social media and secondary menu horizontally
+      justify-content: flex-end;
+      margin-bottom: 15px;
+      width: 100%;
+
+      // just secondary menu
+      .menu {
+        align-items: center;
+
+        .menu__item {
+          &:after {
+            color: $lilac-bg-alt;
+            content: '/';
+          }
+
+          &:last-child {
+            &:after {
+              content: '';
+            }
+          }
+        }
+
+        .menu__link {
+          font-size: 1rem;
+          line-height: 1.25;
+          padding: 8px 15px;
+
+          &.button {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+
+    .site-header__social-media {
+      display: block;
+    }
+
+    .site-header__menus-lower {
+      background-color: $lilac-bg;
+      display: flex; // separates primary menu and AIDSLine horizontally
+      width: 100%;
+    }
+
+    .site-header__desktop-menu--primary {
+      position: relative;
+      flex: 1;
+      padding: 10px 0;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        background-color: $lilac-bg;
+        content: '';
+        display: block;
+        height: 100%;
+        transform: skew(-20deg);
+        width: 100%;
+      }
+
+      // just primary menu
+      .menu {
+        position: relative;
+        z-index: 1;
+        justify-content: space-evenly;
+
+        .menu__item {
+          flex: 0 1 auto;
+        }
+
+        .menu__link {
+          font-size: 1.0625rem;
+          line-height: 1.1;
+        }
+      }
+    }
+
+    .site-header__aidsline {
+      &:after {
+        max-width: 100vw;
+        width: 100vw;
+      }
+    }
+
+    .site-header__hamburger-col {
+      display: none;
+    }
+
+    .site-header__desktop-menu {
+      display: block;
     }
   }
 }

@@ -5,7 +5,8 @@
 
     .social-media__item {
         display: inline-block;
-        margin-right: 20px;
+        margin-top: 5px;
+        margin-right: 10px;
 
         &:last-child {
             margin-right: 0;
@@ -15,12 +16,13 @@
     .social-media__link {
         background-repeat: no-repeat;
         display: block;
-        height: 27px;
-        width: 27px;
+        height: 20px;
+        width: 20px;
 
         &[href*="facebook"] {
             background-image: url(../../dist/img/social/social_fb.svg);
 
+            &:focus,
             &:hover {
                 background-image: url(../../dist/img/social/social_fb_hover.svg);
             }
@@ -29,6 +31,7 @@
         &[href*="linkedin"] {
             background-image: url(../../dist/img/social/social_linkedin.svg);
 
+            &:focus,
             &:hover {
                 background-image: url(../../dist/img/social/social_linkedin_hover.svg);
             }
@@ -37,9 +40,14 @@
         &[href*="twitter"] {
             background-image: url(../../dist/img/social/social_twitter.svg);
 
+            &:focus,
             &:hover {
                 background-image: url(../../dist/img/social/social_twitter_hover.svg);
             }
+        }
+
+        &:focus {
+            outline: 0;
         }
     }
 }

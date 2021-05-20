@@ -3,16 +3,34 @@
 <header class="site-header {{ options.sticky_header ? 'site-header--sticky' }}">
 	<div class="container">
 		<div class="row no-gutters site-header__row">
-			<div class="col-12 col-md-auto order-md-2 site-header__aidsline-col">
-
-				{% if options.aidsline_cta.link %}
-					<div class="site-header__aidsline">
-						<span class="site-header__aidsline-label">AIDSLine</span>
-
-						<a class="site-header__aidsline-link" href="{{ options.aidsline_cta.link.url }}">{{ options.aidsline_cta.link.title }}</a>
+			<div class="col-12 col-md-auto order-md-2 col-lg-9 site-header__menus-col">
+				<div class="site-header__menus-upper">
+					<div class="site-header__social-media">
+						{% include 'blocks/social-media.twig' %}
 					</div>
-				{% endif %}
 
+					<div class="site-header__desktop-menu site-header__desktop-menu--secondary">
+						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items } %}
+					</div>
+				</div>
+
+				<div class="site-header__menus-lower">
+					<div class="site-header__desktop-menu site-header__desktop-menu--primary">
+						{% if options.desktop_menu_style == 'dropdown' %}
+							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'modifier' : 'dropdown', 'items' : menu_primary.get_items, 'show_children' : true } %}
+						{% else %}
+							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'items' : menu_primary.get_items, 'show_children' : false } %}
+						{% endif %}
+					</div>
+
+					{% if options.aidsline_cta.link %}
+						<div class="site-header__aidsline">
+							<span class="site-header__aidsline-label">AIDSLine</span>
+
+							<a class="site-header__aidsline-link" href="{{ options.aidsline_cta.link.url }}">{{ options.aidsline_cta.link.title }}</a>
+						</div>
+					{% endif %}
+				</div>
 			</div>
 
 			<div class="col-7 col-md-4 order-md-1 col-lg-3 site-header__logo-col">
@@ -27,22 +45,6 @@
 				</button>
 				<div class="site-header__menu-mobile">
 					{% include 'blocks/nav.twig' with { 'menu' : menu_mobile, 'id' : 'site-header__nav-mobile', 'items' : menu_mobile.get_items, 'show_children' : true } %}
-				</div>
-			</div>
-
-			<div class="col site-header__desktop-menus-col">
-				<div class="site-header__desktop-menus">
-					<div class="site-header__desktop-menu site-header__desktop-menu--secondary">
-						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items } %}
-						{% include 'blocks/social-media.twig' %}
-					</div>
-					<div class="site-header__desktop-menu site-header__desktop-menu--primary">
-						{% if options.desktop_menu_style == 'dropdown' %}
-							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'modifier' : 'dropdown', 'items' : menu_primary.get_items, 'show_children' : true } %}
-						{% else %}
-							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'items' : menu_primary.get_items, 'show_children' : false } %}
-						{% endif %}
-					</div>
 				</div>
 			</div>
 		</div>
