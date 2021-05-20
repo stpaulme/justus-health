@@ -1,21 +1,6 @@
-// Colors
-$black: #000;
-$blue: #0084DC;
-$dark-blue: #052949;
-$gray: #D8D8D8;
-$gray-border: #dfeaeb;
-$light-blue: #9ac0c4;
-$rose: #bf8472;
-$teal: #367e85;
-$white: #fff;
-$mid-blue: #487195;
-$gray-alt: #bcbcc3;
-$red: #B70404;
-$purple: #1c005a;
+@import "colors";
 
 // Bootstrap variables
-$link-color: $blue;
-$link-hover-color: $red;
 $link-hover-decoration: none;
 $enable-rounded: false;
 
@@ -36,9 +21,7 @@ $enable-rounded: false;
 @import "../../node_modules/@splidejs/splide/dist/css/splide.min.css";
 
 // Fonts
-$text: "Nunito Sans",
-sans-serif;
-$display: "Montserrat",
+$text: "Source Sans Pro",
 sans-serif;
 
 *:focus {
@@ -52,7 +35,20 @@ html {
 }
 
 a {
-  font-weight: bold;
+  color: $purple;
+  font-weight: 700;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $red;
+  }
+
+  &:hover {
+    color: $dark-purple-bg-alt;
+  }
 }
 
 a,
@@ -159,15 +155,44 @@ img {
 }
 
 .button {
-  background-color: $link-color;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
   border: none;
   color: $white !important;
   display: inline-block;
+  font-size: 1rem;
   font-weight: 700;
-  padding: 10px 20px !important;
+  line-height: 1.125;
+  padding: 15px 25px !important;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $purple;
+    content: '';
+    display: block;
+    height: 100%;
+    transform: skew(-20deg);
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 0
+  }
+
+  &:focus-visible {
+    &:after {
+      outline: 3px solid $red;
+    }
+  }
 
   &:hover {
-    background-color: $link-hover-color;
+    &:after {
+      background-color: $purple-medium;
+    }
   }
 }
 
@@ -307,10 +332,19 @@ img {
 
 .text-heavy {
   a {
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid $purple;
+    color: $purple;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $red;
+    }
 
     &:hover {
-      border-bottom-color: $link-hover-color;
+      color: $red;
     }
   }
 
