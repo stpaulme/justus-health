@@ -1,19 +1,27 @@
 {% set logo = Image(options.logo) %}
 
 <header class="site-header {{ options.sticky_header ? 'site-header--sticky' }}">
-	{% if options.announcement.copy or options.announcement.link.url %}
-		{% include 'blocks/announcement.twig' %}
-	{% endif %}
-
 	<div class="container">
-		<div class="row site-header__row">
-			<div class="col-3 col-md-1">
-				<a class="link-has-image" href="{{ site.url }}">
+		<div class="row no-gutters site-header__row">
+			<div class="col-12 col-md-auto order-md-2 site-header__aidsline-col">
+
+				{% if options.aidsline_cta.link %}
+					<div class="site-header__aidsline">
+						<span class="site-header__aidsline-label">AIDSLine</span>
+
+						<a class="site-header__aidsline-link" href="{{ options.aidsline_cta.link.url }}">{{ options.aidsline_cta.link.title }}</a>
+					</div>
+				{% endif %}
+
+			</div>
+
+			<div class="col-7 col-md-4 order-md-1 col-lg-3 site-header__logo-col">
+				<a class="site-header__logo-link" href="{{ site.url }}">
 					<img alt="{{ site.title }} homepage" class="site-header__logo" src="{{ logo.src }}">
 				</a>
 			</div>
 
-			<div class="col site-header__hamburger-col">
+			<div class="col col-md-auto order-md-3 site-header__hamburger-col">
 				<button id="site-header__hamburger" aria-label="Toggle Mobile Menu">
 					<span class="sr-only">Toggle Mobile Menu</span>
 				</button>
