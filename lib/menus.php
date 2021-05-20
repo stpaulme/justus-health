@@ -3,8 +3,7 @@
 $locations = array(
     'primary' => __('Primary'),
     'secondary' => __('Secondary'),
-    'footer_1' => __('Footer 1'),
-    'footer_2' => __('Footer 2'),
+    'footer' => __('Footer'),
     'mobile' => __('Mobile'),
 );
 
