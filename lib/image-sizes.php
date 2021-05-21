@@ -13,7 +13,3 @@ add_image_size('wide-sm', 576, 282, true);
 add_image_size('infographic', 2000, 0, false);
 add_image_size('infographic-md', 1024, 0, false);
 add_image_size('infographic-sm', 576, 0, false);
-
-// add_image_size('hero', 2000, 1051, true);
-// add_image_size('hero-md', 1024, 538, true);
-// add_image_size('hero-sm', 576, 303, true);
