@@ -15,9 +15,6 @@
   }
 
   &__heading {
-    color: $purple-medium;
-    font-size: 1.6875rem;
-    line-height: 1.15;
     margin-bottom: 0;
   }
 
@@ -86,11 +83,6 @@
     &__copy {
       position: relative;
       z-index: 1;
-    }
-
-    &__heading {
-      font-size: 2.25rem;
-      line-height: 1.11111111;
     }
 
     &__links {
