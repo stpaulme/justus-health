@@ -2,34 +2,33 @@
 
 {% block outer_top %}
 	{% set image = Image(module.image) %}
-	{% if image %}
-		<picture>
-			<source srcset="{{ image.src('wide')|towebp }} 2000w, {{ image.src('wide-md')|towebp }} 1024w, {{ image.src('wide-sm')|towebp }} 576w" sizes="100vw" type="image/webp">
-			<source srcset="{{ image.src('wide') }} 2000w, {{ image.src('wide-md') }} 1024w, {{ image.src('wide-sm') }} 576w" sizes="100vw" type="image/jpeg">
-			<img alt="" class="hero__image" loading="lazy" src="{{ image.src('wide') }}">
-		</picture>
-	{% endif %}
+
+	<div class="hero__image" style="background-image:  url('{{ image.src  }}');"></div>
 {% endblock %}
 
 {% block content %}
 
 	<div class="hero__content">
-		{% if module.heading %}
-			<h1 class="hero__heading">{{ module.heading }}</h1>
-		{% endif %}
+		<div class="hero__content-upper">
+			{% if module.heading %}
+				<h1 class="hero__heading">{{ module.heading }}</h1>
+			{% endif %}
 
-		{% if module.copy %}
-			<div class="hero__copy wysiwyg">
-				{{ module.copy }}
-			</div>
-		{% endif %}
+			{% if module.copy %}
+				<div class="hero__copy wysiwyg">
+					{{ module.copy }}
+				</div>
+			{% endif %}
+		</div>
 
-		{% if module.links %}
-			<div class="hero__links">
-				{% for item in module.links %}
-					<a class="hero__link button" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
-				{% endfor %}
-			</div>
-		{% endif %}
+		<div class="hero__content-lower">
+			{% if module.links %}
+				<div class="hero__links">
+					{% for item in module.links %}
+						<a class="hero__link button" href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
 	</div>
 {% endblock %}
