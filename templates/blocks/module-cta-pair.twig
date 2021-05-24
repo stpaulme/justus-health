@@ -2,24 +2,29 @@
 
 {% block content %}
 
-	{% if module.heading %}
-		<h2 class="cta-group__heading">{{ module.heading }}</h2>
-	{% endif %}
+	<div class="row">
+		{% if module.heading or module.description %}
+			<div class="col-lg-5">
+				{% if module.heading %}
+					<h2 class="cta-group__heading">{{ module.heading }}</h2>
+				{% endif %}
+				{% if module.description %}
+					<div class="cta-pair__description wysiwyg">{{ module.description }}</div>
+				{% endif %}
+			</div>
+		{% endif %}
 
-	{% if module.description %}
-		<div class="cta-pair__description wysiwyg">{{ module.description }}</div>
-	{% endif %}
-
-	{% if module.cta_pair|length > 0 %}
-		<div class="row">
-			{% for cta in module.cta_pair %}
-				<div class="col-md-6 cta-pair__col">
-					<div class="cta-pair__cta">
-						{% include 'blocks/cta.twig' with { 'sizes' : '(min-width: 768px) 48vw, 96vw', 'heading_level' : 'h3' } %}
-					</div>
+		{% if module.cta_pair|length > 0 %}
+			<div class="col-lg-7">
+				<div class="row cta-pair__ctas-row">
+					{% for cta in module.cta_pair %}
+						<div class="col-md-6 col-lg-12 cta-pair__cta-col">
+							{% include 'blocks/cta-pair-cta.twig' %}
+						</div>
+					{% endfor %}
 				</div>
-			{% endfor %}
-		</div>
-	{% endif %}
+			</div>
+		{% endif %}
+	</div>
 
 {% endblock %}

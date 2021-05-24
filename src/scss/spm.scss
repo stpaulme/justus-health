@@ -97,7 +97,7 @@ h4 a,
   font-weight: inherit;
 
   &:hover {
-    color: $link-hover-color;
+    color: $red;
   }
 }
 
@@ -472,44 +472,45 @@ img {
   }
 }
 
-@import "er.scss";
-@import "gf.scss";
-@import "wp.scss";
+@import "er";
+@import "gf";
+@import "wp";
 
-@import "blocks/announcement.scss";
-@import "blocks/back.scss";
-@import "blocks/breadcrumbs.scss";
-@import "blocks/cta.scss";
-@import "blocks/excerpt.scss";
-@import "blocks/member.scss";
-@import "blocks/menu.scss";
-@import "blocks/module-anchor-links.scss";
-@import "blocks/module-cta-group.scss";
-@import "blocks/module-cta-pair.scss";
-@import "blocks/module-cta-single.scss";
-@import "blocks/module-counselors.scss";
-@import "blocks/module-featured-event.scss";
-@import "blocks/module-hero.scss";
-@import "blocks/module-image.scss";
-@import "blocks/module-feed-event.scss";
-@import "blocks/module-feed-post.scss";
-@import "blocks/module-link-list.scss";
-@import "blocks/module-statistics.scss";
-@import "blocks/module-team.scss";
-@import "blocks/module-text.scss";
-@import "blocks/module-therapists-or-interns.scss";
-@import "blocks/module-video.scss";
-@import "blocks/page-title.scss";
-@import "blocks/pagination.scss";
-@import "blocks/post.scss";
-@import "blocks/search-bar.scss";
+@import "blocks/announcement";
+@import "blocks/back";
+@import "blocks/breadcrumbs";
+@import "blocks/cta-pair-cta";
+@import "blocks/cta";
+@import "blocks/excerpt";
+@import "blocks/member";
+@import "blocks/menu";
+@import "blocks/module-anchor-links";
+@import "blocks/module-cta-group";
+@import "blocks/module-cta-pair";
+@import "blocks/module-cta-single";
+@import "blocks/module-counselors";
+@import "blocks/module-featured-event";
+@import "blocks/module-hero";
+@import "blocks/module-image";
+@import "blocks/module-feed-event";
+@import "blocks/module-feed-post";
+@import "blocks/module-link-list";
+@import "blocks/module-statistics";
+@import "blocks/module-team";
+@import "blocks/module-text";
+@import "blocks/module-therapists-or-interns";
+@import "blocks/module-video";
+@import "blocks/page-title";
+@import "blocks/pagination";
+@import "blocks/post";
+@import "blocks/search-bar";
 @import "blocks/sidebar/sidebar-module-cta-single";
 @import "blocks/sidebar/sidebar-nav";
-@import "blocks/site-header.scss";
-@import "blocks/site-footer.scss";
-@import "blocks/social-media.scss";
-@import "blocks/statistic.scss";
-@import "blocks/sub-nav.scss";
+@import "blocks/site-header";
+@import "blocks/site-footer";
+@import "blocks/social-media";
+@import "blocks/statistic";
+@import "blocks/sub-nav";
 
 @import "archive/news-landing";
 @import "archive/search-landing";
