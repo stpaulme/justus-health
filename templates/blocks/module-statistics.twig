@@ -6,16 +6,10 @@
 		<h2 class="statistics__heading">{{ module.heading }}</h2>
 	{% endif %}
 
-	{% if module.description %}
-		<div class="statistics__description wysiwyg">
-			{{ module.description }}
-		</div>
-	{% endif %}
-
 	{% if module.statistics|length > 0 %}
 		<div class="row">
 			{% for statistic in module.statistics %}
-				<div class="col-md-4 statistics__col">
+				<div class="col-md-6 offset-md-3 col-lg-4 offset-lg-0 statistics__col">
 					{% include 'blocks/statistic.twig' %}
 				</div>
 			{% endfor %}

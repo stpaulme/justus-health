@@ -230,6 +230,14 @@ img {
 
   }
 
+  &--red-hover {
+    &:hover {
+      &:after {
+        background-color: $red;
+      }
+    }
+  }
+
   &--white {
     color: $purple !important;
 

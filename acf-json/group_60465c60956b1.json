@@ -22,25 +22,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_6047dbaa71ad6",
-            "label": "Description",
-            "name": "description",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
             "key": "field_60465c6f25e81",
             "label": "Statistics",
             "name": "statistics",
@@ -98,30 +79,6 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_60465cdb25e85",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_60465cc025e84",
                     "label": "Link",
                     "name": "link",
@@ -156,5 +113,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615322046
+    "modified": 1621881087
 }

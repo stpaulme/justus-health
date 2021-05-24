@@ -1,26 +1,20 @@
 <div class="statistic">
-	{% set image = Image(statistic.image) %}
-	{% if image %}
-		<picture>
-			<source srcset="{{ image.src('square')|towebp }}" type="image/webp">
-			<source srcset="{{ image.src('square') }}" type="image/jpeg">
-			<img alt="" class="statistic__image" loading="lazy" src="{{ image.src('square') }}">
-		</picture>
-	{% endif %}
+	<div class="statistic__content">
+		{% if statistic.figure %}
+			<h3 class="statistic__figure">{{ statistic.figure }}</h3>
+		{% endif %}
 
-	{% if statistic.figure %}
-		<h3 class="figure__figure">{{ statistic.figure }}</h3>
-	{% endif %}
-
-	{% if statistic.elaboration %}
-		<div class="statistic__elaboration wysiwyg">
-			{{ statistic.elaboration }}
-		</div>
-	{% endif %}
+		{% if statistic.elaboration %}
+			<div class="statistic__elaboration wysiwyg">
+				{{ statistic.elaboration }}
+			</div>
+		{% endif %}
+	</div>
 
 	{% if statistic.link.url %}
 		<div class="statistic__link">
-			<a href="{{ statistic.link.url }}" target="{{ statistic.link.target }}">{{ statistic.link.title }}</a>
+			<a class="button button--red-hover" href="{{ statistic.link.url }}" target="{{ statistic.link.target }}">{{ statistic.link.title }}
+			</a>
 		</div>
 	{% endif %}
 </div>
