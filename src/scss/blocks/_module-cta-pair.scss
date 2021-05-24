@@ -5,7 +5,7 @@
     margin-bottom: 0;
   }
 
-  &__description {
+  &__heading+.cta-pair__description {
     margin-top: 10px;
   }
 
@@ -27,7 +27,7 @@
     padding-top: 50px;
     padding-bottom: 60px;
 
-    &__description {
+    &__heading+.cta-pair__description {
       margin-top: 15px;
     }
 
