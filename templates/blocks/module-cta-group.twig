@@ -6,17 +6,11 @@
 		<h2 class="cta-group__heading">{{ module.heading }}</h2>
 	{% endif %}
 
-	{% if module.description %}
-		<div class="cta-group__description wysiwyg">{{ module.description }}</div>
-	{% endif %}
-
 	{% if module.cta_group|length > 0 %}
 		<div class="row">
 			{% for cta in module.cta_group %}
-				<div class="col-md-4 cta-group__col">
-					<div class="cta-group__cta">
-						{% include 'blocks/cta.twig' with { 'sizes' : '(min-width: 768px) 32vw, 96vw', 'heading_level' : 'h3' } %}
-					</div>
+				<div class="col-md-6 col-lg-3 cta-group__col">
+					{% include 'blocks/cta-group-cta.twig' %}
 				</div>
 			{% endfor %}
 		</div>

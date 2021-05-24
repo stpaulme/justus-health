@@ -1,23 +1,35 @@
 .cta-group {
-  .cta-group__description {
+  background-color: $dark-purple-bg-alt;
+  background-image: url('../../dist/img/accents/dark_bkgrnd_cta.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 125% 100%;
+  padding: 40px 0 20px;
+
+  &__heading {
+    color: $white;
     margin-bottom: 20px;
   }
 
-  .cta-group__col {
+  &__col {
     margin-bottom: 20px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
 @include media-breakpoint-up(md) {
   .cta-group {
-    .cta-group__col {
-      margin-bottom: 30px;
+    background-position: top right;
+    background-size: 83.3333% 100%;
+    padding: 60px 0;
 
-      &:nth-last-child(-n + 3) {
+    &__heading {
+      margin-bottom: 30px;
+    }
+
+    &__col {
+      margin-bottom: 40px;
+
+      &:nth-last-child(-n + 2) {
         margin-bottom: 0;
       }
     }
@@ -26,8 +38,12 @@
 
 @include media-breakpoint-up(lg) {
   .cta-group {
-    .cta-group__description {
-      max-width: 83.3333%;
+    padding-bottom: 50px;
+
+    &__col {
+      &:nth-last-child(-n + 4) {
+        margin-bottom: 0;
+      }
     }
   }
 }

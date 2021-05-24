@@ -1,0 +1,27 @@
+<div class="cta-group-cta">
+	{% if cta.heading %}
+		<h3 class="cta-group-cta__heading">
+			{% if cta.link %}
+				<a href="{{ cta.link.url }}" target="{{ cta.link.target }}">
+				{%  endif %}
+				{{ cta.heading }}
+				{% if cta.link %}
+				</a>
+			{%  endif %}
+		</h3>
+	{% endif %}
+
+	{% if cta.copy %}
+		<div class="cta-group-cta__copy wysiwyg">
+			{{ cta.copy }}
+		</div>
+	{% endif %}
+
+	{% if cta.link %}
+		<div class="cta-group-cta__link">
+			<a href="{{ cta.link.url }}" target="{{ cta.link.target }}">{{ cta.link.title }}
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		</div>
+	{% endif %}
+</div>
