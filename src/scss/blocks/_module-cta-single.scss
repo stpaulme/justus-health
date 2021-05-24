@@ -22,6 +22,19 @@
     .cta-single__copy {
         font-size: 1.1875rem;
         line-height: 1.5;
+
+        a {
+            border-bottom: 2px solid $white;
+            color: $white;
+
+            &:focus-visible {
+                outline: 2px solid $dark-purple-bg;
+            }
+
+            &:hover {
+                color: $dark-purple-bg;
+            }
+        }
     }
 
     .cta-single__link {
