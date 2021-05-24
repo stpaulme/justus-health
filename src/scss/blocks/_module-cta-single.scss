@@ -43,11 +43,22 @@
 }
 
 .cta-single--geometric-bg {
+    position: relative;
     background-color: $lilac-bg-alt;
-    background-image: url('../../dist/img/accents/triangle_upperright.svg');
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: 25%;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url('../../dist/img/accents/triangle_upperright.svg');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 25%;
+    }
 
     .cta-single__link {
         margin-top: 15px;
@@ -66,8 +77,11 @@
     }
 
     .cta-single--geometric-bg {
-        background-size: 41.6667%;
         padding: 80px 0;
+
+        &:after {
+            width: 41.6667%;
+        }
 
         .cta-single__link {
             margin-top: 20px;
@@ -84,7 +98,10 @@
     }
 
     .cta-single--geometric-bg {
-        background-size: 50%;
         padding-bottom: 90px;
+
+        &:after {
+            width: 50%;
+        }
     }
 }
