@@ -46,7 +46,7 @@
 		{% endif %}
 
 		{% if post.meta('show_aidsline_cta') == true %}
-			{% include 'blocks/module-cta-single.twig' with { 'module_name' : 'cta-single', 'module' : options.aidsline_cta } %}
+			{% include 'blocks/module-cta-single.twig' with { 'module_name' : 'cta-single', 'module_style' : 'geometric-bg', 'module' : options.aidsline_cta } %}
 		{% endif %}
 
 		{% if below_modules %}

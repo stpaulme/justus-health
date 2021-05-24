@@ -1,14 +1,77 @@
 .cta-single {
+    padding: 40px 0;
+
+    &__heading {
+        margin-bottom: 0;
+    }
+
+    &__copy {
+        margin-top: 10px;
+    }
+}
+
+.cta-single--color-bg {
+    background-color: $purple;
+    color: $white;
     text-align: center;
+
+    .cta-single__heading {
+        color: $white;
+    }
+
+    .cta-single__copy {
+        font-size: 1.1875rem;
+        line-height: 1.5;
+    }
+
+    .cta-single__link {
+        margin-top: 20px;
+    }
+}
+
+.cta-single--geometric-bg {
+    background-color: $lilac-bg-alt;
+    background-image: url('../../dist/img/accents/triangle_upperright.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 25%;
+
+    .cta-single__link {
+        margin-top: 15px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .cta-single {
+        &__copy {
+            margin-top: 15px;
+        }
+    }
+
+    .cta-single--color-bg {
+        padding: 90px 0;
+    }
+
+    .cta-single--geometric-bg {
+        background-size: 41.6667%;
+        padding: 80px 0;
+
+        .cta-single__link {
+            margin-top: 20px;
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
-    .cta-single {
-        .cta {
-            .cta__copy {
-                margin: 0 auto;
-                max-width: 83.3333%;
-            }
+    .cta-single--color-bg {
+        .cta-single__copy {
+            font-size: 1.3125rem;
+            line-height: 1.4;
         }
+    }
+
+    .cta-single--geometric-bg {
+        background-size: 50%;
+        padding-bottom: 90px;
     }
 }

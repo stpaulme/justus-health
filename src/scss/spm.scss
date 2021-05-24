@@ -229,6 +229,29 @@ img {
     }
 
   }
+
+  &--white {
+    color: $purple !important;
+
+    &:after {
+      background-color: $white;
+    }
+
+    &:focus-visible {
+      &:after {
+        outline: 3px solid $dark-purple-bg;
+      }
+    }
+
+    &:hover {
+      color: $white !important;
+
+      &:after {
+        background-color: $dark-purple-bg-alt;
+      }
+    }
+
+  }
 }
 
 .content-col {

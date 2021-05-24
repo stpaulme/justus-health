@@ -2,6 +2,36 @@
 
 {% block content %}
 
-	{% include 'blocks/cta.twig' with { 'cta' : module, 'sizes' : '96vw', 'heading_level' : 'h2' } %}
+	<div class="row">
+		{% if module_style == 'color-bg' %}
+			{% set col_class = 'col-md-10 offset-md-1 col-lg-8 offset-lg-2' %}
+		{% else %}
+			{% set col_class = 'col-md-8 offset-md-1 col-lg-6 offset-lg-0' %}
+		{% endif %}
+
+		<div class="{{ col_class }}">
+			{% if module.heading %}
+				<h2 class="cta-single__heading">{{ module.heading }}</h2>
+			{% endif %}
+
+			{% if module.copy %}
+				<div class="cta-single__copy wysiwyg">
+					{{ module.copy }}
+				</div>
+			{% endif %}
+
+			{% if module.link %}
+				{% if module_style == 'color-bg' %}
+					{% set button_class = 'button button--white' %}
+				{% else %}
+					{% set button_class = 'button' %}
+				{% endif %}
+
+				<div class="cta-single__link">
+					<a class="{{ button_class }}" href="{{ module.link.url }}" target="{{ module.link.target }}">{{ module.link.title }}</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
 
 {% endblock %}
