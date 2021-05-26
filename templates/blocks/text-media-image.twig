@@ -1,8 +1,8 @@
 {% set media_position = module.media_position %}
 {% set image = Image(module.image) %}
-{% set image_type = module.image_type %}
+{% set image_type = module.image_style %}
 
-<div class="row text__row">
+<div class="row">
 
 	{% if image.src %}
 		<div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0 {{ media_position == 'right' ? 'order-lg-2' }}">

@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_60ae59fd91a10",
-            "label": "Style",
+            "label": "Background Style",
             "name": "style",
             "type": "select",
             "instructions": "",
@@ -54,6 +54,39 @@
             "placeholder": ""
         },
         {
+            "key": "field_60ae6c76bfc9b",
+            "label": "Image Style",
+            "name": "image_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60355a29211f3",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "contained": "Contained - Does Not Touch Edge of Screen",
+                "full": "Full Bleed - Touches Edge of Screen"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_60355a4f27748",
             "label": "Media Position",
             "name": "media_position",
@@ -77,39 +110,6 @@
             "choices": {
                 "left": "Left",
                 "right": "Right"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_60ae6c76bfc9b",
-            "label": "Image Type",
-            "name": "image_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_60355a29211f3",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "contained": "Contained - Does Not Touch Edge of Screen",
-                "full": "Full Bleed - Touches Edge of Screen"
             },
             "default_value": false,
             "allow_null": 0,
@@ -296,5 +296,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1622052371
+    "modified": 1622052777
 }
