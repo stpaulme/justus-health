@@ -1,0 +1,34 @@
+{% set media_position = module.media_position %}
+{% set video = module.video %}
+
+<div class="row">
+
+	{% if video %}
+		<div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0 {{ media_position == 'right' ? 'order-lg-2' }}">
+			<div class="text__media">
+				<div class="text__video er-container">
+					{{ video }}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+	<div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0 {{ media_position == 'right' ? 'order-lg-1' }}">
+		<div class="text__content">
+			{% if module.heading %}
+				<h2 class="text__heading">{{ module.heading }}</h2>
+			{% endif %}
+
+			<div class="text__copy text-heavy wysiwyg">
+				{{ module.copy }}
+			</div>
+
+			{% if module.link.url %}
+				<div class="text__link">
+					<a class="button" href="{{ module.link.url }}" target="{{ module.link.target }}">{{ module.link.title }}</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+</div>
