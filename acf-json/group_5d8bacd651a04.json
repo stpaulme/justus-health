@@ -54,39 +54,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_60ae6c76bfc9b",
-            "label": "Image Type",
-            "name": "image_type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_60355a29211f3",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "illustration": "Illustration",
-                "photo": "Photo"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_60355a4f27748",
             "label": "Media Position",
             "name": "media_position",
@@ -110,6 +77,39 @@
             "choices": {
                 "left": "Left",
                 "right": "Right"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60ae6c76bfc9b",
+            "label": "Image Type",
+            "name": "image_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60355a29211f3",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "contained": "Contained - Does Not Touch Edge of Screen",
+                "full": "Full Bleed - Touches Edge of Screen"
             },
             "default_value": false,
             "allow_null": 0,
@@ -296,5 +296,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1622043917
+    "modified": 1622052371
 }
