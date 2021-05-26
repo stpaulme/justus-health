@@ -44,13 +44,13 @@
 
 .cta-single--geometric-bg {
     position: relative;
-    background-color: $lilac-bg-alt;
+    background-color: $lilac-bg;
 
     &:after {
         position: absolute;
         top: 0;
         right: 0;
-        background-image: url('../../dist/img/accents/triangle_upperright.svg');
+        background-image: url('../../dist/img/accents/aidsline_triangles.svg');
         background-position: top right;
         background-repeat: no-repeat;
         background-size: contain;
