@@ -101,9 +101,20 @@
       margin-bottom: 0;
     }
 
+    &__meta {
+      &--without-image {
+        border-right: 2px solid $white;
+        height: 100%;
+      }
+    }
+
     &__description {
       border-top: 0;
       padding-top: 0;
+
+      &--without-image {
+        margin-top: 0;
+      }
     }
 
     &__link {
