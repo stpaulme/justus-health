@@ -91,11 +91,25 @@ class Event extends Timber\Post
     public $_start;
     public $_end;
     public $_event_category;
+    public $_address;
 
     public function start()
     {
         if (!$this->_start) {
-            $start = tribe_get_start_date($this);
+            if (tribe_event_is_multiday($this)) { // Multi Day
+                if (tribe_event_is_all_day($this)) { // All Day
+                    $start = tribe_get_start_date($this, false, 'F j, Y'); // April 28, 2021
+                } else { // Timed
+                    $start = tribe_get_start_date($this, true, 'F j, Y / g:i A'); // April 28, 2021 / 10:00 AM
+                }
+            } else { // Single Day
+                if (tribe_event_is_all_day($this)) { // All Day
+                    $start = tribe_get_start_date($this, false, 'F j, Y'); // April 28, 2021
+                } else { // Timed
+                    $start = tribe_get_start_date($this, true, 'F j, Y / g:i A'); // April 28, 2021 / 10:00 AM
+                }
+            }
+
             if (isset($start)) {
                 $this->_start = $start;
             }
@@ -107,7 +121,20 @@ class Event extends Timber\Post
     public function end()
     {
         if (!$this->_end) {
-            $end = tribe_get_end_date($this);
+            if (tribe_event_is_multiday($this)) { // Multi Day
+                if (tribe_event_is_all_day($this)) { // All Day
+                    $end = tribe_get_end_date($this, false, 'F j, Y'); // April 30, 2021
+                } else { // Timed
+                    $end = tribe_get_end_date($this, true, 'F j, Y / g:i A'); // April 30, 2021 / 11:00 AM
+                }
+            } else { // Single Day
+                if (tribe_event_is_all_day($this)) { // All Day
+                    $end = false;
+                } else { // Timed
+                    $end = tribe_get_end_date($this, true, 'g:i A'); // 10:00 AM
+                }
+            }
+
             if (isset($end)) {
                 $this->_end = $end;
             }
@@ -125,6 +152,18 @@ class Event extends Timber\Post
             }
         }
         return $this->_event_category;
+    }
+
+    public function address()
+    {
+        if (!$this->_address) {
+            $address = trim(strip_tags(tribe_get_full_address($this), '<br>'));
+
+            if (isset($address)) {
+                $this->_address = $address;
+            }
+        }
+        return $this->_address;
     }
 }
 

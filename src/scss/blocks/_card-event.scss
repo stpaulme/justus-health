@@ -1,0 +1,37 @@
+.card-event {
+    background-color: $lilac-bg;
+    padding: 20px 15px;
+
+    &__date {
+        color: $dark-purple-bg;
+        font-weight: 600;
+        line-height: 1.25;
+        text-transform: uppercase;
+    }
+
+    &__address {
+        color: $gray-text;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-top: 15px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .card-event {
+        padding: 20px;
+
+        &__date {
+            font-size: 1.125rem;
+            line-height: 1.1111;
+        }
+
+        &__address {
+            font-size: 1rem;
+            line-height: 1.125;
+            margin-top: 12px;
+        }
+    }
+
+}

@@ -2,22 +2,49 @@
 
 {% block content %}
 
-	{% if module.heading %}
-		<h2 class="feed-event__heading">{{ module.heading }}</h2>
-	{% endif %}
+	<div class="row">
+		<div class="col-md-5 col-lg-6">
+			{% if module.heading %}
+				<h2 class="feed-event__heading">{{ module.heading }}</h2>
+			{% endif %}
 
-	{% if module.event_category.description %}
-		<p class="feed-event__description">{{ module.event_category.description }}</p>
-	{% endif %}
-
-	{% if module.events|length > 0 %}
-		<div class="row">
-			{% for post in module.events %}
-				<div class="col-md-4 feed-event__col">
-					{% include 'blocks/excerpt-tribe_events.twig' with { 'show_footer' : true } %}
-				</div>
-			{% endfor %}
+			{% if module.event_category.description %}
+				<p class="feed-event__description">{{ module.event_category.description }}</p>
+			{% endif %}
 		</div>
-	{% endif %}
+
+		<div class="col-md-7 col-lg-6">
+			{% if module.subheading %}
+				<span class="feed-event__subheading">
+					{{ module.subheading }}
+				</span>
+			{% endif %}
+
+			{% if module.events|length > 0 %}
+				<div class="feed-event__posts">
+					{% for post in module.events %}
+						<div class="feed-event__post">
+							{% include 'blocks/card-event.twig' with { 'show_title' : module.show_titles } %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+
+
+			<div class="feed-event__all">
+				{% if module.event_category.link %}
+					<a href="{{ module.event_category.link }}">All Events in
+						{{ module.event_category.name }}
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				{% else %}
+					<a href="/events">All Events
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				{% endif %}
+			</div>
+
+		</div>
+	</div>
 
 {% endblock %}
