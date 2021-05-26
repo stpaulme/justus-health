@@ -54,6 +54,39 @@
             "placeholder": ""
         },
         {
+            "key": "field_60ae6c76bfc9b",
+            "label": "Image Type",
+            "name": "image_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60355a29211f3",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "illustration": "Illustration",
+                "photo": "Photo"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_60355a4f27748",
             "label": "Media Position",
             "name": "media_position",
@@ -229,7 +262,15 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60355a29211f3",
+                        "operator": "==",
+                        "value": "none"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -255,5 +296,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1622039800
+    "modified": 1622043917
 }
