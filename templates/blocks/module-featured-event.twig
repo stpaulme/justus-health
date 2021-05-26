@@ -6,7 +6,7 @@
 
 		{% set image = Image(module.image) %}
 		{% if image.src %}
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<picture>
 					<source srcset="{{ image.src('3by2')|towebp }} 1110w, {{ image.src('3by2-md')|towebp }} 690w, {{ image.src('3by2-sm')|towebp }} 395w" sizes="(min-width: 992px) 48vw, 96vw" type="image/webp">
 					<source srcset="{{ image.src('3by2') }} 1110w, {{ image.src('3by2-md') }} 690w, {{ image.src('3by2-sm') }} 395w" sizes="(min-width: 992px) 48vw, 96vw" type="image/jpeg">
@@ -15,23 +15,17 @@
 			</div>
 		{% endif %}
 
-		<div class="col-md-6">
+		<div class="col-lg-6">
+			{% if module.date %}
+				<time class="featured-event__date">{{ module.date }}</time>
+			{% endif %}
+
 			{% if module.heading %}
 				<h2 class="featured-event__heading">{{ module.heading }}</h2>
 			{% endif %}
 
 			{% if module.subheading %}
 				<span class="featured-event__subheading">{{ module.subheading }}</span>
-			{% endif %}
-
-			{% if module.date %}
-				<time class="featured-event__date">{{ module.date }}</time>
-			{% endif %}
-
-			{% if module.date %}
-				<address class="featured-event__location">
-					{{ module.location }}
-				</address>
 			{% endif %}
 
 			{% if module.description %}
