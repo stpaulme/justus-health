@@ -448,6 +448,11 @@ img {
   li {
     margin-bottom: 8px;
 
+    &::marker {
+      color: $purple;
+      font-weight: 700;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -457,6 +462,12 @@ img {
   p,
   ul {
     margin-bottom: 20px;
+  }
+
+  ol,
+  ul {
+    margin-left: 1rem;
+    padding-left: 0;
   }
 
   ol+h2,
