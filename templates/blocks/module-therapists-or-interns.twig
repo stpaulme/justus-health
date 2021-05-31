@@ -10,7 +10,9 @@
 		<div class="row">
 			{% for post in module.posts %}
 				<div class="col-md-4 counselors__col">
-					{% include 'blocks/excerpt.twig' with { 'show_header' : true, 'show_footer' : false } %}
+					<div class="therapists-or-interns__card-wrap">
+						{% include 'blocks/therapist-card.twig' %}
+					</div>
 				</div>
 			{% endfor %}
 		</div>

@@ -1,0 +1,31 @@
+<div class="therapist-card">
+	{% if post.thumbnail.src %}
+		<a href="{{ post.link }}">
+			<picture>
+				<source srcset="{{ post.thumbnail.src('square')|towebp }}" type="image/webp">
+				<source srcset="{{ post.thumbnail.src('square') }}" type="image/jpeg">
+				<img alt="{{ post.title }}" class="therapist-card__image" loading="lazy" src="{{ post.thumbnail.src('square') }}">
+			</picture>
+		</a>
+	{% endif %}
+
+	<div class="therapist-card__content">
+		<h3 class="therapist-card__name">
+			<a href="{{ post.link }}">
+				{{ post.title }}
+			</a>
+		</h3>
+
+		{% if post.meta('therapist_title') %}
+			<span class="therapist-card__title">
+				{{ post.meta('therapist_title') }}
+			</span>
+		{% endif %}
+
+		{% if post.meta('pronouns') %}
+			<span class="therapist-card__pronouns">
+				{{ post.meta('pronouns') }}
+			</span>
+		{% endif %}
+	</div>
+</div>

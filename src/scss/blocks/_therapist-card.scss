@@ -1,0 +1,25 @@
+.therapist-card {
+    &__content {
+        background-color: $white;
+        padding: 20px 15px;
+    }
+
+    &__name {
+        color: $purple;
+        font-size: 1.3125rem;
+        line-height: 1.15;
+        margin-bottom: 0;
+    }
+
+    &__title,
+    &__pronouns {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-top: 6px;
+    }
+
+    &__pronouns {
+        font-style: italic;
+    }
+}
