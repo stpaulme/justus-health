@@ -103,6 +103,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_60b546e9f20cf",
+                    "label": "Pronouns",
+                    "name": "pronouns",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_6047e19391c6c",
                     "label": "Bio",
                     "name": "bio",
@@ -156,5 +175,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615477762
+    "modified": 1622492911
 }

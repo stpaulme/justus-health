@@ -1,9 +1,25 @@
 .team {
-  .team__member {
+  padding: 20px 0 30px;
+
+  &__heading {
     margin-bottom: 20px;
+  }
+
+  .team__member {
+    margin-bottom: 30px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .team {
+    padding: 60px 0;
+
+    .team__member {
+      margin-bottom: 60px;
     }
   }
 }

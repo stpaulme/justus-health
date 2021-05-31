@@ -1,16 +1,16 @@
 <div class="member">
 
 	<div class="row">
-		<div class="col-md-4">
-			{% set image = Image(member.image) %}
-			{% if image.src %}
+		{% set image = Image(member.image) %}
+		{% if image.src %}
+			<div class="col-md-4">
 				<picture>
-					<source srcset="{{ image.src('3by2')|towebp }} 1110w, {{ image.src('3by2-md')|towebp }} 690w, {{ image.src('3by2-sm')|towebp }} 395w" sizes="(min-width: 768px) 32vw, 96vw" type="image/webp">
-					<source srcset="{{ image.src('3by2') }} 1110w, {{ image.src('3by2-md') }} 690w, {{ image.src('3by2-sm') }} 395w" sizes="(min-width: 768px) 32vw, 96vw" type="image/jpeg">
-					<img alt="{{ image.alt }}" class="member__image" loading="lazy" src="{{ image.src('3by2') }}">
+					<source srcset="{{ image.src('square')|towebp }}" type="image/webp">
+					<source srcset="{{ image.src('square') }}" type="image/jpeg">
+					<img alt="{{ post.title }}" class="member__image" loading="lazy" src="{{ image.src('square') }}">
 				</picture>
-			{% endif %}
-		</div>
+			</div>
+		{% endif %}
 
 		<div class="col-md-8">
 			{% if member.name %}
@@ -21,8 +21,12 @@
 				<span class="member__title">{{ member.title }}</span>
 			{% endif %}
 
+			{% if member.pronouns %}
+				<span class="member__pronouns">{{ member.pronouns }}</span>
+			{% endif %}
+
 			{% if member.bio %}
-				<div class="member__bio wysiwyg">{{ member.bio }}</div>
+				<div class="member__bio text-heavy wysiwyg">{{ member.bio }}</div>
 			{% endif %}
 
 			{% if member.link.url %}
