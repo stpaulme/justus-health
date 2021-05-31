@@ -3,6 +3,25 @@
     "title": "Module - Counselors",
     "fields": [
         {
+            "key": "field_60b54abe604f7",
+            "label": "Heading",
+            "name": "heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_604a374d36a3c",
             "label": "",
             "name": "",
@@ -37,5 +56,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1615481480
+    "modified": 1622493891
 }

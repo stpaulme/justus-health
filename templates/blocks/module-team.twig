@@ -13,7 +13,7 @@
 		{% for member in module.members %}
 
 			<div class="team__member">
-				{% include 'blocks/member.twig' %}
+				{% include 'blocks/member.twig' with { 'image' : Image(member.image), 'name' : member.name, 'title' : member.title, 'pronouns' : member.pronouns, 'bio' : member.bio, 'link' : member.link } %}
 			</div>
 
 		{% endfor %}
