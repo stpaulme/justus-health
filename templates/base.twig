@@ -20,13 +20,15 @@
 
 	<main id="content">
 		{% if title %}
-			{% include 'blocks/page-title.twig' %}
+			{% block title %}
+				{% include 'blocks/page-title.twig' %}
+			{% endblock %}
 		{% endif %}
 
 		{% if sidebar %}
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8 content-col">
+					<div class="col-lg-8 order-lg-2 content-col">
 					{% endif %}
 
 					{% block content %}
@@ -36,7 +38,7 @@
 					{% if sidebar %}
 					</div>
 
-					<div class="col-lg-4 sidebar-col">
+					<div class="col-lg-4 order-lg-1 sidebar-col">
 						<aside class="sidebar">
 							{% block sidebar %}{# Sidebar #}{% endblock %}
 						</aside>

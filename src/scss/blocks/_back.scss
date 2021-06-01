@@ -1,9 +1,9 @@
 .back {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 @include media-breakpoint-up(md) {
     .back {
-        margin-top: 60px;
+        margin-top: 40px;
     }
 }
