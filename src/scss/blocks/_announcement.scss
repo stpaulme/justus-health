@@ -1,34 +1,47 @@
 .announcement {
     background-color: $purple;
     color: $white;
-    padding: 10px 0;
+    padding: 12px 0;
 
-    .announcement__inner {
-        align-items: center;
+    &__inner {
         display: flex;
         flex-direction: column;
     }
 
-    .announcement__copy {
-        flex: 1;
-        font-weight: 700;
+    &__copy {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.1875;
     }
 
-    .announcement__link {
-        margin-top: 20px;
+    &__link {
+        margin-top: 15px;
+
+        a {
+            border-bottom: 1px solid $white;
+            color: inherit;
+            display: inline-block;
+            font-size: 1.125rem;
+            line-height: 1.1111;
+        }
     }
 }
 
 @include media-breakpoint-up(md) {
     .announcement {
-        .announcement__inner {
+        &__inner {
+            align-items: center;
             flex-direction: row;
-            justify-content: space-between;
         }
 
-        .announcement__link {
+        &__copy {
+            flex: 1 0 58.3333%;
+        }
+
+        &__link {
             margin-top: 0;
             margin-left: 30px;
+            text-align: right;
         }
     }
 }

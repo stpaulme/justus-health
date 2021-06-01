@@ -9,9 +9,10 @@
 
 			{% if options.announcement.link.url %}
 				<div class="announcement__link">
-					<a class="button" href="{{ options.announcement.link.url }}" target="{{ options.announcement.link.target }}">
+					<a href="{{ options.announcement.link.url }}" target="{{ options.announcement.link.target }}">
 						{{ options.announcement.link.title }}
 					</a>
+					&nbsp;<i aria-hidden="true" class="fas fa-arrow-right"></i>
 				</div>
 			{% endif %}
 		</div>
