@@ -96,6 +96,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60b7a83fec059": {
+                    "key": "layout_60b7a83fec059",
+                    "name": "feed_post",
+                    "label": "Latest Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b7a843ec05a",
+                            "label": "Latest Posts",
+                            "name": "latest_posts",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d8bc418c8844"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Module",
@@ -139,5 +170,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617050414
+    "modified": 1622648931
 }
