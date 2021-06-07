@@ -25,10 +25,38 @@
 					{% endfor %}
 				</ul>
 			</div>
+
+			<div class="slider__arrows">
+				<button class="slider__arrow slider__arrow--prev"></button>
+				<button class="slider__arrow slider__arrow--next"></button>
+			</div>
 		</div>
 
 		<script>
-			new Splide('#splide-{{ loop.index }}').mount();
+			var args = {
+				classes: {
+					arrows: 'slider__arrows',
+					arrow : 'slider__arrow',
+					prev  : 'slider__arrow--prev',
+					next  : 'slider__arrow--next',
+				},
+				gap: '30px',
+				pagination: false,
+				perPage: 3,
+				rewind: true,
+				
+				breakpoints: {
+					768: {
+						perPage: 2,
+					},
+					576: {
+						gap: '15px',
+						perPage: 1,
+					}
+				}
+			}
+			var splide = new Splide('#splide-{{ loop.index }}', args);
+			splide.mount();
 		</script>
 
 	{% endif %}

@@ -1,0 +1,60 @@
+.slider {
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__arrows {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    &__arrow {
+        appearance: none;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0;
+        height: 16px;
+        padding: 0;
+        width: 16px;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus-visible,
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &--prev {
+            background-image: url(../../dist/img/arrow_back.svg);
+        }
+
+        &--next {
+            background-image: url(../../dist/img/arrow_forward.svg);
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .slider {
+        &__arrows {
+            margin-top: 25px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .slider {
+        &__arrows {
+            margin-top: 30px;
+        }
+    }
+}
