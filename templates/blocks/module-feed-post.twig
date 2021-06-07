@@ -9,10 +9,23 @@
 	{% if module.posts|length > 0 %}
 		<div class="row">
 			{% for post in module.posts %}
-				<div class="col-md-4 feed-post__col">
-					{% include 'blocks/excerpt.twig' with { 'show_header' : false, 'show_footer' : true } %}
+				<div class="col-md-10 offset-md-1 col-lg-4 offset-lg-0 feed-post__col">
+					{% include 'blocks/card-post.twig' %}
 				</div>
 			{% endfor %}
+		</div>
+
+		<div class="feed-post__all">
+			{% if module.post_category %}
+				<a href="{{ module.post_category.link }}">All
+					{{ module.post_category.name }}
+					<i class="fas fa-arrow-right"></i>
+				</a>
+			{% else %}
+				<a href="/news">All News
+					<i class="fas fa-arrow-right"></i>
+				</a>
+			{% endif %}
 		</div>
 	{% endif %}
 

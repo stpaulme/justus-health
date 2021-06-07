@@ -1,0 +1,13 @@
+<div class="card-post">
+
+	<h3 class="card-post__title">
+		<a href="{{ post.link }}">{{ post.title }}</a>
+	</h3>
+
+	{% if post.preview|length > 0 %}
+		<p class="card-post__preview">{{ post.preview.length(15).read_more('') }}</p>
+	{% endif %}
+
+	<time class="card-post__date">{{ post.date }}</time>
+
+</div>

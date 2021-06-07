@@ -1,0 +1,23 @@
+.card-post {
+    background-color: $white;
+    padding: 20px;
+
+    &__title {
+        color: $dark-purple-bg;
+        font-size: 1.5rem;
+        line-height: 1.1667;
+        margin-bottom: 0;
+    }
+
+    &__preview {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    &__date {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.15;
+        margin-top: 20px;
+    }
+}
