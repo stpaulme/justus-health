@@ -3,23 +3,25 @@
 {% block content %}
 
 	<div class="news-landing">
-
 		<div class="container">
+			<div class="row">
+				<div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
+					{% if posts|length > 0 %}
+						<div class="row">
+							{% for post in posts %}
+								<div class="col-lg-4 news-landing__post-col">
+									{% include 'blocks/card-post.twig' with { 'modifier' : 'lilac-bg', 'show_cat' : true } %}
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
 
-			{% if posts|length > 0 %}
-				<div class="news-landing__posts append-posts">
-					{% for post in posts %}
-						{% include 'blocks/excerpt.twig' with { 'show_header' : true, 'show_footer' : true } %}
-					{% endfor %}
+					<div class="news-landing__pagination">
+						{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style } %}
+					</div>
 				</div>
-			{% endif %}
-
-			<div class="news-landing__pagination">
-				{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style } %}
 			</div>
-
 		</div>
-
 	</div>
 
 {% endblock %}

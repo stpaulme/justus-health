@@ -5,25 +5,17 @@
 
 	{% elseif pagination_style == 'traditional' and posts.pagination.prev or posts.pagination.next %}
 
-		<div class="row">
-			{% if posts.pagination.prev %}
-				<div class="col pagination__prev">
-					<a href="{{ posts.pagination.prev.link }}">
-						<i aria-hidden="true" class="fas fa-arrow-left"></i>
-						Previous
-					</a>
-				</div>
-			{% endif %}
-
-			{% if posts.pagination.next %}
-				<div class="col pagination__next">
-					<a href="{{ posts.pagination.next.link }}">
-						Next
-						<i aria-hidden="true" class="fas fa-arrow-right"></i>
-					</a>
-				</div>
-			{% endif %}
-		</div>
+		<ul class="pagination__pages">
+			{% for page in posts.pagination.pages %}
+				<li class="pagination__page">
+					{% if page.link %}
+						<a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+					{% else %}
+						<span class="{{page.class}}">{{page.title}}</span>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
 
 	{% endif %}
 </div>

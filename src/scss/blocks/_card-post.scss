@@ -14,10 +14,36 @@
         margin-bottom: 0;
     }
 
-    &__date {
-        display: block;
+    &__meta {
         font-size: 0.875rem;
         line-height: 1.15;
         margin-top: 20px;
+    }
+
+    &__cats {
+        display: inline;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        &:before {
+            content: '/';
+        }
+    }
+
+    &__cat {
+        display: inline;
+
+        &:after {
+            content: ',';
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+    }
+
+    &--lilac-bg {
+        background-color: $lilac-bg;
     }
 }

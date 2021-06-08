@@ -3,6 +3,7 @@
 $context = Timber::context();
 $post = new TimberPost();
 
+$context['post'] = $post;
 $context['title'] = $post->title;
 $context['posts'] = new Timber\PostQuery();
 

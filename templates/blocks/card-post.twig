@@ -1,4 +1,4 @@
-<div class="card-post">
+<div class="card-post card-post--{{ modifier ? '' ~ modifier }}">
 
 	<h3 class="card-post__title">
 		<a href="{{ post.link }}">{{ post.title }}</a>
@@ -8,6 +8,16 @@
 		<p class="card-post__preview">{{ post.preview.length(15).read_more('') }}</p>
 	{% endif %}
 
-	<time class="card-post__date">{{ post.date }}</time>
+	<div class="card-post__meta">
+		<time class="card-post__date">{{ post.date }}</time>
 
+		{% if show_cat == true %}
+			{% set cats = post.categories %}
+			<ul class="card-post__cats">
+				{% for cat in cats %}
+					<li class="card-post__cat"><a href="{{ cat.link }}">{{ cat.name }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
 </div>
