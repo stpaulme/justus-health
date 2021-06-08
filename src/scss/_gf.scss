@@ -56,19 +56,6 @@
     text-align: right;
   }
 
-  input[type="submit"] {
-    background-color: $purple;
-
-    &:focus {
-      outline: 0;
-    }
-
-    &:focus-visible,
-    &:hover {
-      background-color: $purple-medium;
-    }
-  }
-
   .validation_error,
   .validation_message {
     background-color: $gray;

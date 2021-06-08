@@ -306,10 +306,6 @@ select {
   }
 }
 
-input[type="submit"] {
-  @extend .button;
-}
-
 .content-col {
   padding-top: 20px;
   padding-bottom: 30px;

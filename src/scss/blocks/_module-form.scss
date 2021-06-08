@@ -1,5 +1,18 @@
 .form {
     padding: 20px 0 30px;
+
+    input[type="submit"] {
+        background-color: $purple;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus-visible,
+        &:hover {
+            background-color: $purple-medium;
+        }
+    }
 }
 
 @include media-breakpoint-up(md) {
