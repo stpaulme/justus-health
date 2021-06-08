@@ -1,0 +1,13 @@
+.form {
+    padding: 20px 0 30px;
+}
+
+@include media-breakpoint-up(md) {
+    .form {
+        padding: 50px 0 60px;
+
+        &__heading {
+            margin-bottom: 15px;
+        }
+    }
+}

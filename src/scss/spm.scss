@@ -262,6 +262,54 @@ img {
   }
 }
 
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="week"],
+input[type="url"],
+select,
+textarea {
+  appearance: none;
+  background-color: $white;
+  border: 1px solid $purple-medium;
+  color: $gray-text;
+  font-size: 1rem;
+  height: unset;
+  line-height: 1.125;
+  padding: 12px;
+  width: 100%;
+
+  &:focus {
+    border-color: $purple;
+    outline: 0;
+  }
+}
+
+select {
+  background-image: url("../../dist/img/filter_arrows.svg"),
+    linear-gradient(to bottom, #fff 0%, #fff 100%); // Arrow and gradient for IE9 and older
+  background-position: right 12px top 50%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 10px auto, 100%;
+  padding-right: 32px;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input[type="submit"] {
+  @extend .button;
+}
+
 .content-col {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -557,6 +605,7 @@ img {
 @import "blocks/module-cta-single";
 @import "blocks/module-counselors";
 @import "blocks/module-featured-event";
+@import "blocks/module-form";
 @import "blocks/module-hero";
 @import "blocks/module-image";
 @import "blocks/module-feed-event";
