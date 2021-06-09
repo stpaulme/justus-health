@@ -1,1 +1,11 @@
-.sidebar-module.cta-single {}
+.sidebar-module.cta-single {
+    padding: 0;
+
+    .cta {
+        padding: 0;
+
+        &__content {
+            padding: 20px;
+        }
+    }
+}

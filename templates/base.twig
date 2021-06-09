@@ -28,7 +28,7 @@
 		{% if sidebar %}
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8 order-lg-2 content-col">
+					<div class="col-lg-8 {{ fn('is_singular', 'page') ? 'order-lg-1' : 'order-lg-2' }} content-col">
 					{% endif %}
 
 					{% block content %}
@@ -38,7 +38,7 @@
 					{% if sidebar %}
 					</div>
 
-					<div class="col-lg-4 order-lg-1 sidebar-col">
+					<div class="col-lg-4 {{ fn('is_singular', 'page') ? 'order-lg-2' : 'order-lg-1' }} sidebar-col">
 						<aside class="sidebar">
 							{% block sidebar %}{# Sidebar #}{% endblock %}
 						</aside>
