@@ -1,46 +1,46 @@
 .excerpt {
-  .excerpt__flex {
-    border: 2px solid $gray-border;
+  &__flex {
+    border: 2px solid $gray-divider;
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  .excerpt__image {
+  &__image {
     width: 100%;
   }
 
-  .excerpt__content {
+  &__content {
     flex: 1;
     padding: 20px;
   }
 
-  .excerpt__title {
+  &__title {
     margin-bottom: 0;
   }
 
-  .excerpt__subtitle,
-  .excerpt__pronouns {
+  &__subtitle,
+  &__pronouns {
     display: block;
     font-style: italic;
     margin-top: 3px;
   }
 
-  .excerpt__preview {
+  &__preview {
     margin-top: 10px;
     margin-bottom: 0;
   }
 
-  .excerpt__footer {
+  &__footer {
     font-size: 0.75rem;
     padding: 0 20px 20px 20px;
   }
 
-  .excerpt__date {
+  &__date {
     font-style: italic;
   }
 
-  .excerpt__cats {
+  &__cats {
     line-height: 1.1667;
     list-style: none;
     margin-bottom: 0;
