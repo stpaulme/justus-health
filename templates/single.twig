@@ -1,7 +1,13 @@
 {% extends "base.twig" %}
 
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
 {% block content %}
 	<div class="news-post">
+
+		<h1 class="default-title">{{ post.title }}</h1>
 
 		{% if post.thumbnail %}
 

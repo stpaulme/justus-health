@@ -6,13 +6,13 @@ $timber_post = new TimberPost();
 $context['post'] = $timber_post;
 
 // Title
-$context['title'] = $timber_post->title;
 if ($timber_post->post_parent) {
     $context['breadcrumbs'] = bcn_display(true);
 }
 
 // Sidebar
 $context['sidebar'] = true;
+$context['sidebar_pos'] = 'right';
 $context['parent'] = spm_get_top_parent($post);
 $context['sidebar_nav'] = spm_get_child_pages(0, true);
 $sidebar_modules = get_field('sidebar_modules');

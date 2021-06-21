@@ -1,7 +1,13 @@
 {% extends "base.twig" %}
 
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
 {% block content %}
 	<div class="text-heavy wysiwyg">
+		<h1 class="default-title">{{ post.title }}</h1>
+
 		{{ post.content }}
 	</div>
 {% endblock %}
