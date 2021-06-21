@@ -583,6 +583,7 @@ select {
 @import "er";
 @import "gf";
 @import "wp";
+@import "wpsl";
 
 @import "blocks/announcement";
 @import "blocks/back";
@@ -600,6 +601,7 @@ select {
 @import "blocks/module-cta-pair";
 @import "blocks/module-cta-single";
 @import "blocks/module-counselors";
+@import "blocks/module-embed-code";
 @import "blocks/module-featured-event";
 @import "blocks/module-form";
 @import "blocks/module-hero";
