@@ -51,6 +51,7 @@ class SPMSite extends Timber\Site
     public function add_to_context($context)
     {
         $context['categories'] = wp_list_categories(array(
+            'depth' => 1,
             'echo' => false,
             'title_li' => '<h2>Categories</h2>',
         ));

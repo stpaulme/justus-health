@@ -8,7 +8,8 @@
         padding-left: 0;
     }
 
-    .pagenav {
+    .pagenav,
+    .categories {
         h2 {
             color: $dark-purple-bg;
             font-size: 1.5rem;
@@ -22,7 +23,8 @@
             padding-left: 0;
 
             // Risk Reduction
-            >.page_item {
+            >.page_item,
+            >.cat-item {
                 border-bottom: 1px solid $gray-divider;
                 margin-bottom: 15px;
                 padding-bottom: 15px;
