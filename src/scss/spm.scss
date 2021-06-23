@@ -429,7 +429,7 @@ select {
 
 .default-title {
   border-bottom: 3px solid $gray-divider;
-  color: $dark-purple-bg;
+  color: $dark-purple-bg !important;
   font-size: 1.6875rem;
   line-height: 1.15;
   margin-bottom: 15px;
@@ -608,6 +608,7 @@ select {
   }
 }
 
+@import "ecp";
 @import "er";
 @import "gf";
 @import "wp";
