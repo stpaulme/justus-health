@@ -198,11 +198,10 @@
 		margin: 0 0 20px 0;
 
 		.recurringinfo {
-			margin-left: 0.25em;
+			background-color: $lilac-bg;
+			font-family: $text;
 
 			.event-is-recurring {
-				font-style: italic;
-
 				.tribe-events-divider {
 					display: none;
 				}
@@ -252,6 +251,10 @@
 		font-family: $text;
 		margin: 0;
 
+		&:before {
+			border-top-color: $gray-divider;
+		}
+
 		.tribe-events-single-section-title {
 			font-size: 1.3125rem;
 			letter-spacing: 0;
@@ -284,6 +287,7 @@
 	}
 
 	#tribe-events-footer {
+		border-top-color: $gray-divider;
 		padding: 20px 0 0;
 	}
 
