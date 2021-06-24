@@ -29,7 +29,7 @@
     }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
     .video {
         &__header {
             margin-bottom: 40px;
