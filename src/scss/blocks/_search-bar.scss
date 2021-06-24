@@ -7,7 +7,7 @@
 
     &__field {
         background-color: $lilac-bg;
-        border: 1px solid $purple;
+        border: 1px solid $purple !important;
         color: $dark-purple-bg;
         flex: 1;
         font-size: 0.875rem;
@@ -40,6 +40,10 @@
 
         &:focus {
             outline: 2px solid $red;
+        }
+
+        &:hover {
+            color: $gray-text;
         }
     }
 }

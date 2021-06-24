@@ -70,6 +70,8 @@
   }
 
   .site-header__logo-link {
+    display: block;
+    max-width: 50%;
 
     &:focus {
       outline: 0;
@@ -126,6 +128,10 @@
   .site-header {
     .site-header__row {
       padding: 20px 0;
+    }
+
+    .site-header__logo-link {
+      max-width: 100%;
     }
 
     .site-header__menus-col {
@@ -203,14 +209,12 @@
             }
           }
 
-          &:hover {
+          &:hover,
+          &.current-menu-item,
+          &.current-page-ancestor {
             color: $purple;
           }
 
-          &.current-menu-item,
-          &.current-page-ancestor {
-            color: $purple-medium;
-          }
         }
       }
     }
@@ -232,7 +236,7 @@
             content: '/';
           }
 
-          &:last-child {
+          &:nth-last-child(-n+2) {
             &:after {
               content: '';
             }
@@ -341,6 +345,10 @@
                 font-weight: 400;
                 line-height: 1.125;
                 padding: 0;
+
+                &:hover {
+                  opacity: 0.5;
+                }
               }
             }
           }

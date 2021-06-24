@@ -4,6 +4,10 @@
   a {
     color: inherit;
     font-weight: inherit;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   .site-footer__upper {
@@ -70,7 +74,7 @@
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.1667;
-    margin-right: 8px;
+    margin-right: 4px;
   }
 
   .site-footer__phone--aidsline {
