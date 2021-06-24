@@ -1,4 +1,6 @@
 .slider {
+    padding: 30px 0;
+
     &__heading {
         margin-bottom: 30px;
     }
@@ -45,6 +47,8 @@
 
 @include media-breakpoint-up(md) {
     .slider {
+        padding: 40px 0;
+
         &__arrows {
             margin-top: 25px;
         }
