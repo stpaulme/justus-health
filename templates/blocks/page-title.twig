@@ -1,7 +1,7 @@
 <div class="page-title">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col">
 				<div class="page-title__header">
 					{% if breadcrumbs %}
 						{% include 'blocks/breadcrumbs.twig' %}
@@ -11,7 +11,7 @@
 			</div>
 
 			{% if post.thumbnail.src %}
-				<div class="col">
+				<div class="col-md-6">
 					<img alt="" class="page-title__image" src="{{ post.thumbnail.src }}">
 				</div>
 			{% endif %}
