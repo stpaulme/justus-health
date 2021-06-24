@@ -485,7 +485,7 @@ select {
 }
 
 .text-heavy {
-  a {
+  a:not(.button) {
     border-bottom: 2px solid $purple;
     color: $purple;
 
@@ -534,7 +534,7 @@ select {
   }
 
   li {
-    margin-bottom: 8px;
+    margin-bottom: 7.5px;
 
     &::marker {
       color: $purple;
@@ -551,12 +551,12 @@ select {
   ol,
   p,
   ul {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   ol,
   ul {
-    margin-left: 1rem;
+    margin-left: 2rem;
     padding-left: 0;
   }
 
@@ -565,12 +565,20 @@ select {
   ol+h2,
   p+h2,
   ul+h2 {
-    padding-top: 10px;
+    padding-top: 15px;
+  }
+
+  blockquote+h3,
+  .er-container+h3,
+  ol+h3,
+  p+h3,
+  ul+h3 {
+    padding-top: 15px;
   }
 
   p+ol,
   p+ul {
-    margin-top: -10px;
+    margin-top: -7.5px;
   }
 }
 
