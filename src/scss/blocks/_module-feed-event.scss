@@ -26,11 +26,24 @@
     margin-top: 20px;
   }
 
+
   &__post {
     margin-bottom: 15px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .wrap-link:hover {
+    .card-event {
+      background-color: $purple-medium;
+
+      &__title,
+      &__date,
+      &__address {
+        color: $white;
+      }
     }
   }
 
