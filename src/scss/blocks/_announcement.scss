@@ -10,8 +10,7 @@
 
     &__copy {
         font-size: 1rem;
-        font-weight: 600;
-        line-height: 1.1875;
+        line-height: 1.5;
     }
 
     &__link {
@@ -23,6 +22,10 @@
             display: inline-block;
             font-size: 1.125rem;
             line-height: 1.1111;
+
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
 }
