@@ -3,27 +3,48 @@
 {% block content %}
 
 	<div class="row">
-		{% if module.heading or module.description %}
+		{% if module.description %}
 			<div class="col-lg-5">
-				{% if module.heading %}
-					<h2 class="cta-pair__heading">{{ module.heading }}</h2>
-				{% endif %}
-				{% if module.description %}
-					<div class="cta-pair__description text-heavy wysiwyg">{{ module.description }}</div>
-				{% endif %}
-			</div>
-		{% endif %}
+				<div class="cta-pair__header">
+					{% if module.heading %}
+						<h2 class="cta-pair__heading">{{ module.heading }}</h2>
+					{% endif %}
 
-		{% if module.cta_pair|length > 0 %}
-			<div class="col-lg-7">
-				<div class="row cta-pair__ctas-row">
-					{% for cta in module.cta_pair %}
-						<div class="col-md-6 col-lg-12 cta-pair__cta-col">
-							{% include 'blocks/cta-pair-cta.twig' %}
-						</div>
-					{% endfor %}
+					<div class="cta-pair__description text-heavy wysiwyg">{{ module.description }}</div>
 				</div>
 			</div>
+
+			{% if module.cta_pair|length > 0 %}
+				<div class="col-lg-7">
+					<div class="row cta-pair__ctas-row cta-pair__ctas-row--with-description">
+						{% for cta in module.cta_pair %}
+							<div class="col-md-6 col-lg-12 cta-pair__cta-col">
+								{% include 'blocks/cta-pair-cta.twig' %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			{% if module.heading %}
+				<div class="col-lg-12">
+					<div class="cta-pair__header">
+						<h2 class="cta-pair__heading">{{ module.heading }}</h2>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if module.cta_pair|length > 0 %}
+				<div class="col-lg-12">
+					<div class="row cta-pair__ctas-row">
+						{% for cta in module.cta_pair %}
+							<div class="col-md-6 cta-pair__cta-col cta-pair__cta-col--without-description">
+								{% include 'blocks/cta-pair-cta.twig' %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
 		{% endif %}
 	</div>
 

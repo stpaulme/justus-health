@@ -1,16 +1,16 @@
 .cta-pair {
   padding-bottom: 40px;
 
+  &__header {
+    margin-bottom: 20px;
+  }
+
   &__heading {
     margin-bottom: 0;
   }
 
   &__heading+.cta-pair__description {
     margin-top: 10px;
-  }
-
-  &__ctas-row {
-    margin-top: 20px;
   }
 
   &__cta-col {
@@ -27,12 +27,12 @@
     padding-top: 50px;
     padding-bottom: 60px;
 
-    &__heading+.cta-pair__description {
-      margin-top: 15px;
+    &__header {
+      margin-bottom: 30px;
     }
 
-    &__ctas-row {
-      margin-top: 30px;
+    &__heading+.cta-pair__description {
+      margin-top: 15px;
     }
 
     &__cta-col {
@@ -45,13 +45,10 @@
   .cta-pair {
     padding-top: 60px;
 
-    &__ctas-row {
-      margin-top: 0;
-    }
-
     &__cta-col {
       margin-bottom: 20px;
 
+      &--without-description,
       &:last-child {
         margin-bottom: 0;
       }

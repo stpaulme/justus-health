@@ -1,6 +1,11 @@
 .cta-single {
     padding: 40px 0;
 
+    &__inner {
+        position: relative;
+        z-index: 1;
+    }
+
     &__heading {
         margin-bottom: 0;
     }
