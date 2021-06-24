@@ -294,6 +294,7 @@ textarea {
 
   &:focus {
     border-color: $purple;
+    border-width: 2px;
     outline: 0;
   }
 }
