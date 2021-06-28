@@ -32,6 +32,15 @@
                 >a {
                     font-size: 1.0625rem;
                     line-height: 1.05;
+
+                    &:hover {
+                        color: $purple-medium;
+                    }
+                }
+
+                &.current_page_item>a {
+                    border-bottom: 2px solid $purple;
+                    color: $red;
                 }
 
                 &:last-child {
@@ -53,9 +62,15 @@
 
                     // PrEP Locators
                     .page_item {
-                        a:before {
+                        &:before {
                             content: '\00BB';
+                            font-weight: 600;
                             padding-right: 0.25rem;
+                        }
+
+                        &.current_page_item>a {
+                            border-bottom: 2px solid $purple;
+                            color: $red;
                         }
                     }
 
@@ -69,9 +84,15 @@
                     font-size: 0.875rem;
                     font-weight: 600;
                     line-height: 1.15;
+
+                    &:hover {
+                        color: $purple-medium;
+                    }
                 }
             }
 
         }
     }
+
+
 }
