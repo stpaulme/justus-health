@@ -23,10 +23,7 @@
   }
 
   .gfield_label {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.2778;
-    margin-bottom: 9.5px;
+    @extend label;
   }
 
   .ginput_complex {

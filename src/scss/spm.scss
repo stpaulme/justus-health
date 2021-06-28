@@ -299,6 +299,13 @@ textarea {
   }
 }
 
+label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.2778;
+  margin-bottom: 9.5px;
+}
+
 select {
   background-image: url("../../dist/img/filter_arrows.svg"),
     linear-gradient(to bottom, #fff 0%, #fff 100%); // Arrow and gradient for IE9 and older
