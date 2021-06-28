@@ -20,9 +20,19 @@
 
 @include media-breakpoint-up(md) {
   .text-with-symbol {
+    position: relative;
+
     &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: block;
-      margin-top: -50px;
+      height: calc(100% + 50px);
+      transform: translateY(-50px);
+      width: 50%;
     }
 
     &__content {

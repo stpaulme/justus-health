@@ -1,18 +1,16 @@
 {% extends 'blocks/module.twig' %}
 
+{% block outer_top %}
+	{% set image = Image(module.symbol) %}
+	{% if image.src %}
+		<div class="text-with-symbol__image" style="background-image: url('{{ image.src }}')"></div>
+	{% endif %}
+{% endblock %}
+
 {% block content %}
 
-	{% set image = Image(module.symbol) %}
-
-	<div class="row text-with-symbol__row">
-
-		{% if image.src %}
-			<div class="col-md-6">
-				<img alt="" class="text-with-symbol__image" src="{{ image.src }}">
-			</div>
-		{% endif %}
-
-		<div class="col-md-6">
+	<div class="row">
+		<div class="col-md-6 offset-md-6">
 			<div class="text-with-symbol__content">
 				{% if module.heading %}
 					<h2 class="text-with-symbol__heading">{{ module.heading }}</h2>
@@ -29,8 +27,6 @@
 				{% endif %}
 			</div>
 		</div>
-
 	</div>
-
 
 {% endblock %}
