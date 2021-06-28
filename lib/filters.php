@@ -89,3 +89,10 @@ function spm_use_heading_as_acf_layout_title($title, $field, $layout, $i)
 
     return $title;
 }
+
+// GF: Use <button> for submit button
+add_filter('gform_submit_button', 'spm_form_submit_button', 10, 2);
+function spm_form_submit_button($button, $form)
+{
+    return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'><span>Submit</span></button>";
+}
