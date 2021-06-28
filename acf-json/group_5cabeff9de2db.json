@@ -469,6 +469,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_60d9e614018e8": {
+                    "key": "layout_60d9e614018e8",
+                    "name": "text_with_symbol",
+                    "label": "Text with Symbol",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60d9e61e018e9",
+                            "label": "Text with Symbol",
+                            "name": "text_with_symbol",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60d9e5825ab5a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5dc9c3535404a": {
                     "key": "layout_5dc9c3535404a",
                     "name": "feed_event",
@@ -575,5 +606,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617050432
+    "modified": 1624892986
 }
