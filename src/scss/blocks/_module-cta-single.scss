@@ -47,6 +47,14 @@
     }
 }
 
+.error404 .cta-single--color-bg {
+    background-color: $purple-medium;
+
+    .button:hover:after {
+        background-color: $red;
+    }
+}
+
 .cta-single--geometric-bg {
     position: relative;
     background-color: $lilac-bg;
