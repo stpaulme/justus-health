@@ -28,22 +28,24 @@
 						</div>
 					{% endfor %}
 				</div>
+
+				<div class="feed-event__all">
+					{% if module.event_category.link %}
+						<a href="{{ module.event_category.link }}">All Events in
+							{{ module.event_category.name }}
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					{% else %}
+						<a href="/events">All Events
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					{% endif %}
+				</div>
+			{% else %}
+				<p class="feed-event__none">There are no
+					{{ module.event_category.name ? 'upcoming events in '~module.event_category.name : 'upcoming events' }}
+					at this time.</p>
 			{% endif %}
-
-
-			<div class="feed-event__all">
-				{% if module.event_category.link %}
-					<a href="{{ module.event_category.link }}">All Events in
-						{{ module.event_category.name }}
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				{% else %}
-					<a href="/events">All Events
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				{% endif %}
-			</div>
-
 		</div>
 	</div>
 
