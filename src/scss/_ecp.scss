@@ -184,6 +184,12 @@
 		}
 	}
 
+	// Notices
+	.tribe-events-notices {
+		border-bottom: 3px solid $gray-divider;
+		font-style: italic;
+	}
+
 	// Event title
 	.tribe-events-single-event-title {
 		@extend .default-title;
@@ -285,6 +291,14 @@
 		}
 	}
 
+	.tribe-events-meta-group {
+		padding-bottom: 20px;
+	}
+
+	.tribe-events-address {
+		line-height: 1.3;
+	}
+
 	#tribe-events-footer {
 		border-top-color: $gray-divider;
 		padding: 20px 0 0;
@@ -311,6 +325,18 @@
 			a {
 				background-color: transparent;
 			}
+		}
+	}
+}
+
+// Standard breakpoint
+@include media-breakpoint-up(md) {
+	.single-tribe_events {
+
+		.tribe-events-schedule h2,
+		.tribe-events-schedule .tribe-events-cost {
+			font-size: 1.5rem;
+			line-height: 1.3;
 		}
 	}
 }
