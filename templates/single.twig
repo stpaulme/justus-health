@@ -45,5 +45,9 @@
 				{% include 'blocks/sidebar/sidebar-nav.twig' with { 'aria_label' : 'Categories', 'nav' : categories } %}
 			</div>
 		{% endif %}
+
+		<div class="col-md-6 col-lg-12 sidebar__col">
+			{% include 'blocks/share.twig' %}
+		</div>
 	</div>
 {% endblock %}
