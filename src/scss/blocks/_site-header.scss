@@ -306,10 +306,11 @@
             position: relative;
           }
 
+          // "Living with HIV"
           .menu__item--has-children:hover,
           .menu__item--has-children.menu__item--has-focus {
 
-            >.menu--children {
+            .menu--children {
               clip: auto;
               height: auto;
               width: 16rem;
@@ -327,7 +328,6 @@
             display: block;
             height: 1px;
             margin: 0;
-            overflow: hidden;
             padding: 20px 25px;
             width: 1px;
 
@@ -339,15 +339,33 @@
                 margin-bottom: 0;
               }
 
+              // "Assistance"
               .menu__link {
                 color: $white;
                 font-size: 1rem;
-                font-weight: 400;
+                font-weight: 600;
                 line-height: 1.125;
                 padding: 0;
 
                 &:hover {
                   opacity: 0.5;
+                }
+              }
+
+              .menu--children {
+                position: static;
+                border-top: 1px solid $gray-divider;
+                clip: auto;
+                height: auto;
+                margin-top: 10px;
+                padding: 10px 0 0 15px;
+                width: auto;
+
+                // "Transportation"
+                .menu__link {
+                  font-size: 0.875rem;
+                  font-weight: 400;
+                  line-height: 1.15;
                 }
               }
             }
