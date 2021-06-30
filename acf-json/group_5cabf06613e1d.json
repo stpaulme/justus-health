@@ -56,6 +56,25 @@
             "max": ""
         },
         {
+            "key": "field_60dcd21c27bf8",
+            "label": "Show Share Links?",
+            "name": "show_share_links",
+            "type": "true_false",
+            "instructions": "Facebook, Twitter, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ce4a7022265a",
             "label": "Below-the-Fold Modules",
             "name": "below_modules",
@@ -178,5 +197,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625083834
+    "modified": 1625084465
 }

@@ -1,0 +1,35 @@
+{% set share_link = post.link|url_encode %}
+{% set share_title = post.title|url_encode %}
+
+<div class="share">
+	<ul class="share__list">
+		<li class="share__item">
+			<a class="share__link share__link--facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ share_link }}&t={{ share_title }}" target="_blank">
+				<span class="sr-only">Share on Facebook</span>
+			</a>
+		</li>
+		<li class="share__item">
+			<a class="share__link share__link--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_link }}" target="_blank">
+				<span class="sr-only">Share on LinkedIn</span>
+			</a>
+		</li>
+		<li class="share__item">
+			<a class="share__link share__link--twitter" href="https://twitter.com/intent/tweet?text={{ share_link }}" target="_blank">
+				<span class="sr-only">Share on Twitter</span>
+			</a>
+		</li>
+		<li class="share__item">
+			<a class="share__link share__link--email" href="mailto:{{ user.user_email ? user.user_email }}?&subject={{ share_title }}&body={{ share_link }}" target="_blank">
+				<span class="sr-only">Email</span>
+			</a>
+		</li>
+		{% if print == true %}
+			<li class="share__item">
+				<a class="share__link share__link--print" href="javascript:window.print()">
+					<span class="sr-only">Print</span>
+				</a>
+			</li>
+		{% endif %}
+	</ul>
+
+</div>

@@ -28,6 +28,12 @@
 				</div>
 			{% endfor %}
 		{% endif %}
+
+		{% if post.meta('show_share_links') %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				{% include 'blocks/share.twig' %}
+			</div>
+		{% endif %}
 	</div>
 {% endblock %}
 
