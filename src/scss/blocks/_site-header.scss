@@ -332,8 +332,10 @@
             width: 1px;
 
             .menu__item {
+              border-bottom: 1px solid $gray-divider;
               display: block;
               margin-bottom: 10px;
+              padding-bottom: 10px;
 
               &:last-child {
                 margin-bottom: 0;
@@ -354,12 +356,16 @@
 
               .menu--children {
                 position: static;
-                border-top: 1px solid $gray-divider;
                 clip: auto;
                 height: auto;
                 margin-top: 10px;
-                padding: 10px 0 0 15px;
+                padding: 0 0 0 15px;
                 width: auto;
+
+                .menu__item {
+                  border-bottom: 0;
+                  padding-bottom: 0;
+                }
 
                 // "Transportation"
                 .menu__link {
