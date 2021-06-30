@@ -1,11 +1,9 @@
-<div class="row">
-	{% if module.heading %}
-		<div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
-			<h2 class="text__heading text__heading--media-none">{{ module.heading }}</h2>
-		</div>
-	{% endif %}
+{% if module.heading %}
+	<h2 class="text__heading text__heading--media-none">{{ module.heading }}</h2>
+{% endif %}
 
-	<div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0">
+<div class="row">
+	<div class="col-lg-6">
 		<div class="text__content">
 			<div class="text__copy text-heavy wysiwyg">
 				{{ module.copy }}
@@ -20,7 +18,7 @@
 	</div>
 
 	{% if module.copy_2 %}
-		<div class="col-md-10 offset-md-1 col-lg-6 offset-lg-0">
+		<div class="col-lg-6">
 			<div class="text__content text__content--2">
 				<div class="text__copy text-heavy wysiwyg">
 					{{ module.copy_2 }}

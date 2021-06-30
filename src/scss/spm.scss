@@ -599,11 +599,11 @@ select {
     }
 
     h3 {
-      font-size: 2rem;
+      font-size: 1.65rem;
     }
 
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       line-height: 1.1667;
       margin-bottom: 10px;
     }
@@ -611,12 +611,7 @@ select {
 }
 
 @include media-breakpoint-up(lg) {
-  .text-heavy {
-    h2 {
-      font-size: 2.5rem;
-      line-height: 1.125;
-    }
-  }
+  .text-heavy {}
 }
 
 .wysiwyg {
