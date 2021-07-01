@@ -23,10 +23,12 @@
     position: relative;
 
     &__image {
-      position: absolute;
-      top: -50px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
       display: block;
-      width: 100%;
+      height: calc(100% + 50px);
+      margin-top: -50px;
     }
 
     &__content {
