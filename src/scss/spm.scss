@@ -34,6 +34,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 142px; // approximate height of header
+}
+
 a {
   color: $purple;
   font-weight: 700;
@@ -153,6 +157,9 @@ h6,
 }
 
 @include media-breakpoint-up(md) {
+  [id] {
+    scroll-margin-top: 110px; // approximate height of header
+  }
 
   h2,
   .h2 {
@@ -162,6 +169,9 @@ h6,
 }
 
 @include media-breakpoint-up(lg) {
+  [id] {
+    scroll-margin-top: 137px; // approximate height of header
+  }
 
   h2,
   .h2 {
