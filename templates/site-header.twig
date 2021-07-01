@@ -1,6 +1,10 @@
 {% set logo = Image(options.logo) %}
 
 <header class="site-header {{ options.sticky_header ? 'site-header--sticky' }}">
+	{% if options.announcement.copy or options.announcement.link.url %}
+		{% include 'blocks/announcement.twig' %}
+	{% endif %}
+
 	<div class="container">
 		<div class="row no-gutters site-header__row">
 			<div class="col-12 col-md-auto order-md-2 col-lg-9 site-header__menus-col">
