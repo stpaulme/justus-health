@@ -1,6 +1,12 @@
 .site-header {
   background-color: $white;
 
+  &--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
   .site-header__row {
     align-items: center;
     padding-bottom: 15px;
@@ -170,12 +176,6 @@
 
 @include media-breakpoint-up(lg) {
   .site-header {
-    &--sticky {
-      position: sticky;
-      top: 0;
-      z-index: 9999;
-    }
-
     .site-header__row {
       padding-bottom: 0;
     }
