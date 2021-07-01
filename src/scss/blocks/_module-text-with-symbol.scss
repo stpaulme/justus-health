@@ -1,7 +1,7 @@
 .text-with-symbol {
   padding: 0;
 
-  &__image {
+  &__image-col {
     display: none;
   }
 
@@ -20,23 +20,28 @@
 
 @include media-breakpoint-up(md) {
   .text-with-symbol {
-    position: relative;
-
-    &__image {
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      display: block;
-      height: calc(100% + 50px);
-      margin-top: -50px;
-    }
-
     &__content {
       padding: 60px 0;
     }
 
     &__heading {
       margin-bottom: 15px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-with-symbol {
+    &__image-col {
+      display: block;
+    }
+
+    &__image {
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: calc(100% + 50px);
+      margin-top: -50px;
     }
   }
 }
