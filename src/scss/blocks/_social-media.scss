@@ -28,6 +28,15 @@
             }
         }
 
+        &[href*="instagram"] {
+            background-image: url(../../dist/img/social/social_instagram.svg);
+
+            &:focus,
+            &:hover {
+                background-image: url(../../dist/img/social/social_instagram_hover.svg);
+            }
+        }
+
         &[href*="linkedin"] {
             background-image: url(../../dist/img/social/social_linkedin.svg);
 
