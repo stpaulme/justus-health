@@ -1,0 +1,35 @@
+{% if module.heading %}
+	<h2 class="text__heading text__heading--media-none">{{ module.heading }}</h2>
+{% endif %}
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="text__content">
+			<div class="text__copy text-heavy wysiwyg">
+				{{ module.copy }}
+			</div>
+
+			{% if module.link.url %}
+				<div class="text__link">
+					<a class="button" href="{{ module.link.url }}" target="{{ module.link.target }}">{{ module.link.title }}</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+	{% if module.copy_2 %}
+		<div class="col-lg-6">
+			<div class="text__content text__content--2">
+				<div class="text__copy text-heavy wysiwyg">
+					{{ module.copy_2 }}
+				</div>
+
+				{% if module.link_2.url %}
+					<div class="text__link">
+						<a class="button" href="{{ module.link_2.url }}" target="{{ module.link_2.target }}">{{ module.link_2.title }}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+</div>

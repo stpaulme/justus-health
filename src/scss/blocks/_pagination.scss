@@ -1,6 +1,25 @@
 .pagination {
-  .pagination__next {
-    text-align: right;
+  &__pages {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    list-style: none;
+    justify-content: center;
+    margin: 0 -6px;
+    padding-left: 0;
+  }
+
+  &__page {
+    padding: 0 6px;
+
+    span.current {
+      background-color: $purple-medium;
+      color: $white;
+      display: inline-block;
+      padding: 3px 6px;
+    }
   }
 
   &--load-more {

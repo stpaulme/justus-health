@@ -1,1 +1,120 @@
-.cta-single {}
+.cta-single {
+    padding: 40px 0;
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__heading {
+        margin-bottom: 0;
+    }
+
+    &__copy {
+        margin-top: 10px;
+    }
+}
+
+.cta-single--color-bg {
+    background-color: $purple;
+    color: $white;
+    text-align: center;
+
+    .cta-single__heading {
+        color: $white;
+    }
+
+    .cta-single__copy {
+        font-size: 1.1875rem;
+        line-height: 1.5;
+
+        a {
+            border-bottom: 2px solid $white;
+            color: $white;
+
+            &:focus-visible {
+                outline: 2px solid $dark-purple-bg;
+            }
+
+            &:hover {
+                color: $dark-purple-bg;
+            }
+        }
+    }
+
+    .cta-single__link {
+        margin-top: 20px;
+    }
+}
+
+.error404 .cta-single--color-bg {
+    background-color: $purple-medium;
+
+    .button:hover:after {
+        background-color: $red;
+    }
+}
+
+.cta-single--geometric-bg {
+    position: relative;
+    background-color: $lilac-bg;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url('../../dist/img/accents/aidsline_triangles.svg');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 25%;
+    }
+
+    .cta-single__link {
+        margin-top: 15px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .cta-single {
+        &__copy {
+            margin-top: 15px;
+        }
+    }
+
+    .cta-single--color-bg {
+        padding: 90px 0;
+    }
+
+    .cta-single--geometric-bg {
+        padding: 80px 0;
+
+        &:after {
+            width: 41.6667%;
+        }
+
+        .cta-single__link {
+            margin-top: 20px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .cta-single--color-bg {
+        .cta-single__copy {
+            font-size: 1.3125rem;
+            line-height: 1.4;
+        }
+    }
+
+    .cta-single--geometric-bg {
+        padding-bottom: 90px;
+
+        &:after {
+            width: 50%;
+        }
+    }
+}

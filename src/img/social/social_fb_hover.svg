@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>share_fb copy 2</title>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>social_fb copy</title>
+    <defs>
+        <polygon id="path-1" points="0 0 19.9999259 0 19.9999259 19.9999259 0 19.9999259"></polygon>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Individual-Resource" transform="translate(-362.000000, -592.000000)">
-            <g id="share_fb-copy-2" transform="translate(362.000000, 592.000000)">
-                <circle id="Oval" fill="#B2BB1E" cx="13.5" cy="13.5" r="13.5"></circle>
-                <g id="Group-Copy" transform="translate(9.450000, 5.400000)" fill="#FFFFFF">
-                    <path d="M0.9,5.4 L2.5,5.4 L2.5,3.8 C2.5,3.1 2.5,2 3,1.4 C3.5,0.7 4.3,0.2 5.5,0.2 C7.5,0.2 8.4,0.5 8.4,0.5 L8,2.9 C8,2.9 7.3,2.7 6.7,2.7 C6,2.7 5.5,2.9 5.5,3.5 L5.5,5.3 L8.1,5.3 L7.9,7.8 L5.5,7.8 L5.5,16 L2.5,16 L2.5,7.8 L0.9,7.8 L0.9,5.4 Z" id="Fill-10"></path>
+        <g id="Navigation" transform="translate(-450.000000, -213.000000)">
+            <g id="social_fb-copy" transform="translate(450.000000, 213.000074)">
+                <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M9.99992593,0 C15.5228889,0 19.9999259,4.47703704 19.9999259,10 C19.9999259,15.522963 15.5228889,20 9.99992593,20 C4.47696296,20 -7.40740743e-05,15.522963 -7.40740743e-05,10 C-7.40740743e-05,4.47703704 4.47696296,0 9.99992593,0" id="Fill-1" fill="#7E5EBF" mask="url(#mask-2)"></path>
                 </g>
+                <path d="M7.66666667,7.99985185 L8.85185185,7.99985185 L8.85185185,6.81466667 C8.85185185,6.29614815 8.85185185,5.48133333 9.22222222,5.03688889 C9.59259259,4.51837037 10.1851852,4.148 11.0740741,4.148 C12.5555556,4.148 13.2222222,4.37022222 13.2222222,4.37022222 L12.9259259,6.148 C12.9259259,6.148 12.4074074,5.99985185 11.962963,5.99985185 C11.4444444,5.99985185 11.0740741,6.148 11.0740741,6.59244444 L11.0740741,7.92577778 L13,7.92577778 L12.8518519,9.77762963 L11.0740741,9.77762963 L11.0740741,15.8517037 L8.85185185,15.8517037 L8.85185185,9.77762963 L7.66666667,9.77762963 L7.66666667,7.99985185 Z" id="Fill-4" fill="#FFFFFF"></path>
             </g>
         </g>
     </g>

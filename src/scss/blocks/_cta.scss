@@ -1,10 +1,19 @@
 .cta {
-  .cta__content {
-    background-color: $gray;
-    padding: 20px;
+  background-color: $lilac-bg;
+  padding: 20px;
+
+  &__heading {
+    color: $dark-purple-bg;
+    font-size: 1.5rem;
+    line-height: 1.1667;
+    margin-bottom: 0;
   }
 
-  .cta__link {
-    margin-top: 20px;
+  &__copy {
+    margin-top: 10px;
+  }
+
+  &__link {
+    margin-top: 15px;
   }
 }

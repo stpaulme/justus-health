@@ -35,6 +35,37 @@
                 "id": ""
             },
             "layouts": {
+                "layout_6049199a841b5": {
+                    "key": "layout_6049199a841b5",
+                    "name": "anchor_links",
+                    "label": "Anchor Links",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_604919a0841b6",
+                            "label": "Anchor Links",
+                            "name": "anchor_links",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_604919493c057"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d8d1cdefa363": {
                     "key": "layout_5d8d1cdefa363",
                     "name": "cta_single",
@@ -118,6 +149,68 @@
                             },
                             "clone": [
                                 "group_5d8d1f029d66a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60492ca9afece": {
+                    "key": "layout_60492ca9afece",
+                    "name": "embed_code",
+                    "label": "Embed Code",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60492caeafecf",
+                            "label": "Embed Code",
+                            "name": "embed_code",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60492c4cef3f4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6046982f72dc8": {
+                    "key": "layout_6046982f72dc8",
+                    "name": "featured_event",
+                    "label": "Featured Event",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6046983372dc9",
+                            "label": "Featured Event",
+                            "name": "featured_event",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_604697aee3451"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -252,16 +345,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d8d0689f0549": {
-                    "key": "layout_5d8d0689f0549",
-                    "name": "team",
-                    "label": "Team",
+                "layout_60492d903218b": {
+                    "key": "layout_60492d903218b",
+                    "name": "link_list",
+                    "label": "Link List",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d8d068cf054a",
-                            "label": "Team",
-                            "name": "team",
+                            "key": "field_60492d973218c",
+                            "label": "Link List",
+                            "name": "link_list",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -272,7 +365,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5ce49e1e44dc2"
+                                "group_60492d365baab"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -283,16 +376,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5ce40636e1a2e": {
-                    "key": "layout_5ce40636e1a2e",
-                    "name": "testimonial",
-                    "label": "Testimonial",
+                "layout_60465d0f2c3cf": {
+                    "key": "layout_60465d0f2c3cf",
+                    "name": "statistics",
+                    "label": "Statistics",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5ce406818c575",
-                            "label": "Testimonial",
-                            "name": "testimonial",
+                            "key": "field_60465d142c3d0",
+                            "label": "Statistics",
+                            "name": "statistics",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -303,7 +396,38 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5ce406488eb38"
+                                "group_60465c60956b1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6049397fb7571": {
+                    "key": "layout_6049397fb7571",
+                    "name": "slider",
+                    "label": "Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60493983b7572",
+                            "label": "Slider",
+                            "name": "slider",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_604938f5bdc60"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -335,6 +459,37 @@
                             },
                             "clone": [
                                 "group_5d8bacd651a04"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60d9e614018e8": {
+                    "key": "layout_60d9e614018e8",
+                    "name": "text_with_symbol",
+                    "label": "Text with Symbol",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60d9e61e018e9",
+                            "label": "Text with Symbol",
+                            "name": "text_with_symbol",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60d9e5825ab5a"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -411,6 +566,25 @@
             "button_label": "Add Module",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_60623b324d27b",
+            "label": "Show AIDSLine CTA?",
+            "name": "show_aidsline_cta",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -432,5 +606,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1614286926
+    "modified": 1624892986
 }

@@ -1,0 +1,14 @@
+<div class="team">
+	<div class="container">
+		{% if module.heading %}
+			<h2 class="team__heading">{{ module.heading }}</h2>
+		{% endif %}
+		{% if module.posts|length > 0 %}
+			{% for post in module.posts %}
+				<div class="team__member">
+					{% include 'blocks/member.twig' with { 'image' : post.thumbnail, 'name' : post.title, 'title' : post.meta('counselor_title'), 'pronouns' : post.meta('pronouns'), 'bio' : post.content  } %}
+				</div>
+			{% endfor %}
+		{% endif %}
+	</div>
+</div>

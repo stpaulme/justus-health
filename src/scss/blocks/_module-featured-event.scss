@@ -1,0 +1,137 @@
+.featured-event {
+  position: relative;
+  background-color: $lilac-bg-alt;
+  padding: 40px 0 30px;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../../dist/img/accents/triangle_upperright.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 58.3333%;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__image {
+    margin-bottom: 15px;
+  }
+
+  &__date,
+  &__subheading {
+    color: $dark-purple-bg;
+    display: block;
+  }
+
+  &__date {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.1111;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__subheading {
+    font-size: 1.125rem;
+    line-height: 1.5556;
+    margin-top: 8px;
+  }
+
+  &__description {
+    border-top: 2px solid $white;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  &__location,
+  &__link {
+    margin-top: 15px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .featured-event {
+    padding: 60px 0;
+
+    &:after {
+      width: 41.6667%;
+    }
+
+    &__image {
+      margin-bottom: 20px;
+    }
+
+    &__subheading {
+      font-size: 1.3125rem;
+      line-height: 1.3333;
+    }
+
+    &__description {
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+
+    &__location,
+    &__link {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .featured-event {
+    padding: 70px 0;
+
+    &:after {
+      width: 25%;
+    }
+
+    &__image {
+      margin-bottom: 0;
+    }
+
+    &__meta-col {
+      &--without-image {
+        border-right: 2px solid $white;
+      }
+    }
+
+    &__meta {
+      &--without-image {
+        padding-right: 30px;
+      }
+    }
+
+    &__description {
+      border-top: 0;
+      padding-top: 0;
+
+      &--without-image {
+        margin-top: 0;
+        padding-left: 30px;
+      }
+    }
+
+    &__location,
+    &__link {
+      margin-top: 15px;
+
+      &--without-image {
+        padding-left: 30px;
+      }
+    }
+  }
+}

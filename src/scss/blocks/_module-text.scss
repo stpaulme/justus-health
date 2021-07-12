@@ -1,31 +1,133 @@
 .text {
-  .text__row {
-    justify-content: center;
-  }
+  padding: 30px 0;
 
-  .text__media {
+  &__media {
     margin-bottom: 20px;
-  }
 
-  .text__image {
-    width: 100%;
-  }
+    &--image {
+      background-repeat: no-repeat;
+      height: 0;
+    }
 
-  .text__content {
-    &--without-media {
-      text-align: center;
+    &--contained {
+      // Aspect ratio and positioning
+      background-position: bottom center;
+      background-size: contain;
+      padding-bottom: calc(225 / 290 * 100%);
+    }
+
+    &--full {
+      // Break out of container - 100vw
+      position: relative;
+      right: 50%;
+      left: 50%;
+      margin-right: -50vw;
+      margin-left: -50vw;
+      max-width: 100vw;
+      width: 100vw;
+
+      // Cancel out padding-top
+      margin-top: -30px;
+
+      // Aspect ratio and positioning
+      background-position: center;
+      background-size: cover;
+      padding-bottom: calc(185 / 320 * 100%);
     }
   }
 
-  .text__link {
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    &--2 {
+      margin-top: 30px;
+    }
+  }
+
+  &__link {
     margin-top: 20px;
+  }
+
+  &--color-bg {
+    background-color: $lilac-bg;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text {
+    padding: 50px 0 60px;
+
+    &__media {
+      margin-bottom: 40px;
+
+      &--full {
+        // Cancel out padding-top
+        margin-top: -50px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 15px;
+    }
   }
 }
 
 @include media-breakpoint-up(lg) {
   .text {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+
     .text__media {
       margin-bottom: 0;
+
+      &--contained {
+        background-position: top center;
+      }
+
+      &--full {
+        // Break out of container - 50vw
+        position: absolute;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 50vw;
+        width: 50vw;
+
+        // Cancel out padding-top
+        margin-top: -60px;
+
+        // Use height of containing div instead of aspect ratio
+        padding-bottom: 0;
+        height: calc(100% + 120px);
+
+        &.left {
+          left: auto;
+          right: 0;
+          clip-path: polygon(1% 0, 100% 0, 90% 100%, 0% 100%);
+          margin-right: 15px;
+        }
+
+        &.right {
+          left: 0;
+          right: auto;
+          clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+          margin-left: 15px;
+        }
+      }
+    }
+
+    &__heading {
+      &--media-none {
+        max-width: 50%;
+      }
+    }
+
+    &__content {
+      &--2 {
+        margin-top: 0;
+      }
     }
   }
 }

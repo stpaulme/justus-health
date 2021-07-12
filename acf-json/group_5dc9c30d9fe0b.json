@@ -22,8 +22,27 @@
             "maxlength": ""
         },
         {
+            "key": "field_60aeb4d516018",
+            "label": "Subheading",
+            "name": "subheading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5dc9c30da8fd2",
-            "label": "Number of Posts to Show",
+            "label": "Number of Events to Show",
             "name": "max",
             "type": "number",
             "instructions": "",
@@ -41,6 +60,25 @@
             "min": "",
             "max": 10,
             "step": ""
+        },
+        {
+            "key": "field_60aec3844e910",
+            "label": "Show Titles?",
+            "name": "show_titles",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5dc9c30da8f71",
@@ -80,7 +118,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 0,
+    "active": false,
     "description": "",
-    "modified": 1573503797
+    "modified": 1622066081
 }

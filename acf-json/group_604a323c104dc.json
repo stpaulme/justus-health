@@ -1,12 +1,12 @@
 {
-    "key": "group_5ce406488eb38",
-    "title": "Module - Testimonial",
+    "key": "group_604a323c104dc",
+    "title": "Post Type - Counselor",
     "fields": [
         {
-            "key": "field_60411e8574c81",
-            "label": "Quote",
-            "name": "quote",
-            "type": "wysiwyg",
+            "key": "field_604a327e84da3",
+            "label": "Title",
+            "name": "counselor_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,15 +16,15 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_60411e9474c82",
-            "label": "Source",
-            "name": "source",
+            "key": "field_604a329093d69",
+            "label": "Pronouns",
+            "name": "pronouns",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -46,17 +46,17 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "counselor"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
-    "style": "default",
+    "position": "acf_after_title",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
-    "modified": 1614880409
+    "modified": 1615475356
 }

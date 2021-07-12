@@ -1,0 +1,29 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col-lg-10">
+			{% if module.questions|length > 0 %}
+				<ul class="anchor-links__list">
+					{% for item in module.questions %}
+						<li class="anchor-links__list-item">
+							<a href="#{{ item.question|replace(' ','_') }}">{{ item.question }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="anchor-links__items">
+					{% for item in module.questions %}
+						<div class="anchor-links__item" id="{{ item.question|replace(' ','_') }}">
+							<h2 class="anchor-links__question">{{ item.question }}</h2>
+							<div class="anchor-links__answer text-heavy wysiwyg">
+								{{ item.answer }}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+{% endblock %}

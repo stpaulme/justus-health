@@ -1,0 +1,91 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
+{% block content %}
+	<div class="therapist-post">
+
+		<div class="row">
+			{% if post.thumbnail %}
+				<div class="col-7 col-md-4 col-lg-12">
+					<picture>
+						<source srcset="{{ post.thumbnail.src('square')|towebp }}" type="image/webp">
+						<source srcset="{{ post.thumbnail.src('square') }}" type="image/jpeg">
+						<img alt="{{ post.title }}" class="therapist-post__image" loading="lazy" src="{{ post.thumbnail.src('square') }}">
+					</picture>
+				</div>
+			{% endif %}
+
+			<div class="col-12 col-md-8 col-lg-12">
+				<div class="therapist-post__header">
+					<h1 class="therapist-post__name">{{ post.title }}</h1>
+
+					{% if post.meta('therapist_title') %}
+						<span class="therapist-post__title">{{ post.meta('therapist_title') }}</span>
+					{% endif %}
+				</div>
+
+				<div class="therapist-post__meta">
+					<div class="row">
+						{% if post.meta('pronouns') %}
+							<div class="col-md-4 therapist-post__meta-col">
+								<h2 class="therapist-post__label">Pronouns</h2>
+
+								<p class="therapist-post__detail">{{ post.meta('pronouns') }}</p>
+							</div>
+						{% endif %}
+
+						{% if post.terms('therapy_type') %}
+							<div class="col-md-8 therapist-post__meta-col">
+								<h2 class="therapist-post__label">Therapy Types</h2>
+								<p class="therapist-post__detail">{{ post.terms('therapy_type')|join(', ') }}</p>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="therapist-post__content text-heavy wysiwyg">
+			{{ post.content }}
+
+			{% if post.meta('specialties') %}
+				<h3>Specialties</h3>
+				<ul>
+					{% for item in post.meta('specialties') %}
+						<li>{{ item.specialty }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+			{% if post.meta('additional_info') %}
+				{{ post.meta('additional_info') }}
+			{% endif %}
+		</div>
+
+		{% include 'blocks/back.twig' with { 'link_url' : '/therapy-counseling/therapy/our-therapists', 'link_text' : 'Back to All Therapists' } %}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+	<div class="row">
+		{% if post.thumbnail %}
+			<div class="col-md-6 col-lg-12 sidebar__col sidebar__image">
+				<picture>
+					<source srcset="{{ post.thumbnail.src('square')|towebp }}" type="image/webp">
+					<source srcset="{{ post.thumbnail.src('square') }}" type="image/jpeg">
+					<img alt="{{ post.title }}" loading="lazy" src="{{ post.thumbnail.src('square') }}">
+				</picture>
+			</div>
+		{% endif %}
+
+		{% set cta = post.meta('cta') %}
+		{% if cta.heading %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				{% include 'blocks/cta.twig' %}
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

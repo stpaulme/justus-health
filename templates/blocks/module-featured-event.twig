@@ -1,0 +1,66 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	<div class="row">
+
+		{% set image = Image(module.image) %}
+		{% if image.src %}
+			<div class="col-lg-6">
+				<picture>
+					<source srcset="{{ image.src('3by2')|towebp }} 1110w, {{ image.src('3by2-md')|towebp }} 690w, {{ image.src('3by2-sm')|towebp }} 395w" sizes="(min-width: 992px) 48vw, 96vw" type="image/webp">
+					<source srcset="{{ image.src('3by2') }} 1110w, {{ image.src('3by2-md') }} 690w, {{ image.src('3by2-sm') }} 395w" sizes="(min-width: 992px) 48vw, 96vw" type="image/jpeg">
+					<img alt="{{ image.alt }}" class="featured-event__image" loading="lazy" src="{{ image.src('3by2') }}">
+				</picture>
+			</div>
+		{% endif %}
+
+		<div class="col">
+			<div class="row no-gutters">
+
+				<div class="featured-event__meta-col {{ image.src ? 'col-12 featured-event__meta-col--with-image' : 'col-lg-6 featured-event__meta-col--without-image' }}">
+					<div class="featured-event__meta--{{ image.src ? 'with-image' : 'without-image' }}">
+						{% if module.date %}
+							<time class="featured-event__date">{{ module.date }}</time>
+						{% endif %}
+
+						{% if module.heading %}
+							<h2 class="featured-event__heading">
+								{% if module.link %}
+									<a href="{{ module.link.url }}" target="{{ module.link.target }}">
+									{% endif %}
+									{{ module.heading }}
+									{% if module.link %}
+									</a>
+								{% endif %}
+							</h2>
+						{% endif %}
+
+						{% if module.subheading %}
+							<span class="featured-event__subheading">{{ module.subheading }}</span>
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="{{ image.src ? 'col-12' : 'col-lg-6' }}">
+					{% if module.description %}
+						<div class="featured-event__description featured-event__description--{{ image.src ? 'with-image' : 'without-image' }} wysiwyg">{{ module.description }}</div>
+					{% endif %}
+
+					{% if module.location %}
+						<div class="featured-event__location featured-event__location--{{ image.src ? 'with-image' : 'without-image' }}">
+							{{ module.location }}
+						</div>
+					{% endif %}
+
+					{% if module.link %}
+						<div class="featured-event__link featured-event__link--{{ image.src ? 'with-image' : 'without-image' }}">
+							<a class="button" href="{{ module.link.url }}" target="{{ module.link.target }}">{{ module.link.title }}</a>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

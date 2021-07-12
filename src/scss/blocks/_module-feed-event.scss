@@ -1,19 +1,95 @@
 .feed-event {
-  .feed-event__col {
-    margin-bottom: 20px;
+  padding: 30px 0;
+
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  &__subheading {
+    border-left: 3px solid $purple;
+    color: $dark-purple-bg;
+    display: block;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 20px;
+    padding-left: 8px;
+    text-transform: uppercase;
+  }
+
+  &__posts {
+    margin-top: 20px;
+  }
+
+
+  &__post {
+    margin-bottom: 15px;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
+
+  .wrap-link:hover {
+    .card-event {
+      background-color: $purple-medium;
+
+      &__title,
+      &__date,
+      &__address {
+        color: $white;
+      }
+    }
+  }
+
+  &__all {
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  &__none {
+    margin-bottom: 0;
+  }
 }
 
 @include media-breakpoint-up(md) {
   .feed-event {
-    .feed-event__col {
-      &:nth-last-child(-n + 3) {
-        margin-bottom: 0;
-      }
+    padding: 60px 0;
+
+    &__description {
+      margin-top: 15px;
+    }
+
+    &__subheading {
+      font-size: 1.5rem;
+      line-height: 1.1667;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    &__posts {
+      margin-top: 0;
+    }
+
+    &__post {
+      margin-bottom: 20px;
+    }
+
+    &__all {
+      margin-top: 30px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .feed-event {
+    &__subheading {
+      margin-top: 15px;
     }
   }
 }

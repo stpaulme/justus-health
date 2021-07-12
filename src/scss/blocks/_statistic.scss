@@ -1,0 +1,41 @@
+.statistic {
+    &__content {
+        background-color: $white;
+        padding: 25px 25px 40px;
+    }
+
+    &__figure {
+        color: $dark-purple-bg;
+        font-size: 2rem;
+        line-height: 1.34375;
+        margin-bottom: 0;
+    }
+
+    &__elaboration {
+        font-size: 1.125rem;
+        line-height: 1.3889;
+        margin-top: 10px;
+    }
+
+    &__link {
+        margin-top: -23px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .statistic {
+        &__figure {
+            font-size: 2.25rem;
+            line-height: 1.55;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .statistic {
+        &__figure {
+            font-size: 2.5rem;
+            line-height: 1.075;
+        }
+    }
+}

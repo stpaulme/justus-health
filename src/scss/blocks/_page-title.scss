@@ -1,15 +1,42 @@
 .page-title {
-  background-color: $purple;
-  color: $white;
-  padding: 20px 0;
+  background-color: $dark-purple-bg;
+  padding-top: 30px;
 
-  .page-title__heading {
-    margin-bottom: 0;
+  &__heading {
+    color: $white;
+    font-size: 2.125rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
   }
 }
 
 @include media-breakpoint-up(md) {
   .page-title {
-    padding: 40px 0;
+    padding-top: 25px;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__heading {
+      font-size: 3.25rem;
+      margin-top: auto;
+      margin-bottom: 25px;
+    }
+
+    &__image-col {
+      align-self: flex-end;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page-title {
+    &__heading {
+      font-size: 4.5rem;
+      margin-bottom: 30px;
+    }
   }
 }

@@ -1,67 +1,77 @@
-{% set logo = Image(options.logo) %}
+{% set logo = Image(options.logo_reverse) %}
 
 <footer class="site-footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<a class="site-footer__logo-link link-has-image" href="{{ site.url }}">
-					<img alt="{{ site.title }} homepage" class="site-footer__logo" src="{{ logo.src }}">
-				</a>
-
-				{% if options.address %}
-					<address class="site-footer__address links-blend-in">
-						{% if options.map_url %}
-							<a href="{{ options.map_url }}" target="_blank">
-							{% endif %}
-							{{ options.address }}
-							{% if options.map_url %}
-							</a>
-						{% endif %}
-					</address>
-				{% endif %}
-
-				{% if options.email %}
-					<div class="site-footer__email">
-						<a href="mailto:{{ options.email }}">{{ options.email }}</a>
-					</div>
-				{% endif %}
-
-				{% if options.phone %}
-					<div class="site-footer__phone">
-						<a href="tel:{{ options.phone }}">{{ options.phone }}</a>
-					</div>
-				{% endif %}
-
-				<div class="site-footer__social-media">
-					{% include 'blocks/social-media.twig' %}
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="site-footer__menu">
-					{% include 'blocks/nav.twig' with { 'menu' : menu_footer, 'items' : menu_footer.get_items } %}
-				</div>
-			</div>
-
-
-			<div class="col-md-12">
-				<div class="site-footer__colophon links-blend-in">
+	<div class="site-footer__upper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-lg-6">
 					<div class="row">
-						<div class="col-md-6">
-							<span class="site-footer__copyright">
-								Copyright &copy;
-								{{"now"|date('Y')}}
-								{{ site.name }}.
-								<a href="{{ site.url }}/data-privacy-policy/">Data Privacy Policy</a>
-							</span>
+						<div class="col-lg-6">
+							<a class="site-footer__logo-link" href="{{ site.url }}">
+								<img alt="{{ site.title }} homepage" class="site-footer__logo" src="{{ logo.src }}">
+							</a>
 						</div>
-						<div class="col-md-6">
-							<span class="site-footer__attribution">
-								Site Design by
-								<a href="https://stpaulmedia.com/" target="_blank">Saint Paul Media</a>
-							</span>
+						<div class="col-lg-6">
+							{% if options.address %}
+								<address class="site-footer__address">
+									{% if options.map_url %}
+										<a href="{{ options.map_url }}" target="_blank">
+										{% endif %}
+										{{ options.address }}
+										{% if options.map_url %}
+										</a>
+									{% endif %}
+								</address>
+							{% endif %}
+
+							{% if options.phone %}
+								<div class="site-footer__phone">
+									<span class="site-footer__label">Phone</span>
+
+									<a href="tel:{{ options.phone }}">{{ options.phone }}</a>
+								</div>
+							{% endif %}
+
+							{% if options.aidsline_cta.link %}
+								<div class="site-footer__phone site-footer__phone--aidsline">
+									<span class="site-footer__label">AIDSLine</span>
+
+									<a href="{{ options.aidsline_cta.link.url }}">{{ options.aidsline_cta.link.title }}</a>
+								</div>
+							{% endif %}
 						</div>
 					</div>
+				</div>
+				<div class="col-md-4 col-lg-3">
+					<div class="site-footer__menu">
+						{% include 'blocks/nav.twig' with { 'menu' : menu_footer, 'items' : menu_footer.get_items } %}
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-3">
+					<div class="site-footer__search">
+						{% include 'blocks/search-bar.twig' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-footer__lower">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<span class="site-footer__copyright">
+						Copyright &copy;
+						{{"now"|date('Y')}}
+						{{ site.name }}.
+						<a href="{{ site.url }}/data-privacy-policy/">Data Privacy Policy</a>
+					</span>
+				</div>
+				<div class="col-md-6">
+					<span class="site-footer__attribution">
+						Site Design by
+						<a href="https://stpaulmedia.com/" target="_blank">Saint Paul Media</a>
+					</span>
 				</div>
 			</div>
 		</div>

@@ -1,10 +1,11 @@
 <div class="search-bar">
-	<button id="search-bar__toggle" aria-label="Toggle Search Form">
-		<i class="fas fa-search" aria-hidden="true"></i>
-	</button>
-
-	<form role="search" method="get" action="{{ site.url }}" id="search-bar__form">
+	<form action="{{ site.url }}" class="search-bar__form" method="get" role="search">
 		<label class="sr-only" for="s">Search for:</label>
-		<input type="text" name="s" id="search-bar__field" placeholder="Search Site"/>
+		<input class="search-bar__field" type="text" name="s" placeholder="Search Site"/>
+
+		<button class="search-bar__submit" type="submit">
+			<span class="sr-only">Search</span>
+			<i class="fas fa-search" aria-hidden="true"></i>
+		</button>
 	</form>
 </div>

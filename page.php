@@ -6,13 +6,13 @@ $timber_post = new TimberPost();
 $context['post'] = $timber_post;
 
 // Title
-$context['title'] = $timber_post->title;
 if ($timber_post->post_parent) {
     $context['breadcrumbs'] = bcn_display(true);
 }
 
 // Sidebar
 $context['sidebar'] = true;
+$context['sidebar_pos'] = 'right';
 $context['parent'] = spm_get_top_parent($post);
 $context['sidebar_nav'] = spm_get_child_pages(0, true);
 $sidebar_modules = get_field('sidebar_modules');
@@ -24,4 +24,10 @@ $context['below_modules'] = spm_add_data_to_modules($below_modules);
 
 $templates = array('default.twig');
 
-Timber::render($templates, $context);
+if (post_password_required($timber_post->ID)) {
+    $context['title'] = $timber_post->title;
+    $context['sidebar'] = true; // for .container and line length
+    Timber::render('page-password.twig', $context);
+} else {
+    Timber::render($templates, $context);
+}

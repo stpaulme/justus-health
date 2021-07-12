@@ -20,12 +20,26 @@
 
 		<div class="excerpt__content">
 			{% block content %}
-				<h2 class="excerpt__title">
+				<h3 class="excerpt__title">
 					<a href="{{ post.link }}">{{ post.title }}</a>
-				</h2>
+				</h3>
+
+				{% if post.meta('counselor_title') or post.meta('therapist_title') %}
+					{% if post.meta('counselor_title') %}
+						<span class="excerpt__subtitle">{{ post.meta('counselor_title') }}</span>
+					{% endif %}
+
+					{% if post.meta('therapist_title') %}
+						<span class="excerpt__subtitle">{{ post.meta('therapist_title') }}</span>
+					{% endif %}
+				{% endif %}
+
+				{% if post.meta('pronouns') %}
+					<span class="excerpt__pronouns">{{ post.meta('pronouns') }}</span>
+				{% endif %}
 
 				{% if post.preview|length > 0 %}
-					<p class="excerpt__preview">{{ post.preview.length(25).read_more('') }}</p>
+					<p class="excerpt__preview">{{ post.preview.length(15).read_more('') }}</p>
 				{% endif %}
 			{% endblock %}
 		</div>

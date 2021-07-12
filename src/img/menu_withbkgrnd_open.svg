@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="97px" height="58px" viewBox="0 0 97 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-223.000000, -60.000000)">
+            <g id="Group-9" transform="translate(223.000000, 60.000000)">
+                <polygon id="Rectangle-Copy" fill="#ECEBF3" points="18 0 97 7.72715225e-14 97 58 0 58"></polygon>
+                <g id="Group-Copy-2" transform="translate(32.000000, 13.000000)" fill="#352F59">
+                    <path d="M1,0 L48,0 C48.5522847,-4.02567223e-15 49,0.44771525 49,1 L49,4.06999391 C49,4.62227866 48.5522847,5.06999391 48,5.06999391 L1,5.06999391 C0.44771525,5.06999391 1.1778584e-15,4.62227866 0,4.06999391 L0,1 C-1.78657678e-16,0.44771525 0.44771525,3.23497668e-16 1,0 Z" id="Rectangle-10"></path>
+                    <path d="M1,13.1819842 L48,13.1819842 C48.5522847,13.1819842 49,13.6296994 49,14.1819842 L49,17.2519781 C49,17.8042628 48.5522847,18.2519781 48,18.2519781 L1,18.2519781 C0.44771525,18.2519781 1.1778584e-15,17.8042628 0,17.2519781 L0,14.1819842 C-1.78657678e-16,13.6296994 0.44771525,13.1819842 1,13.1819842 Z" id="Rectangle-10-Copy"></path>
+                    <rect id="Rectangle-10-Copy-2" x="0" y="26.3639684" width="49" height="5.06999391" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

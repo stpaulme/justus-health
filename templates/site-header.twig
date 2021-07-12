@@ -6,27 +6,19 @@
 	{% endif %}
 
 	<div class="container">
-		<div class="row site-header__row">
-			<div class="col-8 col-md-4 col-lg-3">
-				<a class="link-has-image" href="{{ site.url }}">
-					<img alt="{{ site.title }} homepage" class="site-header__logo" src="{{ logo.src }}">
-				</a>
-			</div>
-
-			<div class="col site-header__hamburger-col">
-				<button id="site-header__hamburger" aria-label="Toggle Mobile Menu">
-					<span class="sr-only">Toggle Mobile Menu</span>
-				</button>
-				<div class="site-header__menu-mobile">
-					{% include 'blocks/nav.twig' with { 'menu' : menu_mobile, 'id' : 'site-header__nav-mobile', 'items' : menu_mobile.get_items, 'show_children' : true } %}
-				</div>
-			</div>
-
-			<div class="col site-header__desktop-menus-col">
-				<div class="site-header__desktop-menus">
-					<div class="site-header__desktop-menu site-header__desktop-menu--secondary">
-						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items, 'show_search' : true } %}
+		<div class="row no-gutters site-header__row">
+			<div class="col-12 col-md-auto order-md-2 col-lg-9 site-header__menus-col">
+				<div class="site-header__menus-upper">
+					<div class="site-header__social-media">
+						{% include 'blocks/social-media.twig' %}
 					</div>
+
+					<div class="site-header__desktop-menu site-header__desktop-menu--secondary">
+						{% include 'blocks/nav.twig' with { 'menu' : menu_secondary, 'items' : menu_secondary.get_items } %}
+					</div>
+				</div>
+
+				<div class="site-header__menus-lower">
 					<div class="site-header__desktop-menu site-header__desktop-menu--primary">
 						{% if options.desktop_menu_style == 'dropdown' %}
 							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'modifier' : 'dropdown', 'items' : menu_primary.get_items, 'show_children' : true } %}
@@ -34,6 +26,29 @@
 							{% include 'blocks/nav.twig' with { 'menu' : menu_primary, 'items' : menu_primary.get_items, 'show_children' : false } %}
 						{% endif %}
 					</div>
+
+					{% if options.aidsline_cta.link %}
+						<div class="site-header__aidsline">
+							<span class="site-header__aidsline-label">AIDSLine</span>
+
+							<a class="site-header__aidsline-link" href="{{ options.aidsline_cta.link.url }}">{{ options.aidsline_cta.link.title }}</a>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="col-7 col-md-4 order-md-1 col-lg-3 site-header__logo-col">
+				<a class="site-header__logo-link" href="{{ site.url }}">
+					<img alt="{{ site.title }} homepage" class="site-header__logo" src="{{ logo.src }}">
+				</a>
+			</div>
+
+			<div class="col col-md-auto order-md-3 site-header__hamburger-col">
+				<button id="site-header__hamburger" aria-label="Toggle Mobile Menu">
+					<span class="sr-only">Toggle Mobile Menu</span>
+				</button>
+				<div class="site-header__menu-mobile">
+					{% include 'blocks/nav.twig' with { 'menu' : menu_mobile, 'id' : 'site-header__nav-mobile', 'items' : menu_mobile.get_items, 'show_children' : true } %}
 				</div>
 			</div>
 		</div>

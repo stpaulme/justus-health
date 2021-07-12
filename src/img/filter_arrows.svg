@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta2 (2b71d25, 2019-12-03)"
+   sodipodi:docname="filter_arrows.svg"
+   id="svg851"
+   version="1.1"
+   viewBox="0 0 13 9"
+   height="9px"
+   width="13px">
+  <metadata
+     id="metadata855">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg851"
+     inkscape:window-maximized="0"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:cy="4.5"
+     inkscape:cx="6.5"
+     inkscape:zoom="65.846154"
+     showgrid="false"
+     id="namedview853"
+     inkscape:window-height="819"
+     inkscape:window-width="1440"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     inkscape:document-rotation="0"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <title
+     id="title833">Triangles</title>
+  <defs
+     id="defs841">
+    <polygon
+       points="6.7 8 12.7 0 0.7 0"
+       id="path-1" />
+    <filter
+       id="filter-2"
+       filterUnits="objectBoundingBox"
+       height="125.0%"
+       width="108.3%"
+       y="-6.2%"
+       x="-4.2%">
+      <feOffset
+         id="feOffset836"
+         result="shadowOffsetOuter1"
+         in="SourceAlpha"
+         dy="1"
+         dx="0" />
+      <feColorMatrix
+         id="feColorMatrix838"
+         in="shadowOffsetOuter1"
+         type="matrix"
+         values="0 0 0 0 1   0 0 0 0 0.999936521   0 0 0 0 1  0 0 0 1 0" />
+    </filter>
+  </defs>
+  <g
+     style="fill:#464545;fill-opacity:1"
+     fill-rule="evenodd"
+     fill="none"
+     stroke-width="1"
+     stroke="none"
+     id="Page-1">
+    <g
+       style="fill:#464545;fill-opacity:1"
+       transform="translate(-281.000000, -255.000000)"
+       id="CIC---Risk-Resources-Phone">
+      <g
+         style="fill:#464545;fill-opacity:1"
+         transform="translate(15.000000, 241.000000)"
+         id="Group-Copy-4">
+        <g
+           style="fill:#464545;fill-opacity:1"
+           transform="translate(266.000000, 14.000000)"
+           id="Triangle">
+          <use
+             style="fill:#464545;fill-opacity:1"
+             id="use843"
+             xlink:href="#path-1"
+             filter="url(#filter-2)"
+             fill-opacity="1"
+             fill="black" />
+          <use
+             style="fill:#464545;fill-opacity:1"
+             id="use845"
+             xlink:href="#path-1"
+             fill-rule="evenodd"
+             fill="#B44D00" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

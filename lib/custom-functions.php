@@ -26,6 +26,8 @@ function spm_get_child_pages($depth, $show_title_li)
 
     $top_parent = spm_get_top_parent($post);
 
+    $excluded_pages = get_field('excluded_pages', 'option');
+
     $args = array(
         'child_of' => $top_parent,
         'depth' => $depth,
@@ -36,6 +38,10 @@ function spm_get_child_pages($depth, $show_title_li)
 
     if ($show_title_li == true) {
         $args['title_li'] = '<h2>' . get_the_title($top_parent) . '</h2>';
+    }
+
+    if (is_array($excluded_pages)) {
+        $args['exclude'] = implode(',', $excluded_pages);
     }
 
     $child_pages = wp_list_pages($args);
@@ -52,6 +58,19 @@ function spm_add_data_to_modules($modules)
     }
 
     foreach ($modules as &$module) {
+        if ($module['acf_fc_layout'] == 'counselors') {
+
+            // Add posts to module in Timber
+            $args = array(
+                'post_type' => 'counselor',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+            );
+
+            $module['posts'] = Timber::get_posts($args);
+        }
+
         if ($module['acf_fc_layout'] == 'feed_event') {
             // Get data from ACF
             $event_category = $module['event_category'];
@@ -97,6 +116,28 @@ function spm_add_data_to_modules($modules)
                 'post_type' => 'post',
                 'posts_per_page' => $max,
                 'cat' => $post_category,
+            );
+
+            $module['posts'] = Timber::get_posts($args);
+        }
+
+        if ($module['acf_fc_layout'] == 'therapists_or_interns') {
+            // Get data from ACF
+            $role = $module['role'];
+
+            // Add posts to module in Timber
+            $args = array(
+                'post_type' => 'therapist',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'therapist_role',
+                        'field' => 'term_id',
+                        'terms' => $role,
+                    ),
+                ),
             );
 
             $module['posts'] = Timber::get_posts($args);

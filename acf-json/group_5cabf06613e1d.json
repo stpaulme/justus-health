@@ -36,7 +36,10 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5cabeb1f27537"
+                                "field_5d8cf665e07a2",
+                                "field_5d8cf645e079f",
+                                "field_5d8cf64ce07a0",
+                                "field_5d8cf655e07a1"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -51,6 +54,25 @@
             "button_label": "Add Module",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_60dcd21c27bf8",
+            "label": "Show Share Links?",
+            "name": "show_share_links",
+            "type": "true_false",
+            "instructions": "Facebook, Twitter, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5ce4a7022265a",
@@ -68,14 +90,14 @@
             "layouts": {
                 "layout_5ce4b885b1a9a": {
                     "key": "layout_5ce4b885b1a9a",
-                    "name": "testimonial",
-                    "label": "Testimonial",
+                    "name": "cta_single",
+                    "label": "CTA",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5ce4b889b1a9b",
-                            "label": "Testimonial",
-                            "name": "testimonial",
+                            "key": "field_604a39cb4b690",
+                            "label": "CTA",
+                            "name": "cta",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -86,7 +108,38 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5ce406488eb38"
+                                "group_5cabeb1f27537"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60b7a83fec059": {
+                    "key": "layout_60b7a83fec059",
+                    "name": "feed_post",
+                    "label": "Latest Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b7a843ec05a",
+                            "label": "Latest Posts",
+                            "name": "latest_posts",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d8bc418c8844"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -101,6 +154,25 @@
             "button_label": "Add Module",
             "min": "",
             "max": ""
+        },
+        {
+            "key": "field_60623b1b9caf4",
+            "label": "Show AIDSLine CTA?",
+            "name": "show_aidsline_cta",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -109,6 +181,11 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "default"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
             }
         ]
     ],
@@ -120,5 +197,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614882517
+    "modified": 1625084465
 }

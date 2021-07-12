@@ -1,0 +1,47 @@
+.text-with-symbol {
+  padding: 0;
+
+  &__image-col {
+    display: none;
+  }
+
+  &__content {
+    padding: 30px 0;
+  }
+
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    margin-top: 20px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text-with-symbol {
+    &__content {
+      padding: 60px 0;
+    }
+
+    &__heading {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-with-symbol {
+    &__image-col {
+      display: block;
+    }
+
+    &__image {
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: calc(100% + 50px);
+      margin-top: -50px;
+    }
+  }
+}

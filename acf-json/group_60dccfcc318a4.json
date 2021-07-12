@@ -1,0 +1,124 @@
+{
+    "key": "group_60dccfcc318a4",
+    "title": "Page Type - Posts Page",
+    "fields": [
+        {
+            "key": "field_60dccfcc34ae3",
+            "label": "Below-the-Fold Modules",
+            "name": "below_modules",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5ce4b885b1a9a": {
+                    "key": "layout_5ce4b885b1a9a",
+                    "name": "cta_single",
+                    "label": "CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60dccfcc38740",
+                            "label": "CTA",
+                            "name": "cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cabeb1f27537"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60b7a83fec059": {
+                    "key": "layout_60b7a83fec059",
+                    "name": "feed_post",
+                    "label": "Latest Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60dccfcc387a3",
+                            "label": "Latest Posts",
+                            "name": "latest_posts",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d8bc418c8844"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Module",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_60dccfcc34b36",
+            "label": "Show AIDSLine CTA?",
+            "name": "show_aidsline_cta",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "posts_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625083891
+}

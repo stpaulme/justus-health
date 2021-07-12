@@ -1,0 +1,40 @@
+.therapists-or-interns {
+  background-color: $lilac-bg;
+  padding: 20px 0 10px; // bottom 30 total
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__col {
+    margin-bottom: 20px;
+  }
+
+  &__card-wrap {
+    max-width: 83.3333%;
+  }
+}
+
+.therapists-or-interns+.therapists-or-interns {
+  padding-top: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .therapists-or-interns {
+    padding: 50px 0 40px; // bottom 70 total
+
+    &__col {
+      margin-bottom: 30px;
+    }
+
+    &__card-wrap {
+      max-width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .therapists-or-interns {
+    padding-bottom: 30px; // 60 total
+  }
+}

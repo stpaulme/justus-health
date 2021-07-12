@@ -1,0 +1,29 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+	<div class="row">
+		{% set image = Image(module.symbol) %}
+		{% if image.src %}
+			<div class="col-lg-6 text-with-symbol__image-col">
+				<div class="text-with-symbol__image" style="background-image: url('{{ image.src }}');"></div>
+			</div>
+		{% endif %}
+		<div class="col-lg-6">
+			<div class="text-with-symbol__content">
+				{% if module.heading %}
+					<h2 class="text-with-symbol__heading">{{ module.heading }}</h2>
+				{% endif %}
+
+				<div class="text-with-symbol__copy text-heavy wysiwyg">
+					{{ module.copy }}
+				</div>
+
+				{% if module.link.url %}
+					<div class="text-with-symbol__link">
+						<a class="button" href="{{ module.link.url }}" target="{{ module.link.target }}">{{ module.link.title }}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

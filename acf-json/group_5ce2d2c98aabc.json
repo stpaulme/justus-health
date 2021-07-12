@@ -70,6 +70,76 @@
             ]
         },
         {
+            "key": "field_60623a59e54cf",
+            "label": "AIDSLine CTA",
+            "name": "aidsline_cta",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60623a71e54d0",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60623a77e54d1",
+                    "label": "Copy",
+                    "name": "copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_60623a8be54d2",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
             "key": "field_5ce2d2eb2646e",
             "label": "Logo",
             "name": "logo",
@@ -78,7 +148,31 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60a67c917839d",
+            "label": "Logo - Reverse",
+            "name": "logo_reverse",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -219,8 +313,8 @@
             "sub_fields": [
                 {
                     "key": "field_603e85c799c66",
-                    "label": "Title",
-                    "name": "title",
+                    "label": "Heading",
+                    "name": "heading",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -358,6 +452,28 @@
             "placeholder": ""
         },
         {
+            "key": "field_604a8b6b22895",
+            "label": "Excluded Pages",
+            "name": "excluded_pages",
+            "type": "post_object",
+            "instructions": "These pages will be excluded from the sidebar menu system",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_6037ff5e031b9",
             "label": "",
             "name": "",
@@ -391,5 +507,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614797582
+    "modified": 1624287416
 }

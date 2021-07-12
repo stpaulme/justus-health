@@ -2,18 +2,36 @@
 
 {% block content %}
 
-	{% if module.heading %}
-		<h2 class="video__heading">{{ module.heading }}</h2>
-	{% endif %}
+	<div class="row">
+		<div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
+			{% if module.heading or module.description %}
+				<div class="video__header">
+					<div class="row">
+						{% if module.heading %}
+							<div class="col-lg-6">
+								<h2 class="video__heading">{{ module.heading }}</h2>
+							</div>
+						{% endif %}
+						{% if module.description %}
+							<div class="col-lg-6">
+								<div class="video__description text-heavy wysiwyg">
+									{{ module.description }}
+								</div>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
 
-	{% if module.sr_text|length > 0 %}
-		<div class="sr-only">
-			{{ module.sr_text }}
+			<div class="video__embed er-container">
+				{{ module.embed }}
+			</div>
+			{% if module.sr_text|length > 0 %}
+				<div class="sr-only">
+					{{ module.sr_text }}
+				</div>
+			{% endif %}
 		</div>
-	{% endif %}
-
-	<div class="video__embed er-container">
-		{{ module.embed }}
 	</div>
 
 {% endblock %}

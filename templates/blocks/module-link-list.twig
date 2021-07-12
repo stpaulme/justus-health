@@ -1,0 +1,29 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.heading %}
+		<h2 class="link-list__heading">{{ module.heading }}</h2>
+	{% endif %}
+
+	{% if module.links|length > 0 %}
+		<ul class="link-list__list fa-ul">
+			{% for item in module.links %}
+				<li class="link-list__item">
+					<span class="fa-li">
+						<i class="fas fa-arrow-right"></i>
+					</span>
+
+					<a href="{{ item.link.url }}" target="{{ item.link.target }}">{{ item.link.title }}</a>
+
+					{% if item.description %}
+						<div class="wysiwyg">
+							{{ item.description }}
+						</div>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+{% endblock %}

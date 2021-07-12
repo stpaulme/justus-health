@@ -1,0 +1,40 @@
+.link-list {
+    padding: 60px 0;
+
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 0;
+        margin-left: 1.5rem !important;
+        padding-left: 0;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .link-list {
+        &__list {
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        &__item {
+            -webkit-column-break-inside: avoid;
+            /* Chrome, Safari, Opera */
+            page-break-inside: avoid;
+            /* Firefox */
+            break-inside: avoid;
+            /* IE 10+ */
+        }
+    }
+}

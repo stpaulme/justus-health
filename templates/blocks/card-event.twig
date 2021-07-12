@@ -1,0 +1,21 @@
+<a class="wrap-link" href="{{ post.link }}">
+	<div class="card-event">
+		{% if show_title %}
+			<h3 class="card-event__title">{{ post.title }}</h3>
+		{% endif %}
+
+		<div class="card-event__date">
+			<time class="card-event__start">{{ post.start }}</time>
+			{% if post.end %}
+				&ndash;
+				<time class="card-event__end">{{ post.end }}</time>
+			{% endif %}
+		</div>
+
+		{% if post.address %}
+			<div class="card-event__address">
+				{{ post.address }}
+			</div>
+		{% endif %}
+	</div>
+</a>

@@ -1,0 +1,17 @@
+.cta-pair-cta {
+  background-color: $lilac-bg;
+  padding: 20px;
+
+  &__heading {
+    color: $dark-purple-bg;
+    margin-bottom: 0;
+  }
+
+  &__copy {
+    margin-top: 10px;
+  }
+
+  &__link {
+    margin-top: 15px;
+  }
+}

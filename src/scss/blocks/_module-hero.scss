@@ -1,45 +1,36 @@
 .hero {
-  position: relative;
-  overflow: hidden;
   padding: 0;
 
-  .hero__image {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
+  &__image {
+    background-color: $dark-purple-bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 0;
+    padding-bottom: calc(237 / 320 * 100%);
   }
 
-  .hero__inner {
-    position: relative;
-    z-index: 2;
-    padding: 100px 0;
+  &__content {
+    padding: 20px 0 30px;
   }
 
-  .hero__content {
-    background-color: $gray;
-    padding: 40px 30px;
-  }
-
-  .hero__heading {
+  &__heading {
     margin-bottom: 0;
   }
 
-  .hero__copy {
-    margin-top: 20px;
+  &__copy {
+    margin-top: 10px;
   }
 
-  .hero__links {
+  &__links {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
   }
 
-  .hero__link {
-    margin-bottom: 20px;
+  &__link {
+    margin-bottom: 10px;
 
     &:last-child {
       margin: 0;
@@ -49,11 +40,57 @@
 
 @include media-breakpoint-up(md) {
   .hero {
-    .hero__links {
-      flex-direction: row;
+    position: relative;
+    background-color: $dark-purple-bg;
+    overflow: hidden;
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      background-position: bottom left;
+      background-size: contain;
+      height: 100%;
+      padding-bottom: 0;
+      width: 50%;
     }
 
-    .hero__link {
+    &__content {
+      margin: 50px 0 145px;
+      padding: 0;
+      width: 50%;
+    }
+
+    &__content-upper {
+      position: relative;
+      padding: 35px 45px 45px 0;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        content: '';
+        display: block;
+        height: 100%;
+        margin-left: -100vw;
+        transform: skew(-10deg);
+        width: calc(100% + 100vw);
+      }
+    }
+
+    &__heading,
+    &__copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__links {
+      flex-direction: row;
+      margin-top: -23px;
+    }
+
+    &__link {
       margin-right: 20px;
       margin-bottom: 0;
     }
@@ -62,8 +99,21 @@
 
 @include media-breakpoint-up(lg) {
   .hero {
-    .hero__content {
-      max-width: 50%;
+    &__content {
+      margin-bottom: 200px;
+    }
+
+    &__content-upper {
+      padding: 35px 50px 45px 0;
+    }
+
+    &__heading {
+      font-size: 2.875rem;
+      line-height: 1.05;
+    }
+
+    &__copy {
+      margin-top: 15px;
     }
   }
 }

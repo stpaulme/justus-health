@@ -1,0 +1,105 @@
+.therapist-post {
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__header {
+        border-bottom: 3px solid $gray-border;
+        padding-bottom: 15px;
+    }
+
+    &__name {
+        color: $dark-purple-bg;
+        font-size: 1.6875rem;
+        line-height: 1.15;
+        margin-bottom: 0;
+    }
+
+    &__title {
+        color: $purple-medium;
+        display: block;
+        font-size: 1.3125rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-top: 7px;
+    }
+
+    &__meta {
+        margin-top: 15px;
+    }
+
+    &__meta-col {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        color: $dark-purple-bg;
+        font-size: 1.3125rem;
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 0;
+    }
+
+    &__detail {
+        margin-bottom: 0;
+    }
+
+    &__content {
+        margin-top: 20px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .therapist-post {
+        &__image {
+            margin-bottom: 0;
+        }
+
+        &__header {
+            padding-bottom: 20px;
+        }
+
+        &__name {
+            font-size: 2.5rem;
+            line-height: 1.125;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            line-height: 1.1667;
+        }
+
+        &__meta {
+            margin-top: 20px;
+        }
+
+        &__meta-col {
+            margin-bottom: 0;
+        }
+
+        &__label {
+            margin-bottom: 5px;
+        }
+
+        &__content {
+            margin-top: 30px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .therapist-post {
+        &__image {
+            display: none;
+        }
+
+        &__name {
+            font-size: 3.25rem;
+            line-height: 1.08;
+        }
+    }
+}

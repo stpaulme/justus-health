@@ -1,7 +1,13 @@
 {% extends "base.twig" %}
 
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
 {% block content %}
 	<div class="text-heavy wysiwyg">
+		<h1 class="default-title">{{ post.title }}</h1>
+
 		{{ post.content }}
 	</div>
 {% endblock %}
@@ -22,12 +28,19 @@
 				</div>
 			{% endfor %}
 		{% endif %}
+
+		{% if post.meta('show_share_links') %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				{% include 'blocks/share.twig' %}
+			</div>
+		{% endif %}
 	</div>
 {% endblock %}
 
 {% block below %}
 	{% for module in below_modules %}
 		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+		{% set module_style = module.style|replace('_', '-') %}
 		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
 	{% endfor %}
 {% endblock %}

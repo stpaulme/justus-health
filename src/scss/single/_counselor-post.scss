@@ -1,0 +1,19 @@
+.counselor-post {
+    .counselor-post__meta {
+        margin-bottom: 20px;
+    }
+
+    .counselor-post__title,
+    .counselor-post__pronouns {
+        margin-bottom: 0;
+    }
+
+    .counselor-post__title {
+        font-weight: 700;
+    }
+
+    .counselor-post__pronouns {
+        font-style: italic;
+        margin-top: 3px;
+    }
+}

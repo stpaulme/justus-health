@@ -1,0 +1,10 @@
+.single-title {
+    background-color: $dark-purple-bg;
+    padding: 15px 0;
+}
+
+@include media-breakpoint-up(md) {
+    .single-title {
+        padding: 25px 0;
+    }
+}

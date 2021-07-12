@@ -37,6 +37,14 @@ add_filter('embed_oembed_html', 'spm_wrap_embeds');
 function spm_menu_item_classes($classes, $item, $args)
 {
 
+    /* Counselors */
+    if ((is_singular('counselor') && 'Chemical Health' == $item->title)) {
+        $classes[] = 'current-menu-item';
+    }
+    if ((is_singular('counselor') && false !== strpos($item->title, 'Counseling'))) {
+        $classes[] = 'current-menu-item';
+    }
+
     /* Events */
     if ((tribe_is_community_edit_event_page() || tribe_is_community_my_events_page()) && 'Events' == $item->title) {
         $classes[] = 'current-menu-item';
@@ -47,8 +55,11 @@ function spm_menu_item_classes($classes, $item, $args)
         $classes[] = 'current-menu-item';
     }
 
-    /* Staff */
-    if ((is_singular('staff')) && 'About' == $item->title) {
+    /* Therapists */
+    if ((is_singular('therapist') && 'Therapy' == $item->title)) {
+        $classes[] = 'current-menu-item';
+    }
+    if ((is_singular('therapist') && false !== strpos($item->title, 'Counseling'))) {
         $classes[] = 'current-menu-item';
     }
 
@@ -67,3 +78,21 @@ add_filter('acf/fields/google_map/api', 'spm_acf_google_map_api');
 
 // GF: Scroll to confirmation text or validation message on submission
 add_filter('gform_confirmation_anchor', '__return_true');
+
+// ACF: Use a flexible content layout's heading as its title
+add_filter('acf/fields/flexible_content/layout_title', 'spm_use_heading_as_acf_layout_title', 10, 4);
+function spm_use_heading_as_acf_layout_title($title, $field, $layout, $i)
+{
+    if ($heading = get_sub_field('heading')) {
+        $title .= ': ' . esc_html($heading);
+    }
+
+    return $title;
+}
+
+// GF: Use <button> for submit button
+add_filter('gform_submit_button', 'spm_form_submit_button', 10, 2);
+function spm_form_submit_button($button, $form)
+{
+    return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'><span>Submit</span></button>";
+}

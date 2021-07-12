@@ -1,5 +1,10 @@
+@mixin current-link {
+    border-bottom: 2px solid $purple;
+    color: $red;
+}
+
 .sidebar-nav {
-    background-color: $gray;
+    background-color: $lilac-bg;
     padding: 20px;
 
     .sidebar-nav__list {
@@ -8,8 +13,91 @@
         padding-left: 0;
     }
 
-    li.current_page_item > a {
-        color: $black;
-        font-style: italic;
+    .pagenav,
+    .categories {
+        h2 {
+            color: $dark-purple-bg;
+            font-size: 1.5rem;
+            line-height: 1.1667;
+            margin-bottom: 20px;
+        }
+
+        >ul {
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            // Risk Reduction
+            >.page_item,
+            >.cat-item {
+                border-bottom: 1px solid $gray-divider;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+
+                >a {
+                    font-size: 1.0625rem;
+                    line-height: 1.05;
+
+                    &:hover {
+                        color: $purple-medium;
+                    }
+                }
+
+                &.current_page_item>a {
+                    @include current-link();
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .children {
+                list-style: none;
+                margin-top: 8px;
+                margin-bottom: 0;
+                padding-left: 15px;
+
+                // Testing, PrEP Navigation, PrEP Locators
+                .page_item {
+                    margin-bottom: 8px;
+
+                    &.current_page_item>a {
+                        @include current-link();
+                    }
+
+                    // PrEP Locators
+                    .page_item {
+                        &:before {
+                            content: '\00BB';
+                            font-weight: 600;
+                            padding-right: 0.25rem;
+                        }
+
+                        &.current_page_item>a {
+                            @include current-link();
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                a {
+                    color: $dark-purple-bg;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    line-height: 1.15;
+
+                    &:hover {
+                        color: $purple-medium;
+                    }
+                }
+            }
+
+        }
     }
 }
