@@ -1,6 +1,6 @@
 {
     "key": "group_60d9e5825ab5a",
-    "title": "Text with Symbol",
+    "title": "Module - Text with Symbol",
     "fields": [
         {
             "key": "field_60d9e587b6d8a",
@@ -95,7 +95,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
-    "modified": 1624892860
+    "modified": 1628543604
 }
