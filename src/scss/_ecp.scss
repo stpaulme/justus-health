@@ -10,6 +10,11 @@
 .post-type-archive-tribe_events {
 	.tribe-events {
 
+		//
+		.tribe-events-calendar-list__event-details.tribe-common-g-col {
+			width: 100%;
+		}
+
 		// Messages
 		.tribe-events-c-messages__message {
 			background-color: $gray-background;
