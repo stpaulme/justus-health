@@ -45,11 +45,6 @@ function spm_menu_item_classes($classes, $item, $args)
         $classes[] = 'current-menu-item';
     }
 
-    /* Events */
-    if ((tribe_is_community_edit_event_page() || tribe_is_community_my_events_page()) && 'Events' == $item->title) {
-        $classes[] = 'current-menu-item';
-    }
-
     /* News */
     if ((is_singular('post') || is_category()) && 'News' == $item->title) {
         $classes[] = 'current-menu-item';
