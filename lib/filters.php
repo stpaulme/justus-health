@@ -91,3 +91,11 @@ function spm_form_submit_button($button, $form)
 {
     return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'><span>Submit</span></button>";
 }
+
+// Force event series pages to use list view
+add_filter(
+    'tec_events_pro_custom_tables_v1_series_event_view_slug',
+    function ($view) {
+        return 'list';
+    }
+);
