@@ -693,7 +693,9 @@ select {
 
   .tribe-events-view-loader,
   .tribe-events-header,
-  svg.tribe-common-c-svgicon {
+  svg.tribe-common-c-svgicon,
+  .tribe-events-calendar-list-nav,
+  .tribe-events-c-subscribe-dropdown__container {
     display: none !important;
   }
 }
