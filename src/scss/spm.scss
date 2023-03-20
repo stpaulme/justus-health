@@ -690,7 +690,9 @@ select {
 @import "single/therapist-post";
 
 .tribe_event_series-template-default {
-  .tribe-events-view-loader {
+
+  .tribe-events-view-loader,
+  .tribe-events-header {
     display: none !important;
   }
 }
