@@ -22,7 +22,7 @@ $enable-rounded: false;
 
 // Fonts
 $text: "Source Sans Pro",
-sans-serif;
+  sans-serif;
 
 *:focus {
   outline: 1px dotted $black;
@@ -688,3 +688,9 @@ select {
 @import "single/counselor-post";
 @import "single/news-post";
 @import "single/therapist-post";
+
+.tribe_event_series-template-default {
+  .tribe-events-view-loader {
+    display: none !important;
+  }
+}
