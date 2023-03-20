@@ -692,7 +692,8 @@ select {
 .tribe_event_series-template-default {
 
   .tribe-events-view-loader,
-  .tribe-events-header {
+  .tribe-events-header,
+  svg.tribe-common-c-svgicon {
     display: none !important;
   }
 }
