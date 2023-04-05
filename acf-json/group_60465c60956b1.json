@@ -6,6 +6,7 @@
             "key": "field_60465c6951201",
             "label": "Heading",
             "name": "heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_60465c6f25e81",
             "label": "Statistics",
             "name": "statistics",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -39,11 +41,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Statistic",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_60465c8325e82",
                     "label": "Figure",
                     "name": "figure",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -57,12 +61,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_60465c6f25e81"
                 },
                 {
                     "key": "field_60465cad25e83",
                     "label": "Elaboration",
                     "name": "elaboration",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -75,13 +81,15 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 0,
-                    "delay": 0
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_60465c6f25e81"
                 },
                 {
                     "key": "field_60465cc025e84",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -91,7 +99,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_60465c6f25e81"
                 }
             ]
         }
@@ -113,5 +122,6 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1621881087
+    "show_in_rest": 0,
+    "modified": 1680711681
 }
