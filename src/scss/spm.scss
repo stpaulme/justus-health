@@ -463,13 +463,6 @@ select {
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .default-title {
-    font-size: 3.25rem;
-    line-height: 1.075;
-  }
-}
-
 .fw {
   left: 50%;
   margin-left: -50vw;
