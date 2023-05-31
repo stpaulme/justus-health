@@ -136,7 +136,7 @@
 		</div>
 
 		{% set area = post.terms('provider_area')|first %}
-		{% include 'blocks/back.twig' with { 'link_url' : '/resources-directories/' ~ area.slug ~ '-provider-directory/', 'link_text' : 'Back to All ' ~ area.name ~ ' Providers' } %}
+		{% include 'blocks/back.twig' with { 'link_url' : '/resources-directories/providers/?_sft_provider_area=' ~ area.slug, 'link_text' : 'Back to All ' ~ area.name ~ ' Providers' } %}
 	</div>
 {% endblock %}
 

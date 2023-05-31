@@ -1,0 +1,185 @@
+{
+    "key": "group_6477a3b1b2a17",
+    "title": "Page Template - Directory",
+    "fields": [
+        {
+            "key": "field_6477abbcabbe5",
+            "label": "Search Form ID",
+            "name": "search_form_id",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6477a3b1bda39",
+            "label": "Below-the-Fold Modules",
+            "name": "below_modules",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5d8d1cdefa363": {
+                    "key": "layout_5d8d1cdefa363",
+                    "name": "cta_single",
+                    "label": "CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6477a3b1c791d",
+                            "label": "CTA",
+                            "name": "cta",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cabeb1f27537"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5dc9ce243188c": {
+                    "key": "layout_5dc9ce243188c",
+                    "name": "cta_pair",
+                    "label": "CTA Pair",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6477a3b1c79cc",
+                            "label": "CTA Pair",
+                            "name": "cta_pair",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5dc9cdb7d2f4e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d8d1f36964d6": {
+                    "key": "layout_5d8d1f36964d6",
+                    "name": "cta_group",
+                    "label": "CTA Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6477a3b1c7a7d",
+                            "label": "CTA Group",
+                            "name": "cta_group",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d8d1f029d66a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Module"
+        },
+        {
+            "key": "field_6477a3b1bdb09",
+            "label": "Show AIDSLine CTA?",
+            "name": "show_aidsline_cta",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "spm-directory.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1685566647
+}

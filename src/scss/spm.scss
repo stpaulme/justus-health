@@ -675,6 +675,7 @@ select {
 @import "blocks/sub-nav";
 @import "blocks/therapist-card";
 
+@import "archive/directory-landing";
 @import "archive/news-landing";
 @import "archive/search-landing";
 
@@ -691,5 +692,45 @@ select {
   .tribe-events-c-nav,
   .tribe-events-c-subscribe-dropdown__container {
     display: none !important;
+  }
+}
+
+.searchandfilter {
+  >ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    >li {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      >label {
+        display: block;
+        margin-bottom: 0;
+      }
+
+      >ul {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        >li {
+          margin-bottom: 3px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .sf-label-checkbox {
+        font-weight: 400;
+        padding-left: 3px;
+      }
+    }
   }
 }

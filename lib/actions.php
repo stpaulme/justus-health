@@ -112,7 +112,7 @@ function spm_load_more_ajax_handler()
 add_action('wp_ajax_loadmore', 'spm_load_more_ajax_handler'); // wp_ajax_{action}
 add_action('wp_ajax_nopriv_loadmore', 'spm_load_more_ajax_handler'); // wp_ajax_nopriv_{action}
 
-// Add provider area page to breadcrumbs
+// Add filtered provider directory pages to breadcrumbs
 add_action('bcn_after_fill', 'spm_add_area_page_to_breadcrumbs');
 function spm_add_area_page_to_breadcrumbs($trail)
 {
@@ -121,7 +121,8 @@ function spm_add_area_page_to_breadcrumbs($trail)
 
         if (in_array('provider_area', $area_breadcrumb->get_types())) {
             $term = get_term($area_breadcrumb->get_id(), 'provider_area');
-            $area_breadcrumb->set_url('/resources-directories/' . $term->slug . '-provider-directory');
+            $area_breadcrumb->set_title('Providers');
+            $area_breadcrumb->set_url('/resources-directories/providers/?_sft_provider_area=' . $term->slug);
         }
     }
 }

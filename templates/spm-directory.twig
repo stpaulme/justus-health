@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="directory-landing">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					{% filter shortcodes %}
+						[searchandfilter id="{{ search_form_id }}"]
+					{% endfilter %}
+				</div>
+
+				<div class="col-md-8">
+					{% for item in posts %}
+						<div>
+							<h3>
+								<a href="{{ item.link }}">{{ item.title }}</a>
+							</h3>
+
+							<p>Statement from the Provider (250 characters hard max) Optional</p>
+
+							<p>++Service Provider Categories (Limit to 3 or 4 with “See more” link to provider)</p>
+
+							<p>++Areas of Practice (HIV or Aging)</p>
+
+							<p>++Appointment Format</p>
+
+							<p>++Business Hours</p>
+
+							<p>City</p>
+
+							<p>++County</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% if content|length > 0 %}
+		{% for module in content %}
+			{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+			{% set module_style = module.style|replace('_', '-') %}
+			{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}
