@@ -91,3 +91,21 @@ function spm_form_submit_button($button, $form)
 {
     return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'><span>Submit</span></button>";
 }
+
+// Custom validation for provider statement field
+add_filter('acf/validate_value/name=provider_statement', 'spm_max_limit_provider_statement', 10, 4);
+function spm_max_limit_provider_statement($valid, $value, $field, $input_name)
+{
+    // Bail early if value is already invalid
+    if ($valid !== true) {
+        return $valid;
+    }
+
+    $max = 250;
+
+    if (strlen(wp_strip_all_tags($value)) > $max) {
+        return __('The maximum number of characters allowed is ' . $max);
+    }
+
+    return $valid;
+}
