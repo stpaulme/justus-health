@@ -8,6 +8,10 @@ $context['breadcrumbs'] = bcn_display(true);
 $context['sidebar'] = true;
 $context['sidebar_pos'] = 'right';
 
+if (is_singular('provider')) {
+    $context['sidebar_pos'] = 'left';
+}
+
 if (is_singular('therapist')) {
     $context['sidebar_pos'] = 'left';
 }
