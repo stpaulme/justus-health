@@ -1,0 +1,162 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
+{% block content %}
+	<div class="provider-post">
+
+		<div class="row">
+			{% if post.thumbnail %}
+				<div class="col-7 col-md-4 col-lg-12">
+					<picture>
+						<source srcset="{{ post.thumbnail.src('square')|towebp }}" type="image/webp">
+						<source srcset="{{ post.thumbnail.src('square') }}" type="image/jpeg">
+						<img alt="{{ post.title }}" class="provider-post__image" loading="lazy" src="{{ post.thumbnail.src('square') }}">
+					</picture>
+				</div>
+			{% endif %}
+
+			<div class="col-12 col-md-8 col-lg-12">
+				<div class="provider-post__header">
+					<h1 class="provider-post__name">{{ post.title }}</h1>
+
+					{% set type = post.terms('provider_type')|first %}
+					<span class="provider-post__title">{{ type.name }}</span>
+				</div>
+
+				<div class="provider-post__meta">
+					<div class="row">
+						{% if post.terms('provider_service_category') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Service Categories</h2>
+								<p class="provider-post__detail">{{ post.terms('provider_service_category')|join(', ') }}</p>
+							</div>
+						{% endif %}
+
+						{% if post.meta('intake_phone') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Intake Phone</h2>
+
+								<p class="provider-post__detail">
+									<a href="tel:{{ post.meta('intake_phone') }}">{{ post.meta('intake_phone') }}</a>
+								</p>
+							</div>
+						{% endif %}
+
+						{% if post.meta('website') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Website</h2>
+
+								<p class="provider-post__detail">
+									<a href="{{ post.meta('website') }}" target="_blank">Visit Website</a>
+								</p>
+							</div>
+						{% endif %}
+
+						{% if post.meta('email') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Email</h2>
+
+								<p class="provider-post__detail">
+									<a href="mailto:{{ post.meta('email') }}">{{ post.meta('email') }}</a>
+								</p>
+							</div>
+						{% endif %}
+
+						{% if post.meta('city') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">City</h2>
+
+								<p class="provider-post__detail">
+									{{ post.meta('city') }}
+								</p>
+							</div>
+						{% endif %}
+
+						{% if post.meta('street_address') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Street Address</h2>
+
+								<p class="provider-post__detail">
+									{{ post.meta('street_address') }}
+								</p>
+							</div>
+						{% endif %}
+
+						{% if post.terms('provider_county') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Counties</h2>
+								<p class="provider-post__detail">{{ post.terms('provider_county')|join(', ') }}</p>
+							</div>
+						{% endif %}
+
+						{% if post.terms('provider_business_hours') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Business Hours</h2>
+								<p class="provider-post__detail">{{ post.terms('provider_business_hours')|join(', ') }}</p>
+
+								{% if post.meta('business_hours_desc') %}
+									<p class="provider-post__detail">
+										<em>{{ post.meta('business_hours_desc') }}</em>
+									</p>
+								{% endif %}
+							</div>
+						{% endif %}
+
+						{% if post.terms('provider_appointment_formats') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Appointment Formats</h2>
+								<p class="provider-post__detail">{{ post.terms('provider_appointment_formats')|join(', ') }}</p>
+							</div>
+						{% endif %}
+
+						{% if post.terms('provider_payment_options') %}
+							<div class="col-md-4 provider-post__meta-col">
+								<h2 class="provider-post__label">Payment Options</h2>
+								<p class="provider-post__detail">{{ post.terms('provider_payment_options')|join(', ') }}</p>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="provider-post__content text-heavy wysiwyg">
+			{% if post.meta('summary') %}
+				<h3>Summary of Services Provided</h3>
+				{{ post.meta('summary') }}
+			{% endif %}
+
+			{% if post.meta('provider_statement') %}
+				<h3>Provider Statement</h3>
+				{{ post.meta('provider_statement') }}
+			{% endif %}
+		</div>
+
+		{% set area = post.terms('provider_area')|first %}
+		{% include 'blocks/back.twig' with { 'link_url' : '/resources-directories/' ~ area.slug ~ '-provider-directory/', 'link_text' : 'Back to All ' ~ area.name ~ ' Providers' } %}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+	<div class="row">
+		{% if post.thumbnail %}
+			<div class="col-md-6 col-lg-12 sidebar__col sidebar__image">
+				<picture>
+					<source srcset="{{ post.thumbnail.src('square')|towebp }}" type="image/webp">
+					<source srcset="{{ post.thumbnail.src('square') }}" type="image/jpeg">
+					<img alt="{{ post.title }}" loading="lazy" src="{{ post.thumbnail.src('square') }}">
+				</picture>
+			</div>
+		{% endif %}
+
+		{% set cta = post.meta('cta') %}
+		{% if cta.heading %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				{% include 'blocks/cta.twig' %}
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

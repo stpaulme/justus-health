@@ -256,7 +256,7 @@
         {
             "key": "field_6476621e71e10",
             "label": "Business Hours Description",
-            "name": "business_hours_copy",
+            "name": "business_hours_desc",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -338,5 +338,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685480552
+    "modified": 1685554623
 }

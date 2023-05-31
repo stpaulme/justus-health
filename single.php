@@ -12,7 +12,7 @@ if (is_singular('therapist')) {
     $context['sidebar_pos'] = 'left';
 }
 
-if (post_password_required($timber_post->ID)) {
+if (post_password_required($post->ID)) {
     $context['sidebar'] = true; // for .container and line length
     Timber::render('page-password.twig', $context);
 } else {

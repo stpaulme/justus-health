@@ -109,3 +109,14 @@ function spm_max_limit_provider_statement($valid, $value, $field, $input_name)
 
     return $valid;
 }
+
+// Make provider area tax public for breadcrumb purposes
+add_filter('bcn_show_tax_private', 'spm_show_area_tax_to_bcn', 10, 4);
+function spm_show_area_tax_to_bcn($public, $taxonomy_name)
+{
+    if ($taxonomy_name == 'provider_area') {
+        $public = true;
+    }
+
+    return $public;
+}

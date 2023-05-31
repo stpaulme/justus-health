@@ -48,15 +48,15 @@ function spm_add_og_meta_tags()
         }
         ?>
 
-            <meta name="twitter:card" content="summary">
-            <meta property="og:site_name" content="<?php echo get_bloginfo(); ?>">
-            <meta property="og:url" content="<?php echo the_permalink(); ?>">
-            <meta property="og:title" content="<?php echo the_title(); ?>">
-            <meta property="og:description" content="<?php echo $excerpt; ?>">
-            <meta property="og:image" content="<?php echo $img_src; ?>">
-            <meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="<?php echo get_bloginfo(); ?>">
+<meta property="og:url" content="<?php echo the_permalink(); ?>">
+<meta property="og:title" content="<?php echo the_title(); ?>">
+<meta property="og:description" content="<?php echo $excerpt; ?>">
+<meta property="og:image" content="<?php echo $img_src; ?>">
+<meta property="og:type" content="article">
 
-        <?php
+<?php
 } else {
         return;
     }
@@ -111,3 +111,17 @@ function spm_load_more_ajax_handler()
 }
 add_action('wp_ajax_loadmore', 'spm_load_more_ajax_handler'); // wp_ajax_{action}
 add_action('wp_ajax_nopriv_loadmore', 'spm_load_more_ajax_handler'); // wp_ajax_nopriv_{action}
+
+// Add provider area page to breadcrumbs
+add_action('bcn_after_fill', 'spm_add_area_page_to_breadcrumbs');
+function spm_add_area_page_to_breadcrumbs($trail)
+{
+    if (is_singular('provider')) {
+        $area_breadcrumb = $trail->trail[1];
+
+        if (in_array('provider_area', $area_breadcrumb->get_types())) {
+            $term = get_term($area_breadcrumb->get_id(), 'provider_area');
+            $area_breadcrumb->set_url('/resources-directories/' . $term->slug . '-provider-directory');
+        }
+    }
+}
