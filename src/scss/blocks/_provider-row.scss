@@ -1,0 +1,25 @@
+.provider-row {
+    border-bottom: 1px solid $gray-border;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__meta {
+        columns: 2;
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        div {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -11,25 +11,82 @@
 				</div>
 
 				<div class="col-md-8">
-					{% for item in posts %}
-						<div>
-							<h3>
-								<a href="{{ item.link }}">{{ item.title }}</a>
+					{% for post in posts %}
+						<div class="provider-row">
+							<h3 class="provider-row__title">
+								<a href="{{ post.link }}">{{ post.title }}</a>
 							</h3>
 
-							<p>Statement from the Provider (250 characters hard max) Optional</p>
+							{% if post.meta('provider_statement') %}
+								<div class="provider-row__statement text-heavy wysiwyg">
+									{{ post.meta('provider_statement') }}
+								</div>
+							{% endif %}
 
-							<p>++Service Provider Categories (Limit to 3 or 4 with “See more” link to provider)</p>
+							<dl class="provider-row__meta">
+								{% set terms = post.terms('provider_service_category') %}
+								{% if terms %}
+									<div>
+										<dt>Service Categories</dt>
+										<dd>
+											{{ terms|slice(0, 3)|join(', ') }}
 
-							<p>++Areas of Practice (HIV or Aging)</p>
+											{% if terms|length > 3 %}
+												<p>
+													<a href="{{ post.link }}#Service_Categories">See all categories
+														<span aria-hidden="true">&raquo;</span>
+													</a>
+												</p>
+											{% endif %}
+										</dd>
+									</div>
+								{% endif %}
 
-							<p>++Appointment Format</p>
+								{% set terms = post.terms('provider_area') %}
+								<div>
+									<dt>Area</dt>
+									<dd>{{ terms|join(', ') }}</dd>
+								</div>
 
-							<p>++Business Hours</p>
+								{% set terms = post.terms('provider_appointment_formats') %}
+								{% if terms %}
+									<div>
+										<dt>Appointment Formats</dt>
+										<dd>{{ terms|join(', ') }}</dd>
+									</div>
+								{% endif %}
 
-							<p>City</p>
+								{% set terms = post.terms('provider_business_hours') %}
+								{% if terms %}
+									<div>
+										<dt>Business Hours</dt>
+										<dd>
+											{{ terms|join(', ') }}
+											{% if post.meta('business_hours_desc') %}
+												<p>
+													<em>{{ post.meta('business_hours_desc') }}</em>
+												</p>
+											{% endif %}
+										</dd>
+									</div>
+								{% endif %}
 
-							<p>++County</p>
+								{% set field = post.meta('city') %}
+								{% if field %}
+									<div>
+										<dt>City</dt>
+										<dd>{{ field }}</dd>
+									</div>
+								{% endif %}
+
+								{% set terms = post.terms('provider_county') %}
+								{% if terms %}
+									<div>
+										<dt>County</dt>
+										<dd>{{ terms|join(', ') }}</dd>
+									</div>
+								{% endif %}
+							</dl>
 						</div>
 					{% endfor %}
 				</div>

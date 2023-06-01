@@ -30,7 +30,7 @@
 					<div class="row">
 						{% if post.terms('provider_service_category') %}
 							<div class="col-md-4 provider-post__meta-col">
-								<h2 class="provider-post__label">Service Categories</h2>
+								<h2 class="provider-post__label" id="Service_Categories">Service Categories</h2>
 								<p class="provider-post__detail">{{ post.terms('provider_service_category')|join(', ') }}</p>
 							</div>
 						{% endif %}
