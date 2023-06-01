@@ -1,6 +1,29 @@
 <?php
 
 /**
+ * Taxonomy: Article Category
+ */
+
+$labels = array(
+    "name" => _x("Article Categories", "Taxonomy General Name", "justus-health"),
+    "singular_name" => _x("Article Category", "Taxonomy Singular Name", "justus-health"),
+);
+
+$args = array(
+    "hierarchical" => false,
+    "meta_box_cb" => "post_categories_meta_box",
+    "public" => false,
+    "show_admin_column" => true,
+    "show_in_nav_menus" => false,
+    "show_in_quick_edit" => true,
+    "show_ui" => true,
+    "show_ui" => true,
+    "labels" => $labels,
+);
+
+register_taxonomy("article_category", array("article"), $args);
+
+/**
  * Taxonomy: Provider Area
  */
 
@@ -70,7 +93,7 @@ $args = array(
 register_taxonomy("provider_service_category", array("provider"), $args);
 
 /**
- * Taxonomy: Provider Area
+ * Taxonomy: Provider County
  */
 
 $labels = array(
@@ -116,7 +139,7 @@ $args = array(
 register_taxonomy("provider_business_hours", array("provider"), $args);
 
 /**
- * Taxonomy: Provider Appointment Formats
+ * Taxonomy: Provider Appointment Format
  */
 
 $labels = array(
@@ -136,10 +159,10 @@ $args = array(
     "labels" => $labels,
 );
 
-register_taxonomy("provider_appointment_formats", array("provider"), $args);
+register_taxonomy("provider_appointment_format", array("provider"), $args);
 
 /**
- * Taxonomy: Provider Payment Options
+ * Taxonomy: Provider Payment Option
  */
 
 $labels = array(
@@ -159,7 +182,7 @@ $args = array(
     "labels" => $labels,
 );
 
-register_taxonomy("provider_payment_options", array("provider"), $args);
+register_taxonomy("provider_payment_option", array("provider"), $args);
 
 /**
  * Taxonomy: Therapist or Intern Type (Group, Individual, Family)

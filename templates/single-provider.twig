@@ -108,14 +108,14 @@
 						{% if post.terms('provider_appointment_formats') %}
 							<div class="col-md-4 provider-post__meta-col">
 								<h2 class="provider-post__label">Appointment Formats</h2>
-								<p class="provider-post__detail">{{ post.terms('provider_appointment_formats')|join(', ') }}</p>
+								<p class="provider-post__detail">{{ post.terms('provider_appointment_format')|join(', ') }}</p>
 							</div>
 						{% endif %}
 
 						{% if post.terms('provider_payment_options') %}
 							<div class="col-md-4 provider-post__meta-col">
 								<h2 class="provider-post__label">Payment Options</h2>
-								<p class="provider-post__detail">{{ post.terms('provider_payment_options')|join(', ') }}</p>
+								<p class="provider-post__detail">{{ post.terms('provider_payment_option')|join(', ') }}</p>
 							</div>
 						{% endif %}
 					</div>

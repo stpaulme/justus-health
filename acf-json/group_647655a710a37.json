@@ -287,7 +287,7 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "provider_appointment_formats",
+            "taxonomy": "provider_appointment_format",
             "add_term": 1,
             "save_terms": 1,
             "load_terms": 1,
@@ -310,7 +310,7 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "provider_payment_options",
+            "taxonomy": "provider_payment_option",
             "add_term": 1,
             "save_terms": 1,
             "load_terms": 1,
@@ -360,5 +360,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685559685
+    "modified": 1685641023
 }

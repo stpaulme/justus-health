@@ -48,7 +48,7 @@
 									<dd>{{ terms|join(', ') }}</dd>
 								</div>
 
-								{% set terms = post.terms('provider_appointment_formats') %}
+								{% set terms = post.terms('provider_appointment_format') %}
 								{% if terms %}
 									<div>
 										<dt>Appointment Formats</dt>
