@@ -80,6 +80,7 @@ function spm_add_data_to_modules($modules)
                 $args = array(
                     'post_type' => 'article',
                     'posts_per_page' => $max,
+                    'post__not_in' => array(get_the_ID()),
                 );
                 if (!empty($article_category)) {
                     $args['tax_query'] = array(
