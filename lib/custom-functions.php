@@ -71,6 +71,32 @@ function spm_add_data_to_modules($modules)
             $module['posts'] = Timber::get_posts($args);
         }
 
+        if ($module['acf_fc_layout'] == 'feed_article') {
+
+            if ($module['type'] == 'category') {
+                $article_category = $module['post_category'];
+                $max = $module['max'];
+
+                $args = array(
+                    'post_type' => 'article',
+                    'posts_per_page' => $max,
+                );
+                if (!empty($article_category)) {
+                    $args['tax_query'] = array(
+                        array(
+                            'taxonomy' => 'article_category',
+                            'field' => 'term_id',
+                            'terms' => $article_category,
+                        ),
+                    );
+                }
+
+                $module['posts'] = Timber::get_posts($args);
+            } else {
+                $module['posts'] = $module['articles'];
+            }
+        }
+
         if ($module['acf_fc_layout'] == 'feed_event') {
             // Get data from ACF
             $event_category = $module['event_category'];

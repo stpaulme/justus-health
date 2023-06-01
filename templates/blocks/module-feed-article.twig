@@ -1,0 +1,29 @@
+{% extends 'blocks/module.twig' %}
+
+{% block content %}
+
+	{% if module.heading %}
+		<div class="row">
+			<div class="col-md-10 offset-md-1 col-lg-12 offset-lg-0">
+				<h2 class="feed-article__heading">{{ module.heading }}</h2>
+			</div>
+		</div>
+	{% endif %}
+
+	{% if module.posts|length > 0 %}
+		<div class="row">
+			{% for post in Post(module.posts) %}
+				<div class="col-md-10 offset-md-1 col-lg-4 offset-lg-0 feed-article__col">
+					{% include 'blocks/card-article.twig' with { 'show_cat' : true } %}
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="feed-article__all">
+			<a href="/resources-directories/informational-articles/">All Articles
+				<i class="fas fa-arrow-right"></i>
+			</a>
+		</div>
+	{% endif %}
+
+{% endblock %}

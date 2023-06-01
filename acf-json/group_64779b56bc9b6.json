@@ -23,11 +23,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_64779b56c4c82",
-            "label": "Post Category",
-            "name": "post_category",
+            "key": "field_6478e0eafaf99",
+            "label": "Type",
+            "name": "type",
             "aria-label": "",
-            "type": "taxonomy",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,36 +36,115 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "category",
-            "field_type": "select",
-            "allow_null": 1,
+            "choices": {
+                "category": "Choose a Category",
+                "posts": "Choose Individual Articles"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64779b56c4c82",
+            "label": "Article Category",
+            "name": "post_category",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6478e0eafaf99",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "article_category",
             "add_term": 0,
             "save_terms": 0,
             "load_terms": 0,
             "return_format": "id",
+            "field_type": "select",
+            "allow_null": 1,
             "multiple": 0
         },
         {
             "key": "field_64779b56c4cda",
-            "label": "Number of Posts to Show",
+            "label": "Number of Articles to Show",
             "name": "max",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6478e0eafaf99",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": 3,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "min": "",
             "max": 10,
-            "step": ""
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6478e1ab249ef",
+            "label": "Articles",
+            "name": "articles",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6478e0eafaf99",
+                        "operator": "==",
+                        "value": "posts"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "article"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "elements": ""
         }
     ],
     "location": [
@@ -86,5 +165,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685560191
+    "modified": 1685643765
 }

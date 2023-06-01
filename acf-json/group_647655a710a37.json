@@ -365,6 +365,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6478e24661bce": {
+                    "key": "layout_6478e24661bce",
+                    "name": "feed_article",
+                    "label": "Related Articles",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6478e24c61bd1",
+                            "label": "Related Articles",
+                            "name": "feed_article",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64779b56bc9b6"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -390,5 +422,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685642891
+    "modified": 1685643908
 }
