@@ -14,7 +14,7 @@
 			<ul class="news-post__cats">
 				{% for cat in cats %}
 					<li class="news-post__cat">
-						<a href="{{ cat.link }}">{{ cat.name }}</a>
+						<a href="/resources-directories/informational-articles/?_sft_article_category={{ cat.slug }}">{{ cat.name }}</a>
 					</li>
 				{% endfor %}
 			</ul>
