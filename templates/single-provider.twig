@@ -151,12 +151,13 @@
 				</picture>
 			</div>
 		{% endif %}
-
-		{% set cta = post.meta('cta') %}
-		{% if cta.heading %}
-			<div class="col-md-6 col-lg-12 sidebar__col">
-				{% include 'blocks/cta.twig' %}
-			</div>
-		{% endif %}
 	</div>
+{% endblock %}
+
+{% block below %}
+	{% for module in below_modules %}
+		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+		{% set module_style = module.style|replace('_', '-') %}
+		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
+	{% endfor %}
 {% endblock %}

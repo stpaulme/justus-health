@@ -1,9 +1,49 @@
 {
-    "key": "group_60dccfcc318a4",
-    "title": "Page Type - Posts Page",
+    "key": "group_6478dcdd9baf0",
+    "title": "Page Type - Education Article",
     "fields": [
         {
-            "key": "field_60dccfcc34ae3",
+            "key": "field_6478df00f2802",
+            "label": "References",
+            "name": "references",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6478df17f2803",
+            "label": "Suggested Citation",
+            "name": "suggested_citation",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6478dcdda3aa6",
             "label": "Below-the-Fold Modules",
             "name": "below_modules",
             "aria-label": "",
@@ -24,7 +64,7 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60dccfcc38740",
+                            "key": "field_6478dcdda7c7e",
                             "label": "CTA",
                             "name": "cta",
                             "aria-label": "",
@@ -49,16 +89,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60b7a83fec059": {
-                    "key": "layout_60b7a83fec059",
-                    "name": "feed_post",
-                    "label": "Latest Posts",
+                "layout_6478dd2947a7f": {
+                    "key": "layout_6478dd2947a7f",
+                    "name": "link_list",
+                    "label": "Link List",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60dccfcc387a3",
-                            "label": "Latest Posts",
-                            "name": "latest_posts",
+                            "key": "field_6478dd3247a82",
+                            "label": "Link List",
+                            "name": "link_list",
                             "aria-label": "",
                             "type": "clone",
                             "instructions": "",
@@ -70,7 +110,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5d8bc418c8844"
+                                "group_60492d365baab"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -82,37 +122,17 @@
                     "max": ""
                 }
             },
-            "button_label": "Add Module",
             "min": "",
-            "max": ""
-        },
-        {
-            "key": "field_60dccfcc34b36",
-            "label": "Show AIDSLine CTA?",
-            "name": "show_aidsline_cta",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "max": "",
+            "button_label": "Add Module"
         }
     ],
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "post_type",
                 "operator": "==",
-                "value": "posts_page"
+                "value": "article"
             }
         ]
     ],
@@ -125,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685642844
+    "modified": 1685643051
 }

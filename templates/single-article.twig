@@ -1,0 +1,75 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
+{% block content %}
+	<div class="news-post">
+		<div class="news-post__meta">
+			<time class="news-post__date">Last updated on
+				{{ post.modified_date }}</time>
+
+			{% set cats = post.terms('article_category') %}
+			<ul class="news-post__cats">
+				{% for cat in cats %}
+					<li class="news-post__cat">
+						<a href="{{ cat.link }}">{{ cat.name }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<h1 class="default-title">{{ post.title }}</h1>
+
+		{% if post.thumbnail %}
+			<picture>
+				<source srcset="{{ post.thumbnail.src('3by2')|towebp }} 1110w, {{ post.thumbnail.src('3by2-md')|towebp }} 690w, {{ post.thumbnail.src('3by2-sm')|towebp }} 395w" sizes="96vw" type="image/webp">
+				<source srcset="{{ post.thumbnail.src('3by2') }} 1110w, {{ post.thumbnail.src('3by2-md') }} 690w, {{ post.thumbnail.src('3by2-sm') }} 395w" sizes="96vw" type="image/jpeg">
+				<img alt="{{ post.thumbnail.alt }}" class="news-post__image" loading="lazy" src="{{ post.thumbnail.src('3by2') }}">
+			</picture>
+		{% endif %}
+
+		<div class="news-post__content text-heavy wysiwyg">
+			{{ post.content }}
+		</div>
+
+		{% include 'blocks/back.twig' with { 'link_url' : '/resources-directories/informational-articles/', 'link_text' : 'Back to All Articles' } %}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+	<div class="row">
+		{% set field = post.meta('references') %}
+		{% if field %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				<div class="wysiwyg">
+					<h3>References</h3>
+					{{ field}}
+				</div>
+			</div>
+		{% endif %}
+
+		{% set field = post.meta('suggested_citation') %}
+		{% if field %}
+			<div class="col-md-6 col-lg-12 sidebar__col">
+				<div class="wysiwyg">
+					<h3>Suggested Citation</h3>
+					{{ field}}
+				</div>
+			</div>
+		{% endif %}
+
+		<div class="col-md-6 col-lg-12 sidebar__col">
+			{% include 'blocks/share.twig' %}
+		</div>
+	</div>
+{% endblock %}
+
+{% block below %}
+	{% for module in below_modules %}
+		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+		{% set module_style = module.style|replace('_', '-') %}
+		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
+	{% endfor %}
+{% endblock %}
