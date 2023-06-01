@@ -24,7 +24,7 @@
         },
         {
             "key": "field_6478e0eafaf99",
-            "label": "Type",
+            "label": "Selection Type",
             "name": "type",
             "aria-label": "",
             "type": "select",
@@ -37,8 +37,8 @@
                 "id": ""
             },
             "choices": {
-                "category": "Choose a Category",
-                "posts": "Choose Individual Articles"
+                "category": "I want to select a category",
+                "posts": "I want to select individual articles"
             },
             "default_value": false,
             "return_format": "value",
@@ -165,5 +165,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685643765
+    "modified": 1685650575
 }
