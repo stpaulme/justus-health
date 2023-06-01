@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="directory-landing">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					{% filter shortcodes %}
+						[searchandfilter id="{{ search_form_id }}"]
+					{% endfilter %}
+				</div>
+
+				<div class="col-md-8">
+					{% for post in posts %}
+						{% include 'blocks/card-article.twig' with { 'modifier' : 'landing', 'show_cat' : true } %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% if content|length > 0 %}
+		{% for module in content %}
+			{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+			{% set module_style = module.style|replace('_', '-') %}
+			{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}
