@@ -113,7 +113,7 @@ add_action('wp_ajax_loadmore', 'spm_load_more_ajax_handler'); // wp_ajax_{action
 add_action('wp_ajax_nopriv_loadmore', 'spm_load_more_ajax_handler'); // wp_ajax_nopriv_{action}
 
 // Add filtered provider directory pages to breadcrumbs
-add_action('bcn_after_fill', 'spm_add_area_page_to_breadcrumbs');
+// add_action('bcn_after_fill', 'spm_add_area_page_to_breadcrumbs');
 function spm_add_area_page_to_breadcrumbs($trail)
 {
     if (is_singular('provider')) {

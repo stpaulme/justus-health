@@ -135,8 +135,17 @@
 			{% endif %}
 		</div>
 
-		{% set area = post.terms('provider_area')|first %}
-		{% include 'blocks/back.twig' with { 'link_url' : '/resources-directories/providers/?_sft_provider_area=' ~ area.slug, 'link_text' : 'Back to All ' ~ area.name ~ ' Providers' } %}
+		<div class="back" id="back"></div>
+
+		<script>
+			const back = document.getElementById("back");
+
+			if (document.referrer.startsWith(location.origin)) {
+				back.innerHTML = '<a href="javascript:void(0);" onClick="window.history.back()"><i aria-hidden="true" class="fas fa-arrow-left"></i> Back</a>';
+			} else {
+				back.innerHTML = '<a href="/resources-directories/providers/"><i aria-hidden="true" class="fas fa-arrow-left"></i> See All Providers</a>';
+			}
+		</script>
 	</div>
 {% endblock %}
 
