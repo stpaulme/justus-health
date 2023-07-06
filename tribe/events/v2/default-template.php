@@ -16,9 +16,8 @@ if (!defined('ABSPATH')) {
 
 $context = Timber::get_context();
 
-if (tribe_get_events_title()) {
-    $context['title'] = tribe_get_events_title();
-}
+$context['title'] = tribe_get_events_title();
+$context['breadcrumbs'] = bcn_display(true);
 
 if (is_singular('tribe_event_series')) {
     $series_filters = new Series_Filters();
