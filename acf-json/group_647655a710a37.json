@@ -98,7 +98,7 @@
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -135,7 +135,7 @@
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -155,7 +155,7 @@
             "aria-label": "",
             "type": "email",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -409,7 +409,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "provider"
+                "value": "post"
             }
         ]
     ],
@@ -422,5 +422,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685643908
+    "modified": 1689602837
 }
