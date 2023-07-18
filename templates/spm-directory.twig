@@ -19,15 +19,15 @@
 				<p>Sorry, nothing found</p>
 			{% endif %}
 
+			<div class="directory-landing__top">
+				<a href="#content">Back to Top</a>
+			</div>
+
 			{% if posts.pagination.prev or posts.pagination.next %}
 				<div class="directory-landing__pagination">
 					{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style } %}
 				</div>
 			{% endif %}
-
-			<div class="directory-landing__top">
-				<a href="#content">Back to Top</a>
-			</div>
 		</div>
 	</div>
 
