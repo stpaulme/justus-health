@@ -1,15 +1,21 @@
 .provider-post {
+    padding-top: 20px;
+    padding-bottom: 30px;
+
     &__image {
+        background-color: $white;
+        border: 2px solid $gray-border;
         margin-bottom: 20px;
     }
 
     &__header {
-        border-bottom: 3px solid $gray-border;
+        border-bottom: 3px solid $gray-divider;
+        margin-bottom: 15px;
         padding-bottom: 15px;
     }
 
     &__name {
-        color: $dark-purple-bg;
+        color: $dark-purple-bg-alt;
         font-size: 1.6875rem;
         line-height: 1.15;
         margin-bottom: 0;
@@ -21,42 +27,97 @@
         font-size: 1.3125rem;
         font-weight: 600;
         line-height: 1.15;
-        margin-top: 7px;
     }
 
-    &__meta {
-        margin-top: 15px;
-        margin-bottom: -15px;
+    &__name+&__title {
+        margin-top: 10px;
     }
 
-    &__meta-col {
-        margin-bottom: 15px;
-    }
-
-    &__label {
-        color: $dark-purple-bg;
-        font-size: 1.3125rem;
-        font-weight: 600;
-        line-height: 1.15;
+    &__details {
+        font-size: 1rem;
+        line-height: 1.375;
         margin-bottom: 0;
     }
 
     &__detail {
-        margin-bottom: 0;
+        margin-bottom: 20px;
+
+        &--sub {
+            margin-bottom: 3px;
+        }
     }
 
-    &__content {
-        margin-top: 20px;
+    &__term {
+        color: $dark-purple-bg;
+        font-size: 1.1875rem;
+        line-height: 1.1052631579;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+
+        &--sub {
+            color: $gray-text;
+            display: inline;
+            font-size: 1rem;
+            line-height: 1.375;
+            margin-bottom: 0;
+            text-transform: none;
+        }
+    }
+
+    &__definition {
+        margin-bottom: 0;
+
+        p {
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin-bottom: 0;
+            padding-left: 0.85em;
+        }
+
+        li::marker {
+            color: $purple;
+        }
+
+        &--sub {
+            display: inline;
+        }
+    }
+
+    &__intake {
+        &--desktop {
+            display: none;
+        }
+
+        &--phone {
+            margin-top: 20px;
+        }
+    }
+
+    &__back {
+        margin-top: 30px;
+
+        a {
+            background-image: url('../../dist/img/arrow_back.svg');
+            background-position: center left;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            font-size: 1.125rem;
+            line-height: 1.1111111111;
+            padding-left: 22.5px;
+        }
     }
 }
 
 @include media-breakpoint-up(md) {
     .provider-post {
-        &__image {
-            margin-bottom: 0;
-        }
+        padding-top: 30px;
+        padding-bottom: 60px;
 
         &__header {
+            margin-bottom: 20px;
             padding-bottom: 20px;
         }
 
@@ -67,23 +128,34 @@
 
         &__title {
             font-size: 1.5rem;
-            line-height: 1.1667;
+            line-height: 1.1666666667;
         }
 
-        &__meta {
-            margin-top: 20px;
-            margin-bottom: -20px;
+        &__details {
+            columns: 2;
+            column-gap: 30px;
         }
 
-        &__meta-col {
-            margin-bottom: 20px;
+        &__detail {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+
+            &--summary,
+            &--statement {
+                column-span: all;
+                margin-top: 20px;
+            }
         }
 
-        &__label {
-            margin-bottom: 5px;
+        &__intake {
+            &--phone {
+                margin-top: 30px;
+                width: calc(50% - 15px);
+            }
         }
 
-        &__content {
+        &__back {
             margin-top: 30px;
         }
     }
@@ -92,12 +164,17 @@
 @include media-breakpoint-up(lg) {
     .provider-post {
         &__image {
-            display: none;
+            margin-bottom: 30px;
         }
 
-        &__name {
-            font-size: 3.25rem;
-            line-height: 1.08;
+        &__intake {
+            &--desktop {
+                display: block;
+            }
+
+            &--phone {
+                display: none;
+            }
         }
     }
 }

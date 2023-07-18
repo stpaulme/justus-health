@@ -1,0 +1,29 @@
+<div class="intake">
+	<dl class="intake__details">
+		{% if post.meta('intake_phone') %}
+			<div class="intake__detail">
+				<dt class="intake__term">Intake Phone</dt>
+
+				<dd class="intake__definition">
+					<a href="tel:{{ post.meta('intake_phone') }}">{{ post.meta('intake_phone') }}</a>
+				</dd>
+			</div>
+		{% endif %}
+
+		{% if post.meta('email') %}
+			<div class="intake__detail">
+				<dt class="intake__term">Email</dt>
+
+				<dd class="intake__definition">
+					<a href="mailto:{{ post.meta('email') }}">{{ post.meta('email') }}</a>
+				</dd>
+			</div>
+		{% endif %}
+	</dl>
+
+	{% if post.meta('website') %}
+		<div class="intake__link">
+			<a class="button" href="{{ post.meta('website') }}" target="_blank">Visit Website</a>
+		</div>
+	{% endif %}
+</div>

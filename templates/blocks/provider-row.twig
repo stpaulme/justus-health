@@ -37,7 +37,7 @@
 						</ul>
 						{% if terms|length > 3 %}
 							<p>
-								<a href="{{ post.link }}#Service_Categories">See all categories
+								<a href="{{ post.link }}#Provider_Service_Categories">See all categories
 									<span aria-hidden="true">&raquo;</span>
 								</a>
 							</p>
@@ -70,7 +70,7 @@
 						{{ terms|join(', ') }}
 						{% if post.meta('business_hours_desc') %}
 							<p>
-								{{ post.meta('business_hours_desc') }}
+								<em>{{ post.meta('business_hours_desc') }}</em>
 							</p>
 						{% endif %}
 					</dd>

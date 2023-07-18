@@ -15,7 +15,7 @@ if (is_singular('article')) {
 }
 
 if (is_singular('provider')) {
-    $context['sidebar_pos'] = 'left';
+    $context['sidebar'] = false;
 
     // Below the fold
     $below_modules = get_field('below_modules');
