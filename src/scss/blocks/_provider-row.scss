@@ -1,19 +1,132 @@
 .provider-row {
     background-color: $white;
 
-    &__meta {
-        columns: 2;
-        margin-top: 20px;
+    &__area {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 6px 20px;
+
+        &--aging {
+            background-color: #A9C6B8;
+        }
+
+        &--hiv {
+            background-color: #F6DFA4;
+        }
+    }
+
+    &__inner {
+        padding: 10px 20px 20px;
+    }
+
+    &__header {
+        border-bottom: 1px solid $gray-divider;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        line-height: 1.2777777778;
+        margin-bottom: 0;
+    }
+
+    &__statement {
+        font-size: 1rem;
+        font-style: italic;
+        line-height: 1.4375;
+        margin-top: 10px;
+    }
+
+    &__details {
+        font-size: 1rem;
+        line-height: 1.375;
         margin-bottom: 0;
 
         div {
-            -webkit-column-break-inside: avoid;
-            page-break-inside: avoid;
-            break-inside: avoid;
+            margin-bottom: 15px;
         }
 
-        p {
+        dt {
+            color: $dark-purple-bg;
+            font-size: 0.875rem;
+            line-height: 1.15;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        dd {
             margin-bottom: 0;
+
+            p {
+                line-height: 1.25;
+                margin-top: 4px;
+                margin-bottom: 0;
+            }
+
+            ul {
+                margin-bottom: 0;
+                padding-left: 0.85em;
+            }
+
+            li::marker {
+                color: $purple;
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: 15px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .provider-row {
+        &__inner {
+            padding: 10px 30px 30px;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            line-height: 1.1666666667;
+        }
+
+        &__details {
+            columns: 3;
+
+            div {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 20px;
+
+                &:nth-child(2) {
+                    break-before: column;
+                }
+            }
+        }
+
+        &__footer {
+            margin-top: 20px;
+            text-align: right;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .provider-row {
+        &__header {
+            margin-bottom: 20px;
+
+            .row {
+                align-items: center;
+            }
+        }
+
+        &__statement {
+            margin-top: 0;
         }
     }
 }

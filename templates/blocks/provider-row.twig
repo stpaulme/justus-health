@@ -1,76 +1,93 @@
 <div class="provider-row">
-	<h3 class="provider-row__title">
-		<a href="{{ post.link }}">{{ post.title }}</a>
-	</h3>
+	{% set area = post.terms('provider_area')|first %}
 
-	{% if post.meta('provider_statement') %}
-		<div class="provider-row__statement text-heavy wysiwyg">
-			{{ post.meta('provider_statement') }}
-		</div>
+	{% if area %}
+		<span class="provider-row__area provider-row__area--{{ area.slug }}">{{ area.name }}</span>
 	{% endif %}
 
-	<dl class="provider-row__meta">
-		{% set terms = post.terms('provider_service_category') %}
-		{% if terms %}
-			<div>
-				<dt>Service Categories</dt>
-				<dd>
-					{{ terms|slice(0, 3)|join(', ') }}
+	<div class="provider-row__inner">
+		<div class="provider-row__header">
+			<div class="row">
+				<div class="col-lg-5">
+					<h3 class="provider-row__title">
+						<a href="{{ post.link }}">{{ post.title }}</a>
+					</h3>
+				</div>
 
-					{% if terms|length > 3 %}
-						<p>
-							<a href="{{ post.link }}#Service_Categories">See all categories
-								<span aria-hidden="true">&raquo;</span>
-							</a>
-						</p>
-					{% endif %}
-				</dd>
+				{% if post.meta('provider_statement') %}
+					<div class="col-lg-7">
+						<div class="provider-row__statement text-heavy wysiwyg">
+							{{ post.meta('provider_statement') }}
+						</div>
+					</div>
+				{% endif %}
 			</div>
-		{% endif %}
-
-		{% set terms = post.terms('provider_area') %}
-		<div>
-			<dt>Area</dt>
-			<dd>{{ terms|join(', ') }}</dd>
 		</div>
 
-		{% set terms = post.terms('provider_appointment_format') %}
-		{% if terms %}
-			<div>
-				<dt>Appointment Formats</dt>
-				<dd>{{ terms|join(', ') }}</dd>
-			</div>
-		{% endif %}
+		<dl class="provider-row__details">
+			{% set terms = post.terms('provider_service_category') %}
+			{% if terms %}
+				<div>
+					<dt>Provider Service Categories</dt>
+					<dd>
+						<ul>
+							{% for term in terms|slice(0, 3) %}
+								<li>{{ term.name }}</li>
+							{% endfor %}
+						</ul>
+						{% if terms|length > 3 %}
+							<p>
+								<a href="{{ post.link }}#Service_Categories">See all categories
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</p>
+						{% endif %}
+					</dd>
+				</div>
+			{% endif %}
 
-		{% set terms = post.terms('provider_business_hours') %}
-		{% if terms %}
-			<div>
-				<dt>Business Hours</dt>
-				<dd>
-					{{ terms|join(', ') }}
-					{% if post.meta('business_hours_desc') %}
-						<p>
-							<em>{{ post.meta('business_hours_desc') }}</em>
-						</p>
-					{% endif %}
-				</dd>
-			</div>
-		{% endif %}
+			{% set terms = post.terms('provider_county') %}
+			{% if terms %}
+				<div>
+					<dt>County</dt>
+					<dd>{{ terms|join(', ') }}</dd>
+				</div>
+			{% endif %}
 
-		{% set field = post.meta('city') %}
-		{% if field %}
-			<div>
-				<dt>City</dt>
-				<dd>{{ field }}</dd>
-			</div>
-		{% endif %}
+			{% set field = post.meta('city') %}
+			{% if field %}
+				<div>
+					<dt>City</dt>
+					<dd>{{ field }}</dd>
+				</div>
+			{% endif %}
 
-		{% set terms = post.terms('provider_county') %}
-		{% if terms %}
-			<div>
-				<dt>County</dt>
-				<dd>{{ terms|join(', ') }}</dd>
-			</div>
-		{% endif %}
-	</dl>
+			{% set terms = post.terms('provider_business_hours') %}
+			{% if terms %}
+				<div>
+					<dt>Business Hours</dt>
+					<dd>
+						{{ terms|join(', ') }}
+						{% if post.meta('business_hours_desc') %}
+							<p>
+								{{ post.meta('business_hours_desc') }}
+							</p>
+						{% endif %}
+					</dd>
+				</div>
+			{% endif %}
+
+			{% set terms = post.terms('provider_appointment_format') %}
+			{% if terms %}
+				<div>
+					<dt>Appointment Formats</dt>
+					<dd>{{ terms|join(', ') }}</dd>
+				</div>
+			{% endif %}
+		</dl>
+
+		<div class="provider-row__footer">
+			<a class="button" href="{{ post.link }}">View Profile</a>
+		</div>
+	</div>
 </div>
