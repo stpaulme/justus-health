@@ -122,7 +122,7 @@ function spm_add_area_page_to_breadcrumbs($trail)
         if (in_array('provider_area', $area_breadcrumb->get_types())) {
             $term = get_term($area_breadcrumb->get_id(), 'provider_area');
             $area_breadcrumb->set_title('Providers');
-            $area_breadcrumb->set_url('/resources-directories/providers/?_sft_provider_area=' . $term->slug);
+            $area_breadcrumb->set_url('/violet/providers/?_sft_provider_area=' . $term->slug);
         }
     }
 }

@@ -1,12 +1,32 @@
 .directory-landing {
+    background-color: $lilac-bg;
     padding-top: 20px;
     padding-bottom: 30px;
 
-    &__post-col {
+    &__filters {
+        margin-bottom: 25px;
+    }
+
+    &__post {
         margin-bottom: 20px;
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    &__top {
+        margin-top: 30px;
+        text-align: right;
+
+        a {
+            background-image: url('../../dist/img/arrow_up.svg');
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: 15px;
+            font-size: 1.125rem;
+            line-height: 1.1111111111;
+            padding-right: 22.5px;
         }
     }
 
@@ -17,27 +37,23 @@
 
 @include media-breakpoint-up(md) {
     .directory-landing {
-        padding-top: 50px;
-        padding-bottom: 60px;
+        padding-top: 40px;
+        padding-bottom: 100px;
 
-        &__post-col {
-            margin-bottom: 30px;
+        &__filters {
+            margin-bottom: 40px;
+        }
+
+        &__post {
+            margin-bottom: 40px;
+        }
+
+        &__top {
+            margin-top: 50px;
         }
 
         &__pagination {
             margin-top: 50px;
-        }
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .directory-landing {
-        padding-top: 60px;
-
-        &__post-col {
-            &:nth-last-child(-n+3) {
-                margin-bottom: 0;
-            }
         }
     }
 }

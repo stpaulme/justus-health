@@ -22,7 +22,7 @@ $context['search_form_id'] = $search_form_id;
 $args = array(
     'search_filter_id' => $search_form_id,
 );
-$context['posts'] = Timber::get_posts($args);
+$context['posts'] = new Timber\PostQuery($args);
 
 // Below modules
 $below_modules = get_field('below_modules');

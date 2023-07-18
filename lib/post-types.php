@@ -28,7 +28,7 @@ $args = array(
     "capability_type" => "page",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => array("slug" => "resources-directories/informational-articles/articles", "with_front" => false),
+    "rewrite" => array("slug" => "violet/informational-articles/articles", "with_front" => false),
     "query_var" => true,
     "supports" => array("title", "editor", "thumbnail"),
 );
@@ -99,7 +99,7 @@ $args = array(
     "capability_type" => "page",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => array("slug" => "resources-directories/providers", "with_front" => false),
+    "rewrite" => array("slug" => "violet/providers", "with_front" => false),
     "query_var" => true,
     "menu_icon" => "dashicons-groups",
     "supports" => array("title", "thumbnail"),

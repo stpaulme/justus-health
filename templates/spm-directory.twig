@@ -3,98 +3,30 @@
 {% block content %}
 	<div class="directory-landing">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					{% filter shortcodes %}
-						[searchandfilter id="{{ search_form_id }}"]
-					{% endfilter %}
-				</div>
+			<div class="directory-landing__filters">
+				{% include 'blocks/filters.twig' with { 'modifier' : 'providers', 'heading' : 'Search and Filter Providers' } %}
+			</div>
 
-				<div class="col-md-8">
+			{% if posts|length > 0 %}
+				<div class="directory-landing__posts">
 					{% for post in posts %}
-						<div class="provider-row">
-							<h3 class="provider-row__title">
-								<a href="{{ post.link }}">{{ post.title }}</a>
-							</h3>
-
-							{% if post.meta('provider_statement') %}
-								<div class="provider-row__statement text-heavy wysiwyg">
-									{{ post.meta('provider_statement') }}
-								</div>
-							{% endif %}
-
-							<dl class="provider-row__meta">
-								{% set terms = post.terms('provider_service_category') %}
-								{% if terms %}
-									<div>
-										<dt>Service Categories</dt>
-										<dd>
-											{{ terms|slice(0, 3)|join(', ') }}
-
-											{% if terms|length > 3 %}
-												<p>
-													<a href="{{ post.link }}#Service_Categories">See all categories
-														<span aria-hidden="true">&raquo;</span>
-													</a>
-												</p>
-											{% endif %}
-										</dd>
-									</div>
-								{% endif %}
-
-								{% set terms = post.terms('provider_area') %}
-								<div>
-									<dt>Area</dt>
-									<dd>{{ terms|join(', ') }}</dd>
-								</div>
-
-								{% set terms = post.terms('provider_appointment_format') %}
-								{% if terms %}
-									<div>
-										<dt>Appointment Formats</dt>
-										<dd>{{ terms|join(', ') }}</dd>
-									</div>
-								{% endif %}
-
-								{% set terms = post.terms('provider_business_hours') %}
-								{% if terms %}
-									<div>
-										<dt>Business Hours</dt>
-										<dd>
-											{{ terms|join(', ') }}
-											{% if post.meta('business_hours_desc') %}
-												<p>
-													<em>{{ post.meta('business_hours_desc') }}</em>
-												</p>
-											{% endif %}
-										</dd>
-									</div>
-								{% endif %}
-
-								{% set field = post.meta('city') %}
-								{% if field %}
-									<div>
-										<dt>City</dt>
-										<dd>{{ field }}</dd>
-									</div>
-								{% endif %}
-
-								{% set terms = post.terms('provider_county') %}
-								{% if terms %}
-									<div>
-										<dt>County</dt>
-										<dd>{{ terms|join(', ') }}</dd>
-									</div>
-								{% endif %}
-							</dl>
+						<div class="directory-landing__post">
+							{% include 'blocks/provider-row.twig' %}
 						</div>
 					{% endfor %}
 				</div>
+			{% else %}
+				<p>Sorry, nothing found</p>
+			{% endif %}
 
-				<div class="col-12">
-					<br>
-					<a href="#content">Back to Top</a>
+			{% if posts.pagination.prev or posts.pagination.next %}
+				<div class="directory-landing__pagination">
+					{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style } %}
 				</div>
+			{% endif %}
+
+			<div class="directory-landing__top">
+				<a href="#content">Back to Top</a>
 			</div>
 		</div>
 	</div>

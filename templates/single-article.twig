@@ -14,7 +14,7 @@
 			<ul class="news-post__cats">
 				{% for cat in cats %}
 					<li class="news-post__cat">
-						<a href="/resources-directories/informational-articles/?_sft_article_category={{ cat.slug }}">{{ cat.name }}</a>
+						<a href="/violet/informational-articles/?_sft_article_category={{ cat.slug }}">{{ cat.name }}</a>
 					</li>
 				{% endfor %}
 			</ul>
@@ -34,7 +34,7 @@
 			{{ post.content }}
 		</div>
 
-		{% include 'blocks/back.twig' with { 'link_url' : '/resources-directories/informational-articles/', 'link_text' : 'Back to All Articles' } %}
+		{% include 'blocks/back.twig' with { 'link_url' : '/violet/informational-articles/', 'link_text' : 'Back to All Articles' } %}
 	</div>
 {% endblock %}
 
