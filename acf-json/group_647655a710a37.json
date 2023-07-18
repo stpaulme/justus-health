@@ -409,7 +409,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "provider"
             }
         ]
     ],
@@ -422,5 +422,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689602837
+    "modified": 1689699118
 }
