@@ -101,7 +101,7 @@ function spm_max_limit_provider_statement($valid, $value, $field, $input_name)
         return $valid;
     }
 
-    $max = 250;
+    $max = 500;
 
     if (strlen(wp_strip_all_tags($value)) > $max) {
         return __('The maximum number of characters allowed is ' . $max);
