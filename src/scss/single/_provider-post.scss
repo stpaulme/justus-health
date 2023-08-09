@@ -77,12 +77,22 @@
         }
 
         ul {
+            list-style: none;
             margin-bottom: 0;
-            padding-left: 0.85em;
+            padding-left: 0;
         }
 
-        li::marker {
-            color: $purple;
+        li {
+            padding-left: 1em;
+
+            &::before {
+                color: $purple;
+                content: "\2022";
+                display: inline-block;
+                font-weight: 700;
+                margin-left: -1em;
+                width: 1em;
+            }
         }
 
         &--sub {

@@ -9,9 +9,9 @@
 			{% for page in posts.pagination.pages %}
 				<li class="pagination__page">
 					{% if page.link %}
-						<a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+						<a href="{{ page.link }}{{ id ? '#' ~ id }}" class="{{ page.class }}">{{ page.title }}</a>
 					{% else %}
-						<span class="{{page.class}}">{{page.title}}</span>
+						<span class="{{ page.class }}">{{ page.title }}</span>
 					{% endif %}
 				</li>
 			{% endfor %}
