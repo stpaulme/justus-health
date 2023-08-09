@@ -24,7 +24,7 @@
     &__header {
         border-bottom: 1px solid $gray-divider;
         margin-bottom: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
     }
 
     &__title {
@@ -37,7 +37,7 @@
         font-size: 1rem;
         font-style: italic;
         line-height: 1.4375;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     &__details {
@@ -87,9 +87,17 @@
             padding: 10px 30px 30px;
         }
 
+        &__header {
+            padding-bottom: 15px;
+        }
+
         &__title {
             font-size: 1.5rem;
             line-height: 1.1666666667;
+        }
+
+        &__statement {
+            margin-top: 10px;
         }
 
         &__details {
