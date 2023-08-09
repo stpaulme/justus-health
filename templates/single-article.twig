@@ -42,7 +42,7 @@
 	<div class="row">
 		{% set field = post.meta('references') %}
 		{% if field %}
-			<div class="col-md-6 col-lg-12 sidebar__col">
+			<div class="col-md-6 col-lg-12 sidebar__col sidebar__col--article">
 				<div class="wysiwyg">
 					<h3>References</h3>
 					{{ field}}
@@ -52,7 +52,7 @@
 
 		{% set field = post.meta('suggested_citation') %}
 		{% if field %}
-			<div class="col-md-6 col-lg-12 sidebar__col">
+			<div class="col-md-6 col-lg-12 sidebar__col sidebar__col--article">
 				<div class="wysiwyg">
 					<h3>Suggested Citation</h3>
 					{{ field}}
