@@ -13,11 +13,9 @@
 			{% set cats = post.terms('article_category') %}
 			<ul class="card-article__cats">
 				{% for cat in cats %}
-					<li class="card-article__cat">
-						{{ cat.name }}
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
+					<li class="card-article__cat">{{ cat.name }}
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
 	</div>
-</div>
