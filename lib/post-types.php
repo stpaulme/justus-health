@@ -28,7 +28,7 @@ $args = array(
     "capability_type" => "page",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => array("slug" => "violet/informational-articles/articles", "with_front" => false),
+    "rewrite" => array("slug" => "violet/health-education/articles", "with_front" => false),
     "query_var" => true,
     "supports" => array("title", "editor", "thumbnail"),
 );
