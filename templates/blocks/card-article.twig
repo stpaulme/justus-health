@@ -11,11 +11,9 @@
 	<div class="card-article__meta">
 		{% if show_cat == true %}
 			{% set cats = post.terms('article_category') %}
-			<ul class="card-article__cats">
-				{% for cat in cats %}
-					<li class="card-article__cat">{{ cat.name }}
-					{% endfor %}
-				</ul>
-			{% endif %}
-		</div>
+			<span class="card-article__cats">
+				{{ cats|join(', ') }}
+			</span>
+		{% endif %}
 	</div>
+</div>

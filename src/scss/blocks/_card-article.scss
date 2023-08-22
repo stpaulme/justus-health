@@ -20,25 +20,6 @@
         margin-top: 20px;
     }
 
-    &__cats {
-        display: inline;
-        list-style: none;
-        margin-bottom: 0;
-        padding-left: 0;
-    }
-
-    &__cat {
-        display: inline;
-
-        &:after {
-            content: ',';
-        }
-
-        &:last-child:after {
-            content: '';
-        }
-    }
-
     &--landing {
         background-color: $lilac-bg;
         margin-bottom: 20px;
