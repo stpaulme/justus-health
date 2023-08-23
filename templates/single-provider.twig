@@ -46,7 +46,7 @@
 
 						{% set terms = post.terms('provider_service_category') %}
 						{% if terms %}
-							<div class="provider-post__detail">
+							<div class="provider-post__detail provider-post__detail--service-categories">
 								<dt class="provider-post__term" id="Provider_Service_Categories">Provider Service Categories</dt>
 								<dd class="provider-post__definition">
 									<ul>
@@ -147,10 +147,10 @@
 
 					<script>
 						const back = document.getElementById("back");
-						
-						if (document.referrer.startsWith(location.origin)) {
-							back.innerHTML = '<a href="javascript:history.back()">Back</a>';
-						}
+
+if (document.referrer.startsWith(location.origin)) {
+back.innerHTML = '<a href="javascript:history.back()">Back</a>';
+}
 					</script>
 				</div>
 			</div>
