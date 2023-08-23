@@ -1,0 +1,19 @@
+<div class="card-article card-article--{{ modifier ? '' ~ modifier }}">
+
+	<h3 class="card-article__title">
+		<a href="{{ post.link }}">{{ post.title }}</a>
+	</h3>
+
+	{% if post.preview|length > 0 %}
+		<p class="card-article__preview">{{ post.preview.length(45) }}</p>
+	{% endif %}
+
+	<div class="card-article__meta">
+		{% if show_cat == true %}
+			{% set cats = post.terms('article_category') %}
+			<span class="card-article__cats">
+				{{ cats|join(', ') }}
+			</span>
+		{% endif %}
+	</div>
+</div>

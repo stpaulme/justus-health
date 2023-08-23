@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="directory-landing">
+		<div class="container">
+			<div class="directory-landing__filters">
+				{% include 'blocks/filters.twig' with { 'modifier' : 'providers', 'heading' : 'Search and Filter Providers' } %}
+			</div>
+
+			{% if posts|length > 0 %}
+				<div class="directory-landing__posts" id="posts">
+					{% for post in posts %}
+						<div class="directory-landing__post">
+							{% include 'blocks/provider-row.twig' %}
+						</div>
+					{% endfor %}
+				</div>
+			{% else %}
+				<p>Sorry, nothing found</p>
+			{% endif %}
+
+			<div class="directory-landing__top">
+				<a href="#content">Back to Top</a>
+			</div>
+
+			{% if posts.pagination.prev or posts.pagination.next %}
+				<div class="directory-landing__pagination">
+					{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style, 'id' : 'posts' } %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+	{% if content|length > 0 %}
+		{% for module in content %}
+			{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+			{% set module_style = module.style|replace('_', '-') %}
+			{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}

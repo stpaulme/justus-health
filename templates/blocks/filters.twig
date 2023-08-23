@@ -1,0 +1,9 @@
+<div class="filters {{ modifier ? 'filters--' ~ modifier }}">
+	{% if heading %}
+		<h3 class="filters__heading">{{ heading }}</h3>
+	{% endif %}
+
+	{% filter shortcodes %}
+		[searchandfilter id="{{ search_form_id }}"]
+	{% endfilter %}
+</div>

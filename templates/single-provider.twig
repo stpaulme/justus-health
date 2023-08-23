@@ -1,0 +1,167 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	{% include 'blocks/single-title.twig' %}
+{% endblock %}
+
+{% block content %}
+	<div class="provider-post">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-4">
+					{% if post.thumbnail %}
+						<picture>
+							<source srcset="{{ post.thumbnail.src('square')|towebp }}" type="image/webp">
+							<source srcset="{{ post.thumbnail.src('square') }}" type="image/jpeg">
+							<img alt="{{ post.title }}" class="provider-post__image" src="{{ post.thumbnail.src('square') }}">
+						</picture>
+					{% endif %}
+
+					<div class="provider-post__intake provider-post__intake--desktop">
+						{% include 'blocks/intake.twig' ignore missing %}
+					</div>
+				</div>
+				<div class="col-12 col-lg-8">
+					<div class="provider-post__header">
+						<h1 class="provider-post__name">{{ post.title }}</h1>
+
+						{% set type = post.terms('provider_type')|first %}
+						<span class="provider-post__title">{{ type.name }}</span>
+					</div>
+
+					<dl class="provider-post__details">
+						{% set terms = post.terms('provider_area') %}
+						{% if terms %}
+							<div class="provider-post__detail">
+								<dt class="provider-post__term">Areas of Practice</dt>
+								<dd class="provider-post__definition">
+									<ul>
+										{% for term in terms %}
+											<li>{{ term.name }}</li>
+										{% endfor %}
+									</ul>
+								</dd>
+							</div>
+						{% endif %}
+
+						{% set terms = post.terms('provider_service_category') %}
+						{% if terms %}
+							<div class="provider-post__detail">
+								<dt class="provider-post__term" id="Provider_Service_Categories">Provider Service Categories</dt>
+								<dd class="provider-post__definition">
+									<ul>
+										{% for term in terms %}
+											<li>{{ term.name }}</li>
+										{% endfor %}
+									</ul>
+								</dd>
+							</div>
+						{% endif %}
+
+						<div class="provider-post__detail">
+							<dt class="provider-post__term">Location</dt>
+							<dd class="provider-post__definition">
+								<dl>
+									{% set terms = post.terms('provider_county') %}
+									{% if terms %}
+										<div class="provider-post__detail provider-post__detail--sub">
+											<dt class="provider-post__term provider-post__term--sub">County:</dt>
+											<dd class="provider-post__definition provider-post__definition--sub">{{ terms|join(', ') }}</dd>
+										</div>
+									{% endif %}
+
+									{% set field = post.meta('city') %}
+									{% if field %}
+										<div class="provider-post__detail provider-post__detail--sub">
+											<dt class="provider-post__term provider-post__term--sub">City:</dt>
+											<dd class="provider-post__definition provider-post__definition--sub">{{ field }}</dd>
+										</div>
+									{% endif %}
+
+									{% set field = post.meta('street_address') %}
+									{% if field %}
+										<div class="provider-post__detail provider-post__detail--sub">
+											<dt class="provider-post__term provider-post__term--sub">Street Address:</dt>
+											<dd class="provider-post__definition provider-post__definition--sub">{{ field }}</dd>
+										</div>
+									{% endif %}
+								</dl>
+							</dd>
+						</div>
+
+						{% set field = post.meta('summary') %}
+						{% if field %}
+							<div class="provider-post__detail provider-post__detail--summary">
+								<dt class="provider-post__term">Summary of Services Provided</dt>
+								<dd class="provider-post__definition">{{ field }}</dd>
+							</div>
+						{% endif %}
+
+						{% set field = post.meta('provider_statement') %}
+						{% if field %}
+							<div class="provider-post__detail provider-post__detail--statement">
+								<dt class="provider-post__term">Provider Statement</dt>
+								<dd class="provider-post__definition">{{ field }}</dd>
+							</div>
+						{% endif %}
+
+						{% set terms = post.terms('provider_appointment_format') %}
+						{% if terms %}
+							<div class="provider-post__detail">
+								<dt class="provider-post__term">Appointment Formats</dt>
+								<dd class="provider-post__definition">{{ terms|join(', ') }}</dd>
+							</div>
+						{% endif %}
+
+						{% set terms = post.terms('provider_business_hours') %}
+						{% if terms %}
+							<div class="provider-post__detail">
+								<dt class="provider-post__term">Business Hours</dt>
+								<dd class="provider-post__definition">
+									{{ terms|join(', ') }}
+									{% if post.meta('business_hours_desc') %}
+										<p>
+											<em>{{ post.meta('business_hours_desc') }}</em>
+										</p>
+									{% endif %}
+								</dd>
+							</div>
+						{% endif %}
+
+						{% set terms = post.terms('provider_payment_option') %}
+						{% if terms %}
+							<div class="provider-post__detail">
+								<dt class="provider-post__term">Payment Options</dt>
+								<dd class="provider-post__definition">
+									{{ terms|join(', ') }}
+								</dd>
+							</div>
+						{% endif %}
+					</dl>
+
+					<div class="provider-post__intake provider-post__intake--phone">
+						{% include 'blocks/intake.twig' ignore missing %}
+					</div>
+
+					<div class="provider-post__back" id="back"></div>
+
+					<script>
+						const back = document.getElementById("back");
+						
+						if (document.referrer.startsWith(location.origin)) {
+							back.innerHTML = '<a href="javascript:history.back()">Back</a>';
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block below %}
+	{% for module in below_modules %}
+		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+		{% set module_style = module.style|replace('_', '-') %}
+		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
+	{% endfor %}
+{% endblock %}

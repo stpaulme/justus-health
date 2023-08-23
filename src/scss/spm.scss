@@ -387,6 +387,11 @@ select {
 @include media-breakpoint-up(md) {
   .sidebar {
     .sidebar__col {
+      &--article {
+        font-size: 0.875rem;
+        line-height: 1.3;
+      }
+
       &:nth-last-child(-n + 2) {
         margin-bottom: 0;
       }
@@ -626,6 +631,7 @@ select {
 @import "ecp";
 @import "er";
 @import "gf";
+@import "saf";
 @import "wp";
 @import "wpsl";
 
@@ -635,9 +641,12 @@ select {
 @import "blocks/cta-group-cta";
 @import "blocks/cta-pair-cta";
 @import "blocks/cta";
+@import "blocks/card-article";
 @import "blocks/card-event";
 @import "blocks/card-post";
 @import "blocks/excerpt";
+@import "blocks/filters";
+@import "blocks/intake";
 @import "blocks/member";
 @import "blocks/menu";
 @import "blocks/module-anchor-links";
@@ -650,6 +659,7 @@ select {
 @import "blocks/module-form";
 @import "blocks/module-hero";
 @import "blocks/module-image";
+@import "blocks/module-feed-article";
 @import "blocks/module-feed-event";
 @import "blocks/module-feed-post";
 @import "blocks/module-link-list";
@@ -663,6 +673,7 @@ select {
 @import "blocks/page-title";
 @import "blocks/pagination";
 @import "blocks/post";
+@import "blocks/provider-row";
 @import "blocks/search-bar";
 @import "blocks/share";
 @import "blocks/sidebar/sidebar-module-cta-single";
@@ -675,11 +686,14 @@ select {
 @import "blocks/sub-nav";
 @import "blocks/therapist-card";
 
+@import "archive/articles-landing";
+@import "archive/directory-landing";
 @import "archive/news-landing";
 @import "archive/search-landing";
 
 @import "single/counselor-post";
 @import "single/news-post";
+@import "single/provider-post";
 @import "single/therapist-post";
 
 .tribe_event_series-template-default {

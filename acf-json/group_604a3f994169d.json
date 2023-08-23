@@ -6,6 +6,7 @@
             "key": "field_604a3fe5e1f64",
             "label": "Specialties",
             "name": "specialties",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -20,11 +21,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Specialty",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_604a3ff0e1f65",
                     "label": "Specialty",
                     "name": "specialty",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -38,7 +41,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_604a3fe5e1f64"
                 }
             ]
         },
@@ -46,6 +50,7 @@
             "key": "field_604a4033bd295",
             "label": "Additional Info",
             "name": "additional_info",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -65,6 +70,7 @@
             "key": "field_604a409b7a9c5",
             "label": "CTA",
             "name": "cta",
+            "aria-label": "",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -100,5 +106,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1615479161
+    "show_in_rest": 0,
+    "modified": 1685559501
 }

@@ -25,7 +25,7 @@ jobs:
 
       - name: Sync
         env:
-          dest: "justus@35.202.227.133:/sites/justus.stpaulmedia.net/files/wp-content/themes/justus-health"
+          dest: "rainbow2023@50.217.254.171:/sites/rainbow2023.stpaulmedia.net/files/wp-content/themes/justus-health"
         run: |
           echo "${{secrets.DEPLOY_KEY}}" > deploy_key
           chmod 600 ./deploy_key

@@ -1,0 +1,44 @@
+.intake {
+    background-color: $lilac-bg;
+    padding: 25px 20px;
+
+    &__details {
+        font-size: 1rem;
+        line-height: 1.375;
+        margin-bottom: 0;
+    }
+
+    &__detail {
+        margin-bottom: 20px;
+    }
+
+    &__term {
+        color: $dark-purple-bg;
+        font-size: 1.1875rem;
+        line-height: 1.1052631579;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+    }
+
+    &__definition {
+        margin-bottom: 0;
+
+        p {
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin-bottom: 0;
+            padding-left: 0.85em;
+        }
+
+        li::marker {
+            color: $purple;
+        }
+    }
+
+    &__link {
+        margin-top: 20px;
+    }
+}

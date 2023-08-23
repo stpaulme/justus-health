@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="articles-landing">
+		<div class="container">
+			<div class="articles-landing__filters">
+				{% include 'blocks/filters.twig' with { 'modifier' : 'articles', 'heading' : 'Search and Filter Articles' } %}
+			</div>
+
+			<div class="row" id="posts">
+				{% if posts|length > 0 %}
+					{% for post in posts %}
+						<div class="col-lg-4 articles-landing__post-col">
+							{% include 'blocks/card-article.twig' with { 'modifier' : 'landing', 'show_cat' : true } %}
+						</div>
+					{% endfor %}
+				{% else %}
+					<div class="col">
+						<p>Sorry, nothing found</p>
+					</div>
+				{% endif %}
+			</div>
+
+			{% if posts.pagination.prev or posts.pagination.next %}
+				<div class="articles-landing__pagination">
+					{% include 'blocks/pagination.twig' with { 'pagination_style' : options.pagination_style, 'id' : 'posts' } %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+	{% if content|length > 0 %}
+		{% for module in content %}
+			{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+			{% set module_style = module.style|replace('_', '-') %}
+			{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}
