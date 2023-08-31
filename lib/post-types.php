@@ -135,7 +135,7 @@ $args = array(
     "capability_type" => "page",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => array("slug" => "therapy-counseling/therapy/our-therapists", "with_front" => false),
+    "rewrite" => array("slug" => "mental-health-services/therapy/our-therapists", "with_front" => false),
     "query_var" => true,
     "menu_icon" => "dashicons-groups",
     "supports" => array("title", "editor", "thumbnail", "page-attributes"),
