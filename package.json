@@ -21,7 +21,5 @@
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
   },
-  "dependencies": {
-    "@splidejs/splide": "^2.4.21"
-  }
+  "dependencies": {}
 }
