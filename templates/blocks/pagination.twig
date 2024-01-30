@@ -1,4 +1,4 @@
-<div class="pagination pagination--{{ pagination_style|replace('_', '-') }}">
+<div class="pagination pagination--{{ pagination_style|replace({'_': '-'}) }}">
 	{% if pagination_style == 'load_more' and posts.pagination.total > 1 %}
 
 		<button class="button load-more">Load More</button>

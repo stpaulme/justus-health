@@ -160,8 +160,8 @@ back.innerHTML = '<a href="javascript:history.back()">Back</a>';
 
 {% block below %}
 	{% for module in below_modules %}
-		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
-		{% set module_style = module.style|replace('_', '-') %}
+		{% set module_name = module.acf_fc_layout|replace({'_': '-'}) %}
+		{% set module_style = module.style|replace({'_': '-'}) %}
 		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
 	{% endfor %}
 {% endblock %}
