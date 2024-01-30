@@ -22,7 +22,7 @@
 
 		{% if sidebar_modules %}
 			{% for module in sidebar_modules %}
-				{% set module_name = module.acf_fc_layout|replace('_', '-') %}
+				{% set module_name = module.acf_fc_layout|replace({'_': '-'}) %}
 				<div class="col-md-6 col-lg-12 sidebar__col">
 					{% include ['blocks/sidebar/sidebar-module-' ~ module_name ~ '.twig', 'blocks/sidebar/sidebar-module.twig'] with { 'modifier' : 'sidebar' } %}
 				</div>
@@ -39,8 +39,8 @@
 
 {% block below %}
 	{% for module in below_modules %}
-		{% set module_name = module.acf_fc_layout|replace('_', '-') %}
-		{% set module_style = module.style|replace('_', '-') %}
+		{% set module_name = module.acf_fc_layout|replace({'_': '-'}) %}
+		{% set module_style = module.style|replace({'_': '-'}) %}
 		{% include ['blocks/module-' ~ module_name ~ '.twig', 'blocks/module.twig'] with { 'modifier' : 'below' } %}
 	{% endfor %}
 {% endblock %}
