@@ -28,7 +28,7 @@ jobs:
 
       - name: Sync
         env:
-          dest: "rainbowhealth@34.66.217.167:/sites/rainbowhealth.org/files/wp-content/themes/justus-health"
+          dest: "rainbowhealth@50.217.254.172:/sites/rainbowhealth.org/files/wp-content/themes/justus-health"
         run: |
           echo "${{secrets.DEPLOY_KEY}}" > deploy_key
           chmod 600 ./deploy_key
