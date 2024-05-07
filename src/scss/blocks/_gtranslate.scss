@@ -1,0 +1,26 @@
+.gtranslate {
+    select {
+        background-position: right 9px top 50%, 0 0;
+        border-radius: 5px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.1667;
+        padding: 7px 28px 7px 9px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .gtranslate {
+        select {
+            max-width: 250px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .gtranslate {
+        select {
+            max-width: 165px;
+        }
+    }
+}

@@ -12,7 +12,9 @@
     padding-bottom: 15px;
   }
 
-  .site-header__social-media {
+  .site-header__aidsline-inner,
+  .site-header__menus,
+  .site-header__translate-inner {
     display: none;
   }
 
@@ -68,9 +70,13 @@
     }
   }
 
+  .site-header__translate-only {
+    margin-bottom: 20px;
+  }
+
   .site-header__logo-link {
     display: block;
-    max-width: 50%;
+    max-width: 170px;
 
     &:focus {
       outline: 0;
@@ -89,7 +95,7 @@
     }
   }
 
-  .site-header__hamburger-col {
+  .site-header__hamburger-plus {
     text-align: right;
   }
 
@@ -117,10 +123,6 @@
   .site-header__menu-mobile {
     display: none;
   }
-
-  .site-header__desktop-menu {
-    display: none;
-  }
 }
 
 @include media-breakpoint-up(md) {
@@ -129,12 +131,27 @@
       padding: 20px 0;
     }
 
+    .site-header__aidsline-only,
+    .site-header__translate-only {
+      display: none;
+    }
+
+    .site-header__aidsline-inner,
+    .site-header__translate-inner {
+      display: block;
+    }
+
     .site-header__logo-link {
       max-width: 100%;
     }
 
-    .site-header__menus-col {
-      margin-left: auto;
+    .site-header__translate-inner {
+      margin-bottom: 15px;
+    }
+
+    .site-header__aidsline-hamburger {
+      display: flex;
+      justify-content: flex-end;
     }
 
     .site-header__aidsline {
@@ -180,11 +197,34 @@
       padding-bottom: 0;
     }
 
-    .site-header__logo-col {
+    .site-header__hamburger-plus {
+      display: none;
+    }
+
+    .site-header__menus {
+      display: block;
+    }
+
+    .site-header__logo {
       padding-right: 60px;
     }
 
-    .site-header__menus-col {
+    .site-header__aidsline {
+      padding: 10px 25px 0 25px;
+
+      &:after {
+        top: 0;
+        max-width: 100vw;
+        width: 100vw;
+      }
+    }
+
+    .site-header__aidsline-link {
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    .site-header__menus {
       align-items: flex-end;
       display: flex; // separates menus vertically
       flex-direction: column;
@@ -254,8 +294,9 @@
       }
     }
 
-    .site-header__social-media {
-      display: block;
+    .site-header__translate-inner {
+      margin-right: 15px;
+      margin-bottom: 0;
     }
 
     .site-header__menus-lower {
@@ -379,29 +420,6 @@
           }
         }
       }
-    }
-
-    .site-header__aidsline {
-      padding: 10px 25px 0 25px;
-
-      &:after {
-        top: 0;
-        max-width: 100vw;
-        width: 100vw;
-      }
-    }
-
-    .site-header__aidsline-link {
-      display: block;
-      padding-bottom: 10px;
-    }
-
-    .site-header__hamburger-col {
-      display: none;
-    }
-
-    .site-header__desktop-menu {
-      display: block;
     }
   }
 }
