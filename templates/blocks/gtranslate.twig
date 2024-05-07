@@ -1,0 +1,7 @@
+{% if fn('shortcode_exists', 'gtranslate') %}
+    <div class="gtranslate">
+        {% filter shortcodes %}
+            [gtranslate]
+        {% endfilter %}
+    </div>
+{% endif %}
