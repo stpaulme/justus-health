@@ -3,13 +3,25 @@
 <header class="site-header {{ options.sticky_header ? 'site-header--sticky' }}">
 
 	<div class="container">
-		<div class="row no-gutters site-header__row">
+		<div class="row site-header__row">
 
-			<div class="col-12 col-md-4 justify-content-center site-header__logo">
+			<div class="col-4 site-header__logo">
 				<a class="site-header__logo-link" href="{{ site.url }}">
 					<img alt="{{ site.title }} homepage" class="site-header__logo" src="{{ logo.src }}">
 				</a>
 			</div>
+
+			{% if menu_tertiary.items %}
+				<div class="col-8 site-header__tertiary-menu">
+					<ul class="site-header__tertiary-menu-list">
+						{% for item in menu_tertiary.items %}
+							<li class="{{ item.classes|join(' ') }}">
+								<a href="{{ item.link }}">{{ item.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
 
 		</div>
 	</div>

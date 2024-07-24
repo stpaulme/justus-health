@@ -1,6 +1,5 @@
 .site-header {
   background-color: $white;
-  padding-bottom: 30px;
 
   &--sticky {
     position: sticky;
@@ -10,7 +9,7 @@
 
   .site-header__row {
     align-items: center;
-    padding-bottom: 15px;
+    padding: 15px 0;
   }
 
   .site-header__aidsline-inner,
@@ -31,7 +30,7 @@
     &:after {
       position: absolute;
       background-color: $lilac-bg-alt;
-      content: '';
+      content: "";
       display: block;
       height: 100%;
     }
@@ -96,13 +95,26 @@
     }
   }
 
+  .site-header__tertiary-menu-list {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 -15px;
+    padding-left: 0;
+
+    > li {
+      padding: 0 15px;
+    }
+  }
+
   .site-header__hamburger-plus {
     text-align: right;
   }
 
   #site-header__hamburger {
     background-color: $white;
-    background-image: url('../../dist/img/menu_withbkgrnd.svg');
+    background-image: url("../../dist/img/menu_withbkgrnd.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +128,7 @@
 
     &:focus,
     &:hover {
-      background-image: url('../../dist/img/menu_withbkgrnd_open.svg');
+      background-image: url("../../dist/img/menu_withbkgrnd_open.svg");
       outline: 0;
     }
   }
@@ -194,10 +206,6 @@
 
 @include media-breakpoint-up(lg) {
   .site-header {
-    .site-header__row {
-      padding-bottom: 0;
-    }
-
     .site-header__hamburger-plus {
       display: none;
     }
@@ -254,7 +262,6 @@
           &.current-page-ancestor {
             color: $purple;
           }
-
         }
       }
     }
@@ -273,12 +280,12 @@
         .menu__item {
           &:after {
             color: $lilac-bg-alt;
-            content: '/';
+            content: "/";
           }
 
-          &:nth-last-child(-n+2) {
+          &:nth-last-child(-n + 2) {
             &:after {
-              content: '';
+              content: "";
             }
           }
         }
@@ -316,7 +323,7 @@
         top: 0;
         left: -30px;
         background-color: $lilac-bg;
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         transform: skew(-20deg);
@@ -350,7 +357,6 @@
           // "Living with HIV"
           .menu__item--has-children:hover,
           .menu__item--has-children.menu__item--has-focus {
-
             .menu--children {
               clip: auto;
               height: auto;
